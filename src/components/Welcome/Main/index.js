@@ -20,7 +20,7 @@ const Main = () => (
         <div className='main-connect'>
             <p className='main-first'>Première   visite ?</p>
             <p className= 'main-second'>Créer gratuitement un compte</p>
-            <Link to='/welcome/create-account'>
+            <Link to='/create-account'>
                 <button className='main-button'> 
                     Créer mon compte
                 </button>

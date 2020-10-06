@@ -6,7 +6,7 @@ import {  FORM_INPUT_CHANGE,
 
 const initialState = {
         user: {},
-        firstname: 'Aurélie',
+        firstname: '',
         lastname: '',
         email: '',
         pseudo:'',

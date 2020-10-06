@@ -1,0 +1,51 @@
+.navigation {
+    display: flex;
+    align-items: center;
+
+    &-link {
+        margin: 1em;
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgb(33, 33, 33);
+    }
+    
+    &-link:hover{
+        text-decoration: none;
+        color: #f0f;
+    }
+    &-message{
+        text-align: right;
+        margin: .3em 1em;
+        }
+    
+      &-logged{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        }
+    
+    &-button{
+        font-weight: bold;
+        font-size: 1em;
+        color: #fff;
+        background-color: #1774C7;
+        border-radius: .3em;
+        border: 0;
+        padding: .5em 1em;
+        margin: 20px;
+        box-shadow: 1px 1px 2px lightblue;
+        transition: background-color 0.3s;
+    
+          &:hover{
+              background-color: #f0f;
+          }
+        }
+}
+
+.active{
+    padding-bottom: .3em;
+    border-bottom: .2em solid #0f0;
+}
+
+
+

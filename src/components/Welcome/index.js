@@ -12,11 +12,11 @@ import './styles.scss';
 const Welcome = () => (
     <div className='welcome'>
         
-      <Route exact path="/welcome">
+      <Route exact path="/">
         <Main />
       </Route>      
       
-      <Route path="/welcome/create-account">
+      <Route path="/create-account">
         <Form />      
       </Route>
 
