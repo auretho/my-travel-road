@@ -7,7 +7,7 @@ import data from './data';
 
 import './style.scss';
 
-const NewTravel = ({name, continent, departure, opened, onToggle}) => {
+const NewTravel = ({name, continent, departure, step, opened, onToggle, handleChange, handleSubmit}) => {
 
     const [ activeLocation, setActiveLocation ] = React.useState(null);
 
@@ -74,27 +74,27 @@ const NewTravel = ({name, continent, departure, opened, onToggle}) => {
                 <form className="newStep-form">
                     <label>
                     <span>Pays</span>
-                        <input type="text" className="newStep-input" placeholder="Pays" value=""/>
+                        <input type="text" name="country" className="newStep-input" placeholder="Pays" value={step.country} onChange={handleChange}/>
                     </label>
                     <label>
                     <span>Ville</span>
-                        <input type="text" className="newStep-input" placeholder="Ville" value=""/>
+                        <input type="text" name="city" className="newStep-input" placeholder="Ville" value={step.city} onChange={handleChange}/>
                     </label>
                     <label>
                     <span>Lieu</span>
-                        <input type="text" className="newStep-input" placeholder="Lieu" value=""/>
+                        <input type="text" name="place" className="newStep-input" placeholder="Lieu" value={step.place} onChange={handleChange}/>
                     </label>
                     <label>
                     <span>Etape n°</span>
-                        <input type="number" className="newStep-input" placeholder="Etape n°" value=""/>
+                        <input type="number" name="stepNb" className="newStep-input" placeholder="Etape n°" value={step.stepNb} onChange={handleChange}/>
                     </label>
                     <label>
                     <span>Date de départ</span>
-                        <input type="date" className="newStep-input" placeholder="Date de départ" value=""/>
+                        <input type="date" name="departure" className="newStep-input" placeholder="Date de départ" value={step.departure} onChange={handleChange}/>
                     </label>
                     <label>
                     <span>Date d'arrivée</span>
-                        <input type="date" className="newStep-input" placeholder="Date d'arrivée" value=""/>
+                        <input type="date" name="arrival" className="newStep-input" placeholder="Date d'arrivée" value={step.arrival} onChange={handleChange}/>
             </label>
 
                     <button className="newStep-button">Ajouter nouvelle étape</button>
@@ -109,4 +109,12 @@ NewTravel.propTypes = {
     name: PropTypes.string.isRequired,
     continent: PropTypes.string.isRequired,
     departure: PropTypes.string.isRequired,
+    step: PropTypes.shape({
+        country: PropTypes.string.isRequired,
+        city: PropTypes.string.isRequired,
+        place: PropTypes.string,
+        stepNb: PropTypes.number,
+        departure: PropTypes.string.isRequired,
+        arrival: PropTypes.string.isRequired,
+    })
 };

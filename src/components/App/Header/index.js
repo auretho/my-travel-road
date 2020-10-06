@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Login from '../../../containers/Login';
 
-import logo from '../../App/Header/logo-travel2.png';
+import logo from '../../App/Header/logo-travel.png';
 import './styles.scss';
 
 
