@@ -1,13 +1,20 @@
 .leaflet-container{
+    position: relative;
     height: 50vh;
     width: 80%;
     margin: auto;
+    z-index: -1;
+}
+
+.travel{
+    position: relative;
 }
 
 .newTravel{
     line-height: 3em;
     display: flex;
     flex-direction: column;
+    z-index: -1;
     
     &-title{
         font-size: 2em;
@@ -29,6 +36,13 @@
         font-weight: bold;
         padding: .7em 1em;
         border-radius: 3px;
+        &.opened{
+            display: none;
+        }
+
+    }
+    &-closed{
+        opacity: 0.4;
     }
 
     &-create span{
@@ -54,4 +68,52 @@
 
 #steps{
     padding: .5em;
+}
+
+.newStep{
+    position: relative;
+    z-index: 2;
+    top: -450px;
+    margin: auto;
+    background-color: lightskyblue;
+    width: 40%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #777; 
+    opacity: 1;
+
+    &-closed{
+        display: none;
+    }
+
+    &-form{
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    .newStep-form label{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .newStep-form span{
+        font-weight: bold;
+        align-self: center;
+    }
+
+    &-input{
+        width: 60%;
+        margin-bottom: .5em;
+        height: 2.5em;
+    }
+
+    &-button{
+        background-color: #1774C7;
+        color: #FFF;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 3px;
+        height: 2.5em;
+        margin: 1em auto 0;
+    }
 }
