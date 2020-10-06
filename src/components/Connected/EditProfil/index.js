@@ -1,7 +1,7 @@
 import React from 'react';
 /*import PropTypes from 'prop-types';*/
 import './styles.scss';
-import pic from '../EditProfil/pixx.jpg';
+import pic from '../EditProfil/cover.jpg';
 import avatar from '../EditProfil/avatar.jpeg';
 
 const EditProfil = () => {

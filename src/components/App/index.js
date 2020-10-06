@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Welcome from '../Welcome';
 // import NewTravel from '../Connected/NewTravel';
 import Profile from '../Connected/Profile';
-// import EditProfil from '../Connected/EditProfil';
+import EditProfil from '../Connected/EditProfil';
 import ConsultProfil from '../Connected/ConsultProfil'
 import Home from '../Connected/Home';
 import './styles.scss';
@@ -20,8 +20,8 @@ const App = ({ checkLoginAuth }) => {
       <Header />
       {/* <NewTravel/> */}
       {/*<Welcome /> */}
-      {/* <EditProfil /> */}
-      <ConsultProfil />
+      <EditProfil />
+      {/*<ConsultProfil />*/}
 
       <Route path="/home">
         <Home />
