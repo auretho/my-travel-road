@@ -2,7 +2,6 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import Field from './Field';
-import Nav from '../../App/Nav';
 import './style.scss';
 
 
@@ -33,24 +32,24 @@ const Login = ({
 
   return (
     <div className='login'>
-      <div className="connection-zone">
-        <button
-          className={opened ? 'connection-button opened' : 'connection-button'}
-          type="button"
-          onClick={onToggle}
-        >
-          Connexion
-        </button>
-      </div>
-
       <div className={opened? 'login' : 'login-closed'}>
         <div className='login-form'>
+
+          <div className="connection-zone">
+            <button
+            className={opened ? 'connection-button opened' : 'connection-button'}
+            type="button"
+            onClick={onToggle}
+            >
+            Connexion
+          </button>
+          </div>
           {isLogged && (
             <div className="login-form-logged">
               <p className="login-form-message">
                 {loggedMessage}
               </p>
-              <Nav />
+              
               <button
                 type="button"
                 className="login-form-button"
@@ -61,7 +60,10 @@ const Login = ({
             </div>
           )}
           {!isLogged && (
+
             
+
+
             <form autoComplete="off" className="login-form-element" onSubmit={handleSubmit}>
               <Field
                 name="email"
@@ -84,6 +86,7 @@ const Login = ({
                 OK
               </button>
             </form>
+            
           )}
         </div>
       </div>

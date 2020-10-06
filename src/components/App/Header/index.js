@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Login from '../../../containers/Login';
-
-import logo from '../../App/Header/logo-travel2.png';
+import Nav from './Nav';
+import logo from './logo-travel2.png';
 import './styles.scss';
 
 
-const Header = () => (
+const Header = ( { isLogged } ) => {
+    return (
     <div className="header">
-
 
         <div className="header-left">
             <Link to="/">
@@ -16,9 +17,21 @@ const Header = () => (
             </Link>
             {/* <p className="header-title">My Travel Road</p> */}
         </div>
-        
-        <Login />
+
+        <div className="header-right">
+            {isLogged && (
+                <Nav />
+            )}
+            {!isLogged && (
+                <Login />
+            )}
+        </div>
     </div>
   );
+};
+
+  Header.propTypes = {
+    isLogged: PropTypes.bool.isRequired,
+  };
 
   export default Header;
