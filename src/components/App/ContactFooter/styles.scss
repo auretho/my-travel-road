@@ -1,0 +1,40 @@
+.contact{
+    margin-left: 20vh;
+  
+    
+    
+
+    &-intro{
+        background-color: #dae7f4;
+        width: 80vh;
+        padding: 20px;
+        margin-top: 15px;
+        border-radius: 15px;
+    
+    }
+
+    &-form{
+        background-color: #dae7f4;
+        width: 100vh;
+        padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 30vh;
+        border-radius: 15px;
+    }
+
+    &-input{
+        width: 20%; 
+        margin: 1em;
+        padding: 6px;
+        border-radius: 4px;
+        
+    }
+}
+
+p {
+    margin-top: 30px;
+}
+
+label {
+    font-weight: bold;
+}

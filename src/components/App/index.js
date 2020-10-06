@@ -10,6 +10,7 @@ import Profile from '../Connected/Profile';
 import ConsultProfil from '../Connected/ConsultProfil'
 import Home from '../Connected/Home';
 import './styles.scss';
+import ContactFooter from './ContactFooter';
 
 const App = ({ checkLoginAuth }) => {
   useEffect(() => {
@@ -21,7 +22,8 @@ const App = ({ checkLoginAuth }) => {
       {/* <NewTravel/> */}
       {/*<Welcome /> */}
       {/* <EditProfil /> */}
-      <ConsultProfil />
+      {/*<ConsultProfil /> */}
+      <ContactFooter />
 
       <Route path="/home">
         <Home />
