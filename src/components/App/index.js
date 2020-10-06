@@ -14,11 +14,14 @@ const App = ({ checkLoginAuth }) => {
   useEffect(() => {
     checkLoginAuth();
   }, []);
+
   return (
     <div className="app">
       <Header />
       {/* <NewTravel/> */}
-      <Welcome />
+      <Route path="/welcome">
+        <Welcome />
+      </Route>
       {/* <EditProfil /> */}
 
       <Route path="/home">

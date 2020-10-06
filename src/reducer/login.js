@@ -12,7 +12,7 @@ const initialState = {
     loading: false,
     email: '',
     password:'',
-    isLogged: false,
+    isLogged: true,
     pseudo: '',
     loggedMessage: ''    
 };

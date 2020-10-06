@@ -11,7 +11,7 @@ const Header = () => (
 
 
         <div className="header-left">
-            <Link to="/">
+            <Link to="/welcome">
                 <img src={logo} alt="logo My Travel Road" className="header-logo" />
             </Link>
             {/* <p className="header-title">My Travel Road</p> */}
