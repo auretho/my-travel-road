@@ -7,6 +7,7 @@ import Welcome from '../Welcome';
 // import NewTravel from '../Connected/NewTravel';
 import Profile from '../Connected/Profile';
 // import EditProfil from '../Connected/EditProfil';
+import ConsultProfil from '../Connected/ConsultProfil'
 import Home from '../Connected/Home';
 import './styles.scss';
 
@@ -18,8 +19,9 @@ const App = ({ checkLoginAuth }) => {
     <div className="app">
       <Header />
       {/* <NewTravel/> */}
-      <Welcome />
+      {/*<Welcome /> */}
       {/* <EditProfil /> */}
+      <ConsultProfil />
 
       <Route path="/home">
         <Home />

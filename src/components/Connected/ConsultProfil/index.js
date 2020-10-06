@@ -12,16 +12,26 @@ const ConsultProfil = () => {
     return (
         <div className="consult">
              <div className="consult-profil">
-                <p>Camille</p>
+                <h6><b>Nom</b></h6>
                 <p>Pexels</p>
+                
+                <h6><b>Prénom</b></h6>
+                <p>Camille</p>
+                
+                <h6><b>Email</b></h6>
                 <p>Camillep@gmail.com</p>
+                
+                <h6><b>Ville</b></h6>
                 <p>Montreal</p>
+                
+                <h6><b>Code Postal</b></h6>
                 <p>H2Y 1C6</p>
+                
                 <button className="consult-button">Editer le profil</button>
              </div>
             
             <div className="consult-pseudo">
-                <button className="consult-public">Profil public</button>
+                {/*<button className="consult-public">Profil public</button>*/}
                     <h2 className="consult-name">Cami<span>&#x2661;</span></h2>
                     <img className="consult-avat"src={avatar} alt=""/>
                 <button className="consult-pseudo-button">Mes voyages</button>

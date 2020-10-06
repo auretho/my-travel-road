@@ -3,48 +3,52 @@
     background-repeat: no-repeat;
     background-size: cover;
     //height: 300%;
-    border-radius: 10px;
+    //border-radius: 10px;
     //padding-top: inherit;
     //padding: 20px 10vh;
-    padding: 1rem 6rem 3rem 5rem;
+    padding: 1rem 5rem 1rem 5rem;
 
     background-position: center;
     
     
 
     &-profil{
-        border: solid 3px #CCD0F2;
+        border: solid 5px #CCD0F2;
         padding: 15px;
-        background-color:whitesmoke;
+        background-color:#d5e2f7;
         border-radius: 10px;
-        width: 25vh;
-        font-weight: bold;
-        //margin:20px;
+        width: 22vh;
+        //font-weight: bold;
+        margin-top:50px;
         box-shadow: 10px 10px 5px #CCD0F2;
-        letter-spacing: 2px;
-        text-indent: 10px;
+        //letter-spacing: 2px;
+        //text-indent: 10px;
         color: #141418;
+        
+        
  
     }
 
     &-button{
-        padding: 9px;
-        margin-left: 45px;
-        border-radius: 5px;
-        background-color: #1774C7;
+        padding: 6px;
+        margin-left: 1px;
+        border-radius: 10px;
+        background-color: #1968B9;
         color: white;
         font-weight: bold;
+    
     }
 
     &-article{
-        border: solid 3px #CCD0F2;
-        background-color:whitesmoke;
+        border: solid 5px #CCD0F2;
+        background-color:#d5e2f7;
         border-radius: 10px;
         width: 70vh;
         //width: 25vh;
-        margin-left: 140vh;
-        margin-top: -20vh;
-        padding: 10px;
+        margin-left: 120vh;
+        margin-top:-300px;
+        //margin-bottom: -5px;
+        padding: 8px;
         text-align: justify;;
         //box-shadow: 10px 10px 5px #CCD0F2;
         //letter-spacing: 2px;
@@ -57,8 +61,8 @@
     &-pseudo-button{
         padding: 9px;
         //margin-left: px;
-        border-radius: 5px;
-        background-color: #1774C7;
+        border-radius: 10px;
+        background-color: #1968B9;
         color: white;
         font-weight: bold;
     }
@@ -66,14 +70,16 @@
     &-avat{
         border-radius: 50%;
         border: solid 3px #CCD0F2;
-        width: 200px;
-        height: 200px;
-        position: relative;
+        width: 150px;
+        height: 150px;
+        //position: relative;
+        margin-bottom: 50px;
 
     }
 
     &-name{
-        color: #141418;
+        color: black;
+        font-weight: bold;
         font-size: 35px;
         margin-left: 25vh;
         //margin-top: 6px;
@@ -81,6 +87,10 @@
         position: relative;
 
         
+    }
+
+    &-pseudo{
+        //margin: 100px;
     }
 
     //&-public{
@@ -94,5 +104,6 @@
 }
 
 span{
-    color: #FF00FF;
+    color:yellow;
 }
+
