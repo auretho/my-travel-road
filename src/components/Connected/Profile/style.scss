@@ -1,0 +1,231 @@
+//===========================================================
+//GENERAL
+//===========================================================
+.profile{
+    &-picture{
+        margin: auto;
+        width: 80%;
+    }
+
+    &-cover{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 5px;
+    }
+    
+    &-photo{
+        margin: auto;
+        width: 80%;
+        height: 400px;
+    }
+
+    &-avatar{
+        position: relative;
+        top: -140px;
+        left: -60px;
+        height: 200px;
+        filter: drop-shadow(2px 2px 2px black);
+        height: 200px;
+    }
+    
+    &-picture{
+        display: flex;
+        height: 50px;
+    }
+    
+    &-pseudo{
+        position: relative;
+        left: -60px;
+        top: -60px;
+        font-style: italic;
+        color: #fff;
+        text-shadow: 1px 1px 4px black;
+        font-size: 1.2em;
+        font-weight: bold;;
+    }
+
+    &-journal{
+        width: 80%;
+        margin: 2em auto 5em;
+        text-align: justify;
+        font-style: italic;
+    }
+
+    &-journal h2{
+        text-align: center;
+        font-style: normal;;
+    }
+
+    &-journal p{
+        width: 80%;
+        margin: auto;
+    }
+
+    &-title{
+        font-size: 1.8em;
+        font-weight: bold;
+        margin: .5em 1em 1em;
+    }
+}
+
+.past-travels{
+    width: 80%;
+    margin: 4em auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.past-travels img{
+    width: 400px;
+    height: 280px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px grey;
+}
+//===========================================================
+//MOBILE - max. 480px 
+//===========================================================
+@media (max-width: 480px){
+    .profile-avatar{
+        height: 150px;
+        top: -110px;
+        left: -30px;
+    }
+
+    .profile-pseudo{
+        top: -40px;
+        left: -20px;
+    }
+
+    .past-travels{
+       display: block;
+       text-align: center;
+       margin-top: 2em;
+    }
+
+    .past-travels img{
+        margin-bottom: 1em;
+        width: 100px;
+    }
+
+    .past-travels h2{
+        position: relative;
+        top: -60px;
+        color: #fff;
+        font-size: 1.3em;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+        font-weight: bold;
+    }
+
+    .profile-journal{
+        margin-bottom: 2em;
+    }
+}
+
+//===========================================================
+//TABLET - max. 768px 
+//===========================================================
+@media (max-width: 768px){
+    .profile-journal{
+        margin-bottom: 1em;
+    }
+    
+    .past-travels{
+        display: block;
+        text-align: center;
+        margin-top: 2em;
+     }
+
+    .past-travels img{
+        height: 300px;
+        width: 500px;
+    }
+    
+    .past-travels h2{
+        position: relative;
+        top: -110px;
+        color: #fff;
+        font-size: 2em;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+        font-weight: bold;
+    }
+}
+
+//===========================================================
+//TABLET LANDSCAPE - max. 1024px 
+//===========================================================
+@media (max-width: 1024px){
+    .profile-journal{
+        margin-bottom: 1em;
+    }
+    
+    .past-travels{
+        display: block;
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    .past-travels img{
+        height: 350px;
+        width: 580px;
+    }
+    
+    .past-travels h2{
+        position: relative;
+        top: -110px;
+        color: #fff;
+        font-size: 2em;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+        font-weight: bold;
+    }
+}
+
+//===========================================================
+//LAPTOP - min. 1024px + max. 1600px 
+//===========================================================
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .profile-journal{
+        margin-bottom: 1em;
+    }
+    
+    .past-travels{
+        display: block;
+        text-align: center;
+        // margin-top: 2em;
+        margin: auto;
+    }
+    
+    .past-travels img{
+        height: 350px;
+        width: 520px;
+    }
+    
+    .past-travels h2{
+        position: relative;
+        top: -110px;
+        color: #fff;
+        font-size: 2em;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+        font-weight: bold;
+    }
+}
+    
+//===========================================================
+//LAPTOP - min. 1600px 
+//===========================================================
+@media screen and (min-width: 1600px){
+    .voyage{
+        float: left;
+        width: 50%;
+    }
+
+    .past-travels img{
+        width: 550px;
+        height: 350px;
+    }
+
+    .past-travels h2{
+        left: 5px;
+    }
+
+}

@@ -1,0 +1,136 @@
+.profil{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.left{
+    width: 40vw;
+    max-height: 50%;
+    background-color:#dae7f4 ;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+
+    &-input{
+        width: 80%; 
+        margin: 1em;
+        padding: .6em;
+        text-align: left;
+        border-radius: 4px;
+        
+    }
+
+    
+
+    &-title{
+        font-weight: bold;
+        color: #23272B;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 3px;
+    
+        
+    }
+
+    &-profil{
+        margin-left: auto;
+        margin-top: 40px;
+    }
+
+    &-password{
+        //margin-left: auto;
+        margin-top: 40px;
+    }
+}
+
+.right{
+    width: 60vw;
+    border-radius: 5px;
+    background-color:#dae7f4 ;
+    text-align: center;
+    margin-right: 100px;
+    
+
+    &-input{
+        width: 20%; 
+        margin: 1em;
+        padding: .6em;
+        border-radius: 4px;
+        
+        
+        
+    }
+
+    &-first-button{
+        margin-top: 10px;
+        padding: 0.5rem;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    &-avatar{
+        margin-top: 2rem;
+        border-radius: 50%;
+    
+        
+    }
+
+    &-second-button{
+        margin-bottom: 4rem;
+        margin-top: 10px;
+        padding: 0.5rem;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+        
+    }
+
+    &-button{
+        text-align: center;
+        padding-bottom: 50px;
+        
+    }
+
+    &-third-button{
+        margin: 5px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #00325E;
+        color:white;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    &-fourth-button{
+        margin: 5px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #00325E ;
+        color: white;
+        font-weight: bold;
+        font-size: 17px;
+        
+    }
+     
+    
+}
+ .avat{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+ }
+ .avat2 {
+    border-radius: 3%;
+    width: 600px;
+    height: 400px;
+ }
+
+ 

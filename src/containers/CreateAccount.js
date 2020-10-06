@@ -1,0 +1,33 @@
+import { connect } from 'react-redux';
+import Form from '../components/Welcome/Form';
+import { formInputChange, formInputSubmit } from '../actions/createAccount-actions';
+
+// récupère l'état du Form 
+const mapState = (state) => ({
+    firstname: state.createAccount.firstname,
+    lastname: state.createAccount.lastname,
+    pseudo: state.createAccount.pseudo,
+    email: state.createAccount.email,
+    password1 : state.createAccount.password1,
+    password2: state.createAccount.password2,
+    city: state.createAccount.city,
+    cityCode: state.createAccount.cityCode,
+    creationMessage: state.createAccount.creationMessage,
+});
+
+const mapDispatch = (dispatch) => ({
+    changeField: (value, name) => {
+        const text = {
+          [name]: value,
+        };
+        dispatch(formInputChange(text));
+    },
+    onInputSubmit: () => {
+    dispatch(formInputSubmit() )
+
+    },
+});
+
+export default connect(mapState, mapDispatch)(Form);
+
+

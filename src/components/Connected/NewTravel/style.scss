@@ -1,0 +1,56 @@
+.leaflet-container{
+    height: 50vh;
+    width: 80%;
+    margin: auto;
+}
+
+.newTravel{
+    line-height: 3em;
+    display: flex;
+    flex-direction: column;
+    
+    &-title{
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    &-continent{
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    &-create{
+        display: flex;
+        align-self: center;
+        background-color: #1774C7;
+        color: #FFF;
+        font-size: 1em;
+        font-weight: bold;
+        padding: .7em 1em;
+        border-radius: 3px;
+    }
+
+    &-create span{
+        align-self: center;
+    } 
+}
+
+.top-block{
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-map-marked-alt{
+    color: #fff;
+    padding-right: .5em;
+    height: 1.5em;
+    width: 110px;
+}
+
+.steps-select{
+    padding: 1em;
+}
+
+#steps{
+    padding: .5em;
+}
