@@ -32,7 +32,7 @@ const ConsultProfil = () => {
             
             <div className="consult-pseudo">
                 {/*<button className="consult-public">Profil public</button>*/}
-                    <h2 className="consult-name">Cami<span>&#x2661;</span></h2>
+                    <h2 className="consult-name">CAMI<span>&#x2661;</span></h2>
                     <img className="consult-avat"src={avatar} alt=""/>
                 <button className="consult-pseudo-button">Mes voyages</button>
             </div>

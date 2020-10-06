@@ -6,7 +6,7 @@
     //border-radius: 10px;
     //padding-top: inherit;
     //padding: 20px 10vh;
-    padding: 1rem 5rem 1rem 5rem;
+    padding: 1rem 5rem 3rem 5rem;
 
     background-position: center;
     
@@ -15,12 +15,12 @@
     &-profil{
         border: solid 5px #CCD0F2;
         padding: 15px;
-        background-color:#d5e2f7;
+        background-color:#ffffff;
         border-radius: 10px;
         width: 22vh;
         //font-weight: bold;
         margin-top:50px;
-        box-shadow: 10px 10px 5px #CCD0F2;
+        //box-shadow: 10px 10px 5px #CCD0F2;
         //letter-spacing: 2px;
         //text-indent: 10px;
         color: #141418;
@@ -41,13 +41,13 @@
 
     &-article{
         border: solid 5px #CCD0F2;
-        background-color:#d5e2f7;
+        background-color:	#ffffff;
         border-radius: 10px;
         width: 70vh;
         //width: 25vh;
         margin-left: 120vh;
         margin-top:-300px;
-        //margin-bottom: -5px;
+        //margin-bottom: 25vh;
         padding: 8px;
         text-align: justify;;
         //box-shadow: 10px 10px 5px #CCD0F2;
@@ -65,6 +65,8 @@
         background-color: #1968B9;
         color: white;
         font-weight: bold;
+        margin-left: 20px;
+        
     }
     
     &-avat{
@@ -78,19 +80,24 @@
     }
 
     &-name{
-        color: black;
+        color: 	#ffffff;
         font-weight: bold;
         font-size: 35px;
-        margin-left: 25vh;
-        //margin-top: 6px;
+        margin-left: 20vh;
+        margin-bottom: -8vh;
         //margin-top: 60px;
-        position: relative;
+        //position: relative;
 
         
     }
 
     &-pseudo{
-        //margin: 100px;
+        margin-left: 15vh;
+        position: relative;
+        margin-bottom: 10vh;
+        //float: right;
+        
+
     }
 
     //&-public{
