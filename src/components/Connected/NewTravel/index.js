@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
 import "@fortawesome/fontawesome-free/js/all";
 
@@ -6,7 +7,7 @@ import data from './data';
 
 import './style.scss';
 
-const NewTravel = () => {
+const NewTravel = ({name, continent, departure}) => {
 
     const [ activeLocation, setActiveLocation ] = React.useState(null);
 
@@ -14,9 +15,9 @@ const NewTravel = () => {
         <div className="newTravel">
             <div className="top-block">
                 <div>
-                    <h1 className="newTravel-title">TITRE DU VOYAGE</h1>
-                    <h3 className="newTravel-continent">Continent: Nom du continent</h3>
-                    <h4 className="newTravel-departure">Date de départ: 25 avril 2020</h4>
+                    <h1 className="newTravel-title">{name}</h1>
+                    <h3 className="newTravel-continent">Continent: {continent}</h3>
+                    <h4 className="newTravel-departure">Date de départ: {departure}</h4>
                 </div>
                 
                 
@@ -67,3 +68,9 @@ const NewTravel = () => {
     )
 }
 export default NewTravel;
+
+NewTravel.propTypes = {
+    name: PropTypes.string.isRequired,
+    continent: PropTypes.string.isRequired,
+    departure: PropTypes.string.isRequired,
+};

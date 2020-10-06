@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Welcome from '../Welcome';
-import NewTravel from '../Connected/NewTravel';
+import NewTravel from '../../containers/NewTravel';
 import Profile from '../Connected/Profile';
 // import EditProfil from '../Connected/EditProfil';
 import Home from '../../containers/Home';
