@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Login from '../../../containers/Login';
-import Nav from './Nav';
+import Nav from '../../../containers/Nav';
 import logo from './logo-travel2.png';
 import './styles.scss';
 

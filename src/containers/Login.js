@@ -1,14 +1,13 @@
 import { connect } from 'react-redux';
 import Login from '../components/Welcome/Login';
-import { toggleLogginForm,  loginInputChange, loginInputSubmit, loginInputLogout } from '../actions/login-actions';
+import { toggleLogginForm,  loginInputChange, loginInputSubmit } from '../actions/login-actions';
 
 // récupère l'état du Login 
 const mapState = (state) => ({
     opened: state.login.opened,
     email: state.login.email,
     password: state.login.password,
-    isLogged: state.login.isLogged ,
-    loggedMessage: state.login.loggedMessage,
+    isLogged: state.login.isLogged,
     loading: state.login.loading,
     pseudo: state.login.pseudo
 });
@@ -26,9 +25,6 @@ const mapDispatch = (dispatch) => ({
     handleLogin: () => {
         dispatch(loginInputSubmit());
     },
-    handleLogout: () => {
-        dispatch(loginInputLogout());
-    }
 });
     
 

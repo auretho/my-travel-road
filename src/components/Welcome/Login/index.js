@@ -32,9 +32,6 @@ const Login = ({
 
   return (
     <div className='login'>
-      <div className={opened? 'login' : 'login-closed'}>
-        <div className='login-form'>
-
           <div className="connection-zone">
             <button
             className={opened ? 'connection-button opened' : 'connection-button'}
@@ -44,50 +41,30 @@ const Login = ({
             Connexion
           </button>
           </div>
-          {isLogged && (
-            <div className="login-form-logged">
-              <p className="login-form-message">
-                {loggedMessage}
-              </p>
-              
-              <button
-                type="button"
-                className="login-form-button"
-                onClick={handleLogout}
-              >
-                Déconnexion
-              </button>
-            </div>
-          )}
-          {!isLogged && (
-
-            
-
-
-            <form autoComplete="off" className="login-form-element" onSubmit={handleSubmit}>
-              <Field
-                name="email"
-                type="email"
-                placeholder="Adresse Email"
-                onChange={changeField}
-                value={email}
-              />
-              <Field
-                name="password"
-                type="password"
-                placeholder="Mot de passe"
-                onChange={changeField}
-                value={password}
-              />
-              <button
-                type="submit"
-                className="login-form-button"
-              >
-                OK
-              </button>
-            </form>
-            
-          )}
+      <div className={opened? 'login' : 'login-closed'}>
+        <div className='login-form'>
+          <form autoComplete="off" className="login-form-element" onSubmit={handleSubmit}>
+            <Field
+              name="email"
+              type="email"
+              placeholder="Adresse Email"
+              onChange={changeField}
+              value={email}
+            />
+            <Field
+              name="password"
+              type="password"
+              placeholder="Mot de passe"
+              onChange={changeField}
+              value={password}
+            />
+            <button
+              type="submit"
+              className="login-form-button"
+            >
+              OK
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -100,10 +77,8 @@ Login.propTypes = {
   password: PropTypes.string.isRequired,
   changeField: PropTypes.func.isRequired,
   handleLogin: PropTypes.func.isRequired,
-  handleLogout: PropTypes.func.isRequired,
   isLogged: PropTypes.bool,
   loading: PropTypes.bool.isRequired,
-  loggedMessage: PropTypes.string,
   onToggle: PropTypes.func.isRequired,
 };
 
