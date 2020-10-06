@@ -10,7 +10,7 @@ import Profile from '../Connected/Profile';
 import ConsultProfil from '../Connected/ConsultProfil'
 import Home from '../Connected/Home';
 import './styles.scss';
-import ContactFooter from './ContactFooter';
+import Contact from './Footer/Contact';
 
 const App = ({ checkLoginAuth }) => {
   useEffect(() => {
@@ -23,7 +23,7 @@ const App = ({ checkLoginAuth }) => {
       {/*<Welcome /> */}
       {/* <EditProfil /> */}
       {/*<ConsultProfil /> */}
-      <ContactFooter />
+      
 
       <Route path="/home">
         <Home />
@@ -32,8 +32,12 @@ const App = ({ checkLoginAuth }) => {
       <Route path="/profile">
         <Profile />
       </Route>
-
-      <Footer />
+      
+        <Footer />
+      <Route path="/contact-us">
+        <Contact />
+      </Route>
+      
     </div>
   );
 };

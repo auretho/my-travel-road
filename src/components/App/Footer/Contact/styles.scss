@@ -1,0 +1,58 @@
+.contact{
+    margin-left: 50vh;
+    width: 100%;
+
+
+    &-intro{
+        background-color: #dae7f4;
+        width: 80vh;
+        padding: 20px;
+        margin-top: 15px;
+        border-radius: 15px;
+        border: 6px solid #1968B9;
+    
+    }
+
+    &-form{
+        background-color: #dae7f4;
+        width: 50%;
+        height: 50%;
+        padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        border: 6px solid #1968B9;
+    }
+
+    &-input{
+        width: 100%; 
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid #1968B9;
+        
+        
+    }
+
+    &-button{
+        margin: 5px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #00325E ;
+        color: white;
+        font-weight: bold;
+        font-size: 17px;
+        margin-left: 93vh;
+       
+    }
+
+}
+
+p {
+    margin-top: 30px;
+}
+
+label {
+    font-weight: bold;
+}

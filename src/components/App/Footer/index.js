@@ -10,7 +10,7 @@ const Footer = () => (
           <Link to="https://nsm09.casimages.com/img/2020/09/27//20092709225517254117047019.gif" className='footer-content'>Qui sommes-nous?</Link>
         </li>
         <li>
-          <Link to="https://nsm09.casimages.com/img/2020/09/27//20092709363417254117047035.gif" className='footer-content'>Contactez nous</Link>
+          <Link to="/contact-us" className='footer-content'>Contactez nous</Link>
         </li>
         <li>
           <Link to="https://nsm09.casimages.com/img/2020/09/27//20092709390317254117047041.gif" className='footer-content'>Mentions légales</Link>

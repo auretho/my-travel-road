@@ -4,7 +4,7 @@ import './styles.scss';
 
 
 
-const ContactFooter = () => {
+const Contact = () => {
     return (
         <div className="contact">
             <div className="contact-intro">
@@ -40,4 +40,4 @@ const ContactFooter = () => {
     }   
 
 
-export default ContactFooter;
+export default Contact;
