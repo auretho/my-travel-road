@@ -7,15 +7,15 @@ const Footer = () => (
     <div className='footer'>
       <ul className='footer-list'>
         <li>
-                  <Link to="https://nsm09.casimages.com/img/2020/09/27//20092709225517254117047019.gif" className='footer-content'>Qui sommes-nous?</Link>
+          <Link to="https://nsm09.casimages.com/img/2020/09/27//20092709225517254117047019.gif" className='footer-content'>Qui sommes-nous?</Link>
         </li>
         <li>
-                       <Link to="https://nsm09.casimages.com/img/2020/09/27//20092709363417254117047035.gif" className='footer-content'>Contactez nous</Link>
-              </li>
-        <li>
-                   <Link to="https://nsm09.casimages.com/img/2020/09/27//20092709390317254117047041.gif" className='footer-content'>Mentions légales</Link>
+          <Link to="/contact-us" className='footer-content'>Contactez nous</Link>
         </li>
-                </ul>
+        <li>
+          <Link to="https://nsm09.casimages.com/img/2020/09/27//20092709390317254117047041.gif" className='footer-content'>Mentions légales</Link>
+        </li>
+      </ul>
            </div>
   );
 

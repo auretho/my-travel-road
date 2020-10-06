@@ -10,6 +10,7 @@ import EditProfil from '../Connected/EditProfil';
 import ConsultProfil from '../Connected/ConsultProfil'
 import Home from '../Connected/Home';
 import './styles.scss';
+import Contact from './Footer/Contact';
 
 const App = ({ checkLoginAuth }) => {
   useEffect(() => {
@@ -30,8 +31,12 @@ const App = ({ checkLoginAuth }) => {
       <Route path="/profile">
         <Profile />
       </Route>
-
-      <Footer />
+      
+        <Footer />
+      <Route path="/contact-us">
+        <Contact />
+      </Route>
+      
     </div>
   );
 };
