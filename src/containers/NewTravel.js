@@ -15,11 +15,9 @@ const mapDispatch = (dispatch) => ({
       dispatch(toggleNewStepButton());
     },
 
-    handleChange: (value, name) => {
-      const object = {
-        [name]: value,
-      };
-      dispatch(newStepInputChange(object));
+    handleChange: (text) => {
+      console.log(text);
+      dispatch(newStepInputChange(text));
     },
 
     handleSubmit: () => {

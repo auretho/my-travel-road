@@ -1,7 +1,7 @@
 import { TOGGLE_NEWSTEP_BUTTON, NEWSTEP_INPUT_CHANGE, NEWSTEP_FORM_SUBMIT } from '../actions/newStep-actions';
 
 const initialState = {
-    name: 'Mexique',
+    location: 'Mexique',
     continent: 'Amérique latine',
     departure: '20 janvier 2019', 
     opened: false,  

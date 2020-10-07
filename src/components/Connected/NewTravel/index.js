@@ -7,11 +7,15 @@ import data from './data';
 
 import './style.scss';
 
-const NewTravel = ({name, continent, departure, step, opened, onToggle, handleChange, handleSubmit}) => {
+const NewTravel = ({location, continent, departure, step, opened, onToggle, handleChange, handleSubmit}) => {
 
     const handleInputChange = (evt) => {
-        handleChange(evt.target.value, name);
+        const { name, value } = evt.target;
+        handleChange({
+            [name]: value,
+        });
       };
+
     const [ activeLocation, setActiveLocation ] = React.useState(null);
       
     return(
@@ -19,7 +23,7 @@ const NewTravel = ({name, continent, departure, step, opened, onToggle, handleCh
             <div className={opened ? 'newTravel-closed' : 'newTravel'}>
                 <div className="top-block">
                     <div>
-                        <h1 className="newTravel-title">{name}</h1>
+                        <h1 className="newTravel-title">{location}</h1>
                         <h3 className="newTravel-continent">Continent: {continent}</h3>
                         <h4 className="newTravel-departure">Date de départ: {departure}</h4>
                     </div>
