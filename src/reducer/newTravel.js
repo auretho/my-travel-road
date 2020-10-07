@@ -1,15 +1,22 @@
-import { TOGGLE_NEWSTEP_BUTTON, NEWSTEP_INPUT_CHANGE, NEWSTEP_FORM_SUBMIT } from '../actions/newStep-actions';
+import { TOGGLE_NEWSTEP_BUTTON, NEWSTEP_INPUT_CHANGE, NEWSTEP_FORM_SUBMIT, TRAVEL_INPUT_CHANGE, TRAVEL_FORM_SUBMIT } from '../actions/travel-actions';
 
 const initialState = {
-    location: 'Mexique',
-    continent: 'Amérique latine',
-    departure: '20 janvier 2019', 
+    id: '',
+    location: '',
+    coverPic: '',
+    description: '',
+    country: '',
+    city: '',
+    departure: '', 
+    arrival: '',
     opened: false,  
     step: {
+        image: '',
+        description: '',
         country: '',
         city: '',
         place: '',
-        stepNb: 1,
+        stepNb: '',
         departure: '',
         arrival: '',
     }, 
@@ -31,6 +38,15 @@ const newTravel = (state = initialState, action = {}) => {
                 }
             };
         case NEWSTEP_FORM_SUBMIT:
+            return {
+                ...state,
+            };
+        case TRAVEL_INPUT_CHANGE:
+            return {
+                ...state,
+                ...action.payload,
+            };
+        case TRAVEL_FORM_SUBMIT:
             return {
                 ...state,
             };

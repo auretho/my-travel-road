@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import NewTravel from '../components/Connected/NewTravel';
-import { toggleNewStepButton, newStepInputChange, newStepFormSubmit} from '../actions/newStep-actions';
+import { toggleNewStepButton, newStepInputChange, newStepFormSubmit} from '../actions/travel-actions';
 
 const mapState = (state) => ({
     location: state.newTravel.location,

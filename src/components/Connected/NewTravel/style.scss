@@ -17,7 +17,7 @@
     z-index: -1;
     
     &-title{
-        font-size: 2em;
+        font-size: 1em;
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -80,7 +80,7 @@
 .newStep{
     position: relative;
     z-index: 2;
-    top: -450px;
+    top: -300px;
     margin: auto;
     background-color: lightskyblue;
     width: 30%;
@@ -103,11 +103,16 @@
         justify-content: space-between;
     }
 
-    .newStep-form span{
+    .newStep-form h1{
         font-weight: bold;
         align-self: center;
         color: #fff;
+        font-size: 1em;
         text-shadow: 1px 1px 2px grey;
+    }
+
+    .newStep-form span{
+        color: red;
     }
 
     &-input{

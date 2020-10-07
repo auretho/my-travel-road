@@ -4,8 +4,8 @@ import ConsultProfil from './ConsultProfil';
 import EditProfil from './EditProfil';
 import Home from './Home';
 import NewTravel from '../../containers/NewTravel';
+import TravelName from '../../containers/TravelName';
 import Profile from './Profile';
-import TravelName from '../Connected/NewTravel/TravelName';
 import './styles.scss';
 
 

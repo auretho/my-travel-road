@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
 import "@fortawesome/fontawesome-free/js/all";
 
 import data from './data';
-import TravelName from './TravelName';
 
 import './style.scss';
 
 
-const NewTravel = ({location, continent, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
+const NewTravel = ({location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
 
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
@@ -33,7 +31,7 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
                 <div className="top-block">
                     <div>
                         <h1 className="newTravel-title">{location}</h1>
-                        <h3 className="newTravel-continent">Continent: {continent}</h3>
+                        <h3 className="newTravel-continent">Pays de départ: {country}</h3>
                         <h4 className="newTravel-departure">Date de départ: {departure}</h4>
                     </div>
 
@@ -89,7 +87,7 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
             <div className={opened ? 'newStep' : 'newStep-closed'}>
                 <form className="newStep-form" onSubmit={handleInputSubmit}>
                     <label>
-                    <span>Pays</span>
+                    <h1>Pays<span>*</span></h1>
                         <input type="text" 
                                name="country" 
                                className="newStep-input" 
@@ -97,8 +95,10 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
                                value={step.country} 
                                onChange={handleInputChange}/>
                     </label>
+    {/* ========================================================                  
+    !!A METTRE EN V2!!
                     <label>
-                    <span>Ville</span>
+                    <h1>Ville</h1>
                         <input type="text" 
                                name="city" 
                                className="newStep-input" 
@@ -107,7 +107,7 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
                                onChange={handleInputChange}/>
                     </label>
                     <label>
-                    <span>Lieu</span>
+                    <h1>Lieu</h1>
                         <input type="text" 
                                name="place" 
                                className="newStep-input" 
@@ -115,8 +115,9 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
                                value={step.place} 
                                onChange={handleInputChange}/>
                     </label>
+
                     <label>
-                    <span>Etape n°</span>
+                    <h1>Etape n°</h1>
                         <input type="number" 
                                name="stepNb"
                                className="newStep-input" 
@@ -124,8 +125,9 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
                                value={step.stepNb} 
                                onChange={handleInputChange}/>
                     </label>
+    ======================================================== */}
                     <label>
-                    <span>Date de départ</span>
+                    <h1>Date de départ<span>*</span></h1>
                         <input type="date" 
                                name="departure" 
                                className="newStep-input" 
@@ -134,7 +136,7 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
                                onChange={handleInputChange}/>
                     </label>
                     <label>
-                    <span>Date d'arrivée</span>
+                    <h1>Date d'arrivée</h1>
                         <input type="date" 
                                name="arrival" 
                                className="newStep-input" 
