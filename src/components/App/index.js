@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
 import Header from '../../containers/Header';
 import Footer from './Footer';
@@ -18,11 +18,19 @@ return (
       <Header />
 
       {!isLogged && (    
-      <Welcome />       
+        <Welcome />
       )}
       
       {isLogged && (
-      <Connected />
+        <Connected />
+      )}
+
+      {!isLogged && (    
+        <Redirect to="/login" />
+      )}
+      
+      {isLogged && (
+        <Redirect to="/home" />
       )}
 
         <Footer />
