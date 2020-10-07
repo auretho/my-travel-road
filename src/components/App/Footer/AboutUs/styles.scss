@@ -1,0 +1,36 @@
+.about{
+    
+    text-align: center;
+
+
+    &-avatar{
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        border: solid 3px black;
+
+       
+    }
+
+    &-elements{
+        
+        
+    }
+
+    &-elt1{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-elt2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-elt3{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+}
+

@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Welcome from '../Welcome';
 import Contact from './Footer/Contact';
 import Connected from '../Connected';
+import AboutUs from './Footer/AboutUs'
 import './styles.scss';
 
 const App = ({ checkLoginAuth, isLogged } ) => {
@@ -30,6 +31,8 @@ return (
         <Contact />
       </Route>
 
+      
+      <AboutUs />
     </div>
   );
 };
