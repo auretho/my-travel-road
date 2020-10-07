@@ -9,8 +9,11 @@ import './style.scss';
 
 const NewTravel = ({name, continent, departure, step, opened, onToggle, handleChange, handleSubmit}) => {
 
+    const handleInputChange = (evt) => {
+        handleChange(evt.target.value, name);
+      };
     const [ activeLocation, setActiveLocation ] = React.useState(null);
-
+      
     return(
         <div className="travel">
             <div className={opened ? 'newTravel-closed' : 'newTravel'}>
@@ -24,7 +27,7 @@ const NewTravel = ({name, continent, departure, step, opened, onToggle, handleCh
                     <button className={opened ? 'newTravel-create opened' : 'newTravel-create'}
                             type="button"
                             onClick={onToggle}>
-                        <i className="fas fa-map-marked-alt fa-lg"></i>
+                        <i className="fas fa-map-marked-alt fa-2x"></i>
                         <span>Nouvelle étape</span>
                     </button>
 
@@ -74,27 +77,57 @@ const NewTravel = ({name, continent, departure, step, opened, onToggle, handleCh
                 <form className="newStep-form">
                     <label>
                     <span>Pays</span>
-                        <input type="text" name="country" className="newStep-input" placeholder="Pays" value={step.country} onChange={handleChange}/>
+                        <input type="text" 
+                               name="country" 
+                               className="newStep-input" 
+                               placeholder="Pays" 
+                               value={step.country} 
+                               onChange={handleInputChange}/>
                     </label>
                     <label>
                     <span>Ville</span>
-                        <input type="text" name="city" className="newStep-input" placeholder="Ville" value={step.city} onChange={handleChange}/>
+                        <input type="text" 
+                               name="city" 
+                               className="newStep-input" 
+                               placeholder="Ville" 
+                               value={step.city} 
+                               onChange={handleInputChange}/>
                     </label>
                     <label>
                     <span>Lieu</span>
-                        <input type="text" name="place" className="newStep-input" placeholder="Lieu" value={step.place} onChange={handleChange}/>
+                        <input type="text" 
+                               name="place" 
+                               className="newStep-input" 
+                               placeholder="Lieu" 
+                               value={step.place} 
+                               onChange={handleInputChange}/>
                     </label>
                     <label>
                     <span>Etape n°</span>
-                        <input type="number" name="stepNb" className="newStep-input" placeholder="Etape n°" value={step.stepNb} onChange={handleChange}/>
+                        <input type="number" 
+                               name="stepNb"
+                               className="newStep-input" 
+                               placeholder="Etape n°" 
+                               value={step.stepNb} 
+                               onChange={handleInputChange}/>
                     </label>
                     <label>
                     <span>Date de départ</span>
-                        <input type="date" name="departure" className="newStep-input" placeholder="Date de départ" value={step.departure} onChange={handleChange}/>
+                        <input type="date" 
+                               name="departure" 
+                               className="newStep-input" 
+                               placeholder="Date de départ" 
+                               value={step.departure} 
+                               onChange={handleInputChange}/>
                     </label>
                     <label>
                     <span>Date d'arrivée</span>
-                        <input type="date" name="arrival" className="newStep-input" placeholder="Date d'arrivée" value={step.arrival} onChange={handleChange}/>
+                        <input type="date" 
+                               name="arrival" 
+                               className="newStep-input" 
+                               placeholder="Date d'arrivée" 
+                               value={step.arrival} 
+                               onChange={handleInputChange }/>
             </label>
 
                     <button className="newStep-button">Ajouter nouvelle étape</button>

@@ -7,12 +7,12 @@ const initialState = {
     opened: false,  
     step: {
         country: '',
-        city: 'Nice',
-        place: 'place Masséna',
-        stepNb: 3,
-        departure: '11/06/2018',
-        arrival: '21/06/2018',
-      }, 
+        city: '',
+        place: '',
+        stepNb: 1,
+        departure: '',
+        arrival: '',
+    }, 
 };
 
 const newTravel = (state = initialState, action = {}) => {
@@ -25,7 +25,10 @@ const newTravel = (state = initialState, action = {}) => {
         case NEWSTEP_INPUT_CHANGE:
             return {
                 ...state,
-                ...action.payload,
+                step:{
+                    ...state.step,
+                    ...action.payload,
+                }
             };
         default:
             return state;

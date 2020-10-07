@@ -27,6 +27,10 @@
         font-weight: bold;
     }
 
+    &-departure{
+        font-size: 1em;
+    }
+
     &-create{
         display: flex;
         align-self: center;
@@ -34,8 +38,9 @@
         color: #FFF;
         font-size: 1em;
         font-weight: bold;
-        padding: .7em 1em;
+        padding: .3em 1em;
         border-radius: 3px;
+        
         &.opened{
             display: none;
         }
@@ -47,6 +52,7 @@
 
     &-create span{
         align-self: center;
+        color: #FFF;
     } 
 }
 
@@ -57,9 +63,10 @@
 
 .fa-map-marked-alt{
     color: #fff;
-    padding-right: .5em;
-    height: 1.5em;
+    padding-right: .2em;
     width: 110px;
+    align-self: center;
+
 }
 
 .steps-select{
@@ -99,6 +106,8 @@
     .newStep-form span{
         font-weight: bold;
         align-self: center;
+        color: #fff;
+        text-shadow: 1px 1px 2px grey;
     }
 
     &-input{

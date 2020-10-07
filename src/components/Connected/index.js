@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import ConsultProfil from './ConsultProfil';
 import EditProfil from './EditProfil';
 import Home from './Home';
-//import NewTravel from './NewTravel';
+import NewTravel from '../../containers/NewTravel';
 import Profile from './Profile';
 import './styles.scss';
 
@@ -25,9 +25,9 @@ const Connected = () => (
             <Home />
         </Route>
 
-        {/* <Route path="/create-travel">
+        <Route path="/create-travel">
             <NewTravel />
-        </Route> */}
+        </Route>
 
         <Route path="/public-profil">
             <Profile />
