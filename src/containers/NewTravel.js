@@ -16,7 +16,6 @@ const mapDispatch = (dispatch) => ({
     },
 
     handleChange: (text) => {
-      console.log(text);
       dispatch(newStepInputChange(text));
     },
 

@@ -1,0 +1,38 @@
+.travel{
+    height: 70vh;
+    
+    &-form{
+        display: flex;
+        flex-direction: column;
+        background-color: lightblue;
+        width: 60%;
+        margin: auto;
+        margin-top: 5em;
+        padding: 2em;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #777; 
+
+    }
+
+    &-form label{
+        width: 80%;
+        margin: 1em auto;
+
+    }
+
+    &-form h1{
+        color: #fff;
+        font-size: 1em;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px grey;
+    }
+
+    &-form span{
+        color: red;
+    }
+
+    &-form input{
+        width: 100%;
+        padding: .3em;
+    }
+}

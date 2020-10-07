@@ -15,7 +15,7 @@ const Home = ({firstname}) => (
     <div className="home">
         <div className="welcome-message">
             <h1>Bienvenue {firstname}!</h1>
-            <Link to="/create-travel">
+            <Link to="/travel">
                 <button className="new-travel">
                     Créer un voyage
                 </button>

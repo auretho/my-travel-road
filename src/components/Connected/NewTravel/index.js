@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
 import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
 import "@fortawesome/fontawesome-free/js/all";
 
 import data from './data';
+import TravelName from './TravelName';
 
 import './style.scss';
 
-const NewTravel = ({location, continent, departure, step, opened, onToggle, handleChange, handleSubmit}) => {
+
+const NewTravel = ({location, continent, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
 
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
@@ -138,8 +142,7 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
                                value={step.arrival} 
                                onChange={handleInputChange }/>
             </label>
-
-                    <button  className="newStep-button">Ajouter nouvelle étape</button>
+                    <button className="newStep-button">Ajouter nouvelle étape</button>
                 </form>
             </div>
         </div>
