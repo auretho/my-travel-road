@@ -1,4 +1,6 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
+
 import './style.scss';
 
 const TravelName = ({location, country, departure, handleChange, handleSubmit}) => {
@@ -10,8 +12,8 @@ const TravelName = ({location, country, departure, handleChange, handleSubmit}) 
       };
 
     const handleInputSubmit = (evt) => {
-    evt.preventDefault();
-    handleSubmit();
+        evt.preventDefault();
+        handleSubmit();
     };
 
     return(
