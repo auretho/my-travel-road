@@ -11,20 +11,16 @@ const Header = ( { isLogged } ) => {
     return (
     <div className="header">
 
-        <div className="header-left">
-            <Link to="/home">
-                <img src={logo} alt="logo My Travel Road" className="header-logo" />
-            </Link>
-            {/* <p className="header-title">My Travel Road</p> */}
+        <div className="header-left">          
+            {isLogged ? 
+                <Link to="/home"> <img src={logo} alt="logo My Travel Road" className="header-logo" /> </Link>
+                    :                
+                <Link to="/login"> <img src={logo} alt="logo My Travel Road" className="header-logo" /> </Link>
+            }      
         </div>
 
         <div className="header-right">
-            {isLogged && (
-                <Nav />
-            )}
-            {!isLogged && (
-                <Login />
-            )}
+            {isLogged ? <Nav /> : <Login /> }
         </div>
     </div>
   );
