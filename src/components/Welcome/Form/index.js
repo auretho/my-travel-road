@@ -56,7 +56,7 @@ const Form = ({
                         </div>
                         
                         <div className="form-buttons">
-                            <Link to='/'>
+                            <Link to='/login'>
                                 <button className="form-button cancel" type="button">Annuler</button>
                             </Link>
                             <button className="form-button create" type="submit">Créer mon compte</button>

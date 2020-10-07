@@ -17,21 +17,9 @@ return (
     <div className="app">
       <Header />
 
-      {!isLogged && (    
-        <Welcome />
-      )}
-      
-      {isLogged && (
-        <Connected />
-      )}
+      { isLogged ? <Connected />  : <Welcome /> }
 
-      {!isLogged && (    
-        <Redirect to="/login" />
-      )}
-      
-      {isLogged && (
-        <Redirect to="/home" />
-      )}
+      { isLogged ? <Redirect to="/home" /> : <Redirect to="/login" /> }
 
         <Footer />
       <Route path="/contact-us">
