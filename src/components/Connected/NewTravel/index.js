@@ -31,7 +31,7 @@ const NewTravel = ({location, country, departure, step, opened, onToggle, handle
                 <div className="top-block">
                     <div>
                         <h1 className="newTravel-title">{location}</h1>
-                        <h3 className="newTravel-continent">Pays de départ: {country}</h3>
+                        <h3 className="newTravel-country">Pays de départ: {country}</h3>
                         <h4 className="newTravel-departure">Date de départ: {departure}</h4>
                     </div>
 

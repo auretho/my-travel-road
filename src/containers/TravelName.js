@@ -6,6 +6,7 @@ const mapState = (state) => ({
     location: state.newTravel.location,
     country: state.newTravel.country,
     departure: state.newTravel.departure,
+    redirection: state.newTravel.redirection,
 });
 
 const mapDispatch = (dispatch) => ({

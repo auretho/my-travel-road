@@ -1,4 +1,4 @@
-import { TOGGLE_NEWSTEP_BUTTON, NEWSTEP_INPUT_CHANGE, NEWSTEP_FORM_SUBMIT, TRAVEL_INPUT_CHANGE, TRAVEL_FORM_SUBMIT } from '../actions/travel-actions';
+import { TOGGLE_NEWSTEP_BUTTON, NEWSTEP_INPUT_CHANGE, NEWSTEP_FORM_SUBMIT, TRAVEL_INPUT_CHANGE, TRAVEL_FORM_SUBMIT, TRAVEL_SUCCESS, TRAVEL_ERROR } from '../actions/travel-actions';
 
 const initialState = {
     id: '',
@@ -10,6 +10,7 @@ const initialState = {
     departure: '', 
     arrival: '',
     opened: false,  
+    redirection: false,
     step: {
         image: '',
         description: '',
@@ -50,6 +51,16 @@ const newTravel = (state = initialState, action = {}) => {
             return {
                 ...state,
             };
+        case TRAVEL_SUCCESS:
+            return {
+                ...state,
+                redirection: true,
+        }
+        case TRAVEL_ERROR:
+            return {
+                ...state,
+                redirection: true,
+        }
         default:
             return state;
     }

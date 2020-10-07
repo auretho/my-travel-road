@@ -4,7 +4,7 @@ import { toggleNewStepButton, newStepInputChange, newStepFormSubmit} from '../ac
 
 const mapState = (state) => ({
     location: state.newTravel.location,
-    continent: state.newTravel.continent,
+    country: state.newTravel.country,
     departure: state.newTravel.departure,
     opened: state.newTravel.opened,
     step: state.newTravel.step, 

@@ -1,9 +1,8 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
-
+import { Redirect } from 'react-router-dom'
 import './style.scss';
 
-const TravelName = ({location, country, departure, handleChange, handleSubmit}) => {
+const TravelName = ({location, country, departure, handleChange, handleSubmit, redirection}) => {
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
         handleChange({
@@ -15,6 +14,8 @@ const TravelName = ({location, country, departure, handleChange, handleSubmit}) 
         evt.preventDefault();
         handleSubmit();
     };
+
+    if (redirection) return <Redirect to="/create-travel" />;
 
     return(
     <div className="travel">

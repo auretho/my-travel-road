@@ -17,12 +17,12 @@
     z-index: -1;
     
     &-title{
-        font-size: 1em;
+        font-size: 2em;
         font-weight: bold;
         text-transform: uppercase;
     }
 
-    &-continent{
+    &-country{
         font-size: 1.2em;
         font-weight: bold;
     }
@@ -59,6 +59,7 @@
 .top-block{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 2em;
 }
 
 .fa-map-marked-alt{
@@ -80,7 +81,7 @@
 .newStep{
     position: relative;
     z-index: 2;
-    top: -300px;
+    top: -400px;
     margin: auto;
     background-color: lightskyblue;
     width: 30%;
