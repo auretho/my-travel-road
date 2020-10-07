@@ -143,7 +143,7 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
 export default NewTravel;
 
 NewTravel.propTypes = {
-    name: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
     continent: PropTypes.string.isRequired,
     departure: PropTypes.string.isRequired,
     step: PropTypes.shape({

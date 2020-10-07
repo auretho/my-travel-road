@@ -3,7 +3,7 @@ import NewTravel from '../components/Connected/NewTravel';
 import { toggleNewStepButton, newStepInputChange, newStepFormSubmit} from '../actions/newStep-actions';
 
 const mapState = (state) => ({
-    name: state.newTravel.name,
+    location: state.newTravel.location,
     continent: state.newTravel.continent,
     departure: state.newTravel.departure,
     opened: state.newTravel.opened,

@@ -62,5 +62,5 @@ const Home = ({firstname}) => (
 export default Home;
 
 Home.propTypes = {
-    firstname: PropTypes.string.isRequired,
+    firstname: PropTypes.string,
 }
