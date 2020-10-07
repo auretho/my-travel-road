@@ -16,6 +16,11 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
         });
       };
 
+      const handleInputSubmit = (evt) => {
+        evt.preventDefault();
+        handleSubmit();
+      };
+
     const [ activeLocation, setActiveLocation ] = React.useState(null);
       
     return(
@@ -78,7 +83,7 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
             </div>
 
             <div className={opened ? 'newStep' : 'newStep-closed'}>
-                <form className="newStep-form">
+                <form className="newStep-form" onSubmit={handleInputSubmit}>
                     <label>
                     <span>Pays</span>
                         <input type="text" 
@@ -134,7 +139,7 @@ const NewTravel = ({location, continent, departure, step, opened, onToggle, hand
                                onChange={handleInputChange }/>
             </label>
 
-                    <button className="newStep-button">Ajouter nouvelle étape</button>
+                    <button  className="newStep-button">Ajouter nouvelle étape</button>
                 </form>
             </div>
         </div>

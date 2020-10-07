@@ -30,6 +30,10 @@ const newTravel = (state = initialState, action = {}) => {
                     ...action.payload,
                 }
             };
+        case NEWSTEP_FORM_SUBMIT:
+            return {
+                ...state,
+            };
         default:
             return state;
     }

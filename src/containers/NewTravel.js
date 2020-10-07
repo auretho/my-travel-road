@@ -23,5 +23,6 @@ const mapDispatch = (dispatch) => ({
     handleSubmit: () => {
       dispatch(newStepFormSubmit());
     },
+    
 });
 export default connect(mapState, mapDispatch)(NewTravel);
