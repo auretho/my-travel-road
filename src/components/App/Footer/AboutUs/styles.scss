@@ -11,32 +11,25 @@
  
     }
 
-
-
     &-scrum {
    
         padding: 20px;
-       
-     
     }
 
 
     &-back{
    
         padding: 20px;
-        
     }
 
     &-front{
    
         padding: 20px;
-        
     }
 
     &-master{
    
         padding: 20px;
-        
     }
 
     &-elt1{
@@ -44,42 +37,39 @@
         flex-wrap: wrap;
         margin-top: 60px;
         justify-content: center;
-        
-      
     }
 
     &-elt2{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-     
-   
     }
 
     &-elt3{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-     
-     
+    }
+
+    &-title{
+        //border-radius: 50px;
+        //border: solid 3px #323232;
+        //padding: 20px;  
+        font-weight: bold; 
+        color: #323232;
+        padding: 20px;
+        width: 50vw;
+        margin:auto;
+        border-bottom: solid 3px purple;
+    
+    }
+
+    &-name{
+        font-weight: bold;
     }
 }
 
-h2{
-    //border-radius: 50px;
-    //border: solid 3px #323232;
-    //padding: 20px;  
-    font-weight: bold; 
-    color: #323232;
-    padding: 20px;
-    width: 50vw;
-    margin:auto;
-    border-bottom: solid 3px purple;
-    
-    
-}
 
-h4{
-    font-weight: bold;
-}
+
+
 
