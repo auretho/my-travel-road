@@ -1,4 +1,14 @@
-import { TOGGLE_NEWSTEP_BUTTON, NEWSTEP_INPUT_CHANGE, NEWSTEP_FORM_SUBMIT, TRAVEL_INPUT_CHANGE, TRAVEL_FORM_SUBMIT, TRAVEL_SUCCESS, TRAVEL_ERROR } from '../actions/travel-actions';
+import { TRAVEL_INPUT_CHANGE, 
+         TRAVEL_FORM_SUBMIT, 
+         TRAVEL_SUCCESS, 
+         TRAVEL_ERROR,
+         TOGGLE_NEWSTEP_BUTTON, 
+         NEWSTEP_INPUT_CHANGE, 
+         NEWSTEP_FORM_SUBMIT, 
+         NEWSTEP_SUCCESS,
+         NEWSTEP_ERROR 
+     } from '../actions/travel-actions';
+         
 
 const initialState = {
     id: '',
@@ -11,37 +21,23 @@ const initialState = {
     arrival: '',
     opened: false,  
     redirection: false,
-    step: {
+    step: 
+        {
         image: '',
         description: '',
         country: '',
         city: '',
         place: '',
-        stepNb: '',
+        // stepNb: ,
         departure: '',
         arrival: '',
-    }, 
+        },
+    newStep: [],
 };
 
 const newTravel = (state = initialState, action = {}) => {
     switch (action.type) {
-        case TOGGLE_NEWSTEP_BUTTON:
-            return {
-                ...state,
-                opened: true,
-            };
-        case NEWSTEP_INPUT_CHANGE:
-            return {
-                ...state,
-                step:{
-                    ...state.step,
-                    ...action.payload,
-                }
-            };
-        case NEWSTEP_FORM_SUBMIT:
-            return {
-                ...state,
-            };
+        //===================TRAVEL ACTIONS ===================
         case TRAVEL_INPUT_CHANGE:
             return {
                 ...state,
@@ -55,12 +51,47 @@ const newTravel = (state = initialState, action = {}) => {
             return {
                 ...state,
                 redirection: true,
-        }
+            };
         case TRAVEL_ERROR:
             return {
                 ...state,
                 redirection: true,
-        }
+            };
+        //===================NEWSTEP ACTIONS ===================
+        case TOGGLE_NEWSTEP_BUTTON:
+            return {
+                ...state,
+                opened: true,
+                redirection: false,
+            };
+        case NEWSTEP_INPUT_CHANGE:
+            return {
+                ...state,
+                step:{
+                    ...state.step,
+                    ...action.payload,
+                }
+            };
+        case NEWSTEP_FORM_SUBMIT:
+            return {
+                ...state,
+            };
+        case NEWSTEP_SUCCESS:
+            return {
+                ...state,
+                opened: false,
+                redirection: true,
+                newStep: [...action.payload],
+                step:{country: '', departure: '', arrival: ''},
+            };
+        case NEWSTEP_ERROR:
+            return {
+                ...state,
+                opened: false,
+                redirection: true,
+                step:{country: '', departure: '', arrival: ''},
+            };
+        
         default:
             return state;
     }
