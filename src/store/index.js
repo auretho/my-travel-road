@@ -2,6 +2,7 @@ import { createStore, compose, applyMiddleware } from 'redux';
 
 import createAccountMiddleware from '../middleware/createAccountMiddleware';
 import loginMiddleware from '../middleware/loginMiddleware';
+import editProfileMiddleware from '../middleware/editProfileMiddleware';
 
 import reducer from '../reducer';
 
@@ -12,6 +13,7 @@ const enhancers = composeEnhancers(
     applyMiddleware(
         createAccountMiddleware,
         loginMiddleware,
+        editProfileMiddleware,
     ),
 );
 

@@ -1,16 +1,16 @@
 .consult{
-    background-image: url("cover.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    //height: 300%;
-    //border-radius: 10px;
-    //padding-top: inherit;
-    //padding: 20px 10vh;
-    padding: 1rem 5rem 3rem 5rem;
-
-    background-position: center;
     
-    
+    &-cover{
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    &-content {
+        border-radius: 3%;
+        width: 800px;
+        height: 600px;
+        border: solid 3px black;
+     }
 
     &-profil{
         border: solid 3px black;
@@ -80,7 +80,7 @@
     }
 
     &-name{
-        color: 	#ffffff;
+        color: 	red;
         font-weight: bold;
         font-size: 35px;
         margin-left: 20vh;

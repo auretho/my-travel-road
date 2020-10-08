@@ -5,7 +5,7 @@ import {  FORM_INPUT_CHANGE,
         } from '../actions/createAccount-actions';
 
 const initialState = {
-        user: {},
+        
         firstname: '',
         lastname: '',
         email: '',
