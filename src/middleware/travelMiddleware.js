@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { TRAVEL_FORM_SUBMIT, NEWSTEP_FORM_SUBMIT, travelSuccess, travelError, stepSuccess, stepError} from '../actions/travel-actions';
-import newTravel from '../reducer/newTravel';
 
 
 export default (store) => (next) => (action) => {

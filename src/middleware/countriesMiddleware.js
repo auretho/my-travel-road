@@ -13,16 +13,14 @@ export default (store) => (next) => (action) => {
             url:  'https://restcountries.eu/rest/v2/',
           })
           .then((res) => {
-            const serverResponse = res.data;
-            const datas = serverResponse;
-            console.log(datas)
-            console.log(store.getState())
-            console.log(datas.find((country) => {
+            const APIdatas = res.data;
+            const selectedCountry = APIdatas.find((country) => {
               return(
               country.name === store.getState().newTravel.step.countryList
               )} 
-            ))
-            dispatch(fetchCountriesSuccess(serverResponse));
+            );
+            console.log(selectedCountry);
+            dispatch(fetchCountriesSuccess(APIdatas));
           })
           .catch((err) => {
             console.error(err);

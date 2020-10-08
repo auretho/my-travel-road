@@ -15,7 +15,7 @@ import './style.scss';
 const NewTravel = ({fetchCountries, location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
     useEffect(() => {
         fetchCountries();
-    } /*,[] */);
+    });
 
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;

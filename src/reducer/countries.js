@@ -1,7 +1,7 @@
 import { FETCH_COUNTRIES_SUCCESS, FETCH_COUNTRIES_ERROR } from '../actions/countries-actions';
 
 const initialState = {
-    countryList: [],
+    countryData: {},
     error: null,
 };
 
@@ -10,14 +10,15 @@ switch (action.type) {
   case FETCH_COUNTRIES_SUCCESS:
     return {
       ...state,
-      error: 'Impossible de récupérer le pays souhaité',
+      countryData: {...action.payload},
+      error: null,
+      
     };
     
-  case FETCH_COUNTRIES_ERROR:
-    return {
-      ...state,
-      countryList: [...action.payload],
-      error: null,
+    case FETCH_COUNTRIES_ERROR:
+      return {
+        ...state,
+        error: 'Impossible de récupérer le pays souhaité',
     };
     
   default:
