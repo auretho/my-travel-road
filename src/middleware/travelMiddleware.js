@@ -5,7 +5,6 @@ import { TRAVEL_FORM_SUBMIT,
          NEWSTEP_FORM_SUBMIT, 
          newStepSuccess, 
          newStepError} from '../actions/travel-actions';
-import newTravel from '../reducer/newTravel';
 
 
 export default (store) => (next) => (action) => {
