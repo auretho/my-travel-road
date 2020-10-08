@@ -10,11 +10,18 @@ export default (store) => (next) => (action) => {
         case FETCH_COUNTRIES:
           axios({
             method: 'get',
-            url:  'https://restcountries.eu/rest/v2/alpha/fr',
+            url:  'https://restcountries.eu/rest/v2/',
           })
           .then((res) => {
             const serverResponse = res.data;
-            console.log(serverResponse);
+            const datas = serverResponse;
+            console.log(datas)
+            console.log(store.getState())
+            console.log(datas.find((country) => {
+              return(
+              country.name === store.getState().newTravel.step.countryList
+              )} 
+            ))
             dispatch(fetchCountriesSuccess(serverResponse));
           })
           .catch((err) => {

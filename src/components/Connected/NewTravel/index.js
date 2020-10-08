@@ -101,7 +101,7 @@ const NewTravel = ({fetchCountries, location, country, departure, step, opened, 
                         {
                         countryList.map((country) => {
                             return (
-                                <option value={country}>{country}</option>
+                                <option key={country} value={country}>{country}</option>
                             );    
                         })
                         }
@@ -171,13 +171,13 @@ export default NewTravel;
 
 NewTravel.propTypes = {
     location: PropTypes.string.isRequired,
-    continent: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
     departure: PropTypes.string.isRequired,
     step: PropTypes.shape({
         country: PropTypes.string.isRequired,
         city: PropTypes.string.isRequired,
         place: PropTypes.string,
-        stepNb: PropTypes.number,
+        // stepNb: PropTypes.number,
         departure: PropTypes.string.isRequired,
         arrival: PropTypes.string.isRequired,
     })
