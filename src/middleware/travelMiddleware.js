@@ -10,7 +10,7 @@ import { TRAVEL_FORM_SUBMIT,
 export default (store) => (next) => (action) => {
     next(action);
     const { dispatch } = store;
-    console.log('je veux laisser passer cette action', action)
+    // console.log('je veux laisser passer cette action', action)
     switch (action.type){
         case TRAVEL_FORM_SUBMIT:
           axios({

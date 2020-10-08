@@ -12,14 +12,10 @@ import countryList from './countryList';
 import './style.scss';
 
 
-<<<<<<< HEAD
-const NewTravel = ({location, country, departure, step, newStep, opened, onToggle, handleChange, handleSubmit} ) => {
-=======
 const NewTravel = ({fetchCountries, location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
     useEffect(() => {
         fetchCountries();
     });
->>>>>>> newTravel-feature
 
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
@@ -181,14 +177,8 @@ NewTravel.propTypes = {
         country: PropTypes.string,
         city: PropTypes.string,
         place: PropTypes.string,
-<<<<<<< HEAD
-        stepNb: PropTypes.number,
-        departure: PropTypes.string,
-        arrival: PropTypes.string,
-=======
         // stepNb: PropTypes.number,
         departure: PropTypes.string.isRequired,
         arrival: PropTypes.string.isRequired,
->>>>>>> newTravel-feature
     })
 };
