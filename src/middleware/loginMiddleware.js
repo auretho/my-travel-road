@@ -16,9 +16,10 @@ import {  CHECK_AUTH,
     switch (action.type){
         case CHECK_AUTH:
         axios({
+          //headers: { Authorization: `Bearer ${token}`},
           method: 'post',
-          url: 'http://localhost:3001/isLogged',
-          withCredentials: true, // le serveur doit savoir qui je suis pour me répondre
+          url: 'http://127.0.0.1:8000/isLogged',
+          //withCredentials: true, // le serveur doit savoir qui je suis pour me répondre
         })
           .then((res) => {
             const { data } = res;
@@ -26,6 +27,7 @@ import {  CHECK_AUTH,
             if (data.logged) {
               dispatch(loginSuccess(data));
             }
+
             // sinon
           })
           .catch((err) => {
@@ -35,16 +37,34 @@ import {  CHECK_AUTH,
         case LOGIN_INPUT_SUBMIT:
             axios({
               method: 'post',
-              url:  'http://localhost:3001/login',
+              url:  'http://127.0.0.1:8000/api/login_check',
               data: {
-                  email: store.getState().login.email,
+                  username: store.getState().login.email,
                   password: store.getState().login.password,
-              }, 
-              withCredentials: true, 
+              },
+              //withCredentials: true,
             })            
             .then((res) => {
               const serverResponse = res.data;
               console.log(serverResponse);
+
+              //* =========== */
+              //stockage du token envoyé par symfo lors de la connexion
+              localStorage.setItem('token', serverResponse.token);
+              //requête axios pour la page home
+              axios({
+                headers: { Authorization: `Bearer ${serverResponse.token}` },
+                method: 'get',
+                url:  'http://127.0.0.1:8000/api/home',
+                //withCredentials: true,
+              })
+              .then((res) => {
+                const serverResponse = res.data;
+                console.log(res.data);
+                dispatch(loginSuccess(serverResponse));
+              })
+              //* =========== */
+
               dispatch(loginSuccess(serverResponse));
             })
             .catch((err) => {
@@ -55,7 +75,7 @@ import {  CHECK_AUTH,
           case LOGIN_INPUT_LOGOUT:
             axios({
               method: 'post',
-              url: 'http://localhost:3001/logout',
+              url: 'http://127.0.0.1:8000/logout',
               withCredentials: true,
             })
             .then((res) => {

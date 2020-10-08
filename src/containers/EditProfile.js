@@ -20,10 +20,7 @@ const mapState =(state) => ({
 });
 
 const mapDispatch = (dispatch) => ({
-    handleInputChange: (value, name) => {
-        const text = {
-          [name]: value,
-        };
+    onInputChange: (text) => {
         dispatch(editUserChange(text));
     },
     onInputSubmit: () => {

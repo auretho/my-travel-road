@@ -12,8 +12,9 @@ export const editUserSubmit = () => ({
     type: EDIT_USER_SUBMIT,
 })
 
-export const editUserSuccess = () => ({
+export const editUserSuccess = (payload) => ({
     type: EDIT_USER_SUCCESS,
+    payload
 })
 
 export const editUserError = () => ({

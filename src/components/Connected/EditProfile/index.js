@@ -19,14 +19,20 @@ const EditProfile = ({
     cover,
     editMessage,
     onInputSubmit,
-    handleInputChange,
-
-
+    onInputChange,
+    
     }) => {
         const handleSubmit = (evt) => {
             evt.preventDefault();
             onInputSubmit();
-    };
+        };
+        const handleInputChange = (evt) => {
+            const { name, value } = evt.target;
+            onInputChange({
+                [name]: value,
+            });
+        };
+        
     return (
       <div className="edit">
           <main className="edit-main">
@@ -67,6 +73,7 @@ const EditProfile = ({
                     <button className="right-first-button" >Editer votre photo de couverture</button>                
                     </div>
                 </div>
+                
             
 
             <div className="right-button">
@@ -95,7 +102,7 @@ EditProfile.propTypes = {
     editMessage: PropTypes.string.isRequired,
 
     onInputSubmit: PropTypes.func.isRequired,
-    handleInputChange: PropTypes.func.isRequired,
+    onInputChange: PropTypes.func.isRequired,
 };
 
 export default EditProfile;

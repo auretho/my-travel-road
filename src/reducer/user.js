@@ -1,4 +1,4 @@
-import { LOGIN_SUCCESS, } from '../actions/login-actions';
+import { EDIT_USER_CHANGE } from '../actions/profile-actions';
 
 
 const initialState = {
@@ -11,6 +11,7 @@ const initialState = {
     description: "J'adoooore le jaune d'oeuf, je parcours le monde à la recherche du jaune d'oeuf ultime, suivez moi dans mes aventures mes COCO...ttes  ",
     cover: "",
     avatar: "",
+    currentPassword: "",
     password1: "",
     password2: "",
     editMessage:"",
@@ -18,21 +19,12 @@ const initialState = {
 
 const user = (state = initialState, action = {}) => {
     switch (action.type) {
-        case LOGIN_SUCCESS:
-            return {
-                ...state,
-                firstname: action.payload.firstname,
-                lastname: action.payload.lastname,
-                pseudo: action.payload.pseudo,
-                email: action.payload.email,
-                city: action.payload.city,
-                cityCode: action.payload.cityCode,
-                description: action.payload.description,
-                cover: action.payload.cover,
-                avatar: action.payload.avatar,
-                editMessage: action.payload.editMessage,
-            };
-        
+            case EDIT_USER_CHANGE:
+                return {
+                    ...state,
+                    ...action.payload,
+                };
+            
         default:
             return state;
     }
