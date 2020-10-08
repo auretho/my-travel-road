@@ -1,7 +1,7 @@
 import { FETCH_COUNTRIES_SUCCESS, FETCH_COUNTRIES_ERROR } from '../actions/countries-actions';
 
 const initialState = {
-    countryData: {},
+    countryData: [],
     error: null,
 };
 
