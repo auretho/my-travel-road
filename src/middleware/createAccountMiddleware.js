@@ -5,7 +5,7 @@ import {  FORM_INPUT_SUBMIT } from '../actions/createAccount-actions';
 export default (store) => (next) => (action) => {
     next(action);
     // const { dispatch } = store;
-    console.log('je veux laisser passer cette action', action)
+    // console.log('je veux laisser passer cette action', action)
     switch (action.type){
         case FORM_INPUT_SUBMIT:
           axios({

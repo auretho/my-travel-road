@@ -9,7 +9,7 @@ import data from './data';
 import './style.scss';
 
 
-const NewTravel = ({location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
+const NewTravel = ({location, country, departure, step, newStep, opened, onToggle, handleChange, handleSubmit} ) => {
 
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
@@ -47,7 +47,7 @@ const NewTravel = ({location, country, departure, step, opened, onToggle, handle
                     <label htmlFor="steps-select" className="steps-select">
                         <select name="steps" id="steps">
                             <option value="">--Choisissez une étape--</option>
-                            <option value="step">Etape 1</option>
+                            <option value="step">{step.country}</option>
                             <option value="step">Etape 2</option>
                             <option value="step">Etape 3</option>
                             <option value="step">Etape 4</option>
@@ -157,11 +157,11 @@ NewTravel.propTypes = {
     continent: PropTypes.string.isRequired,
     departure: PropTypes.string.isRequired,
     step: PropTypes.shape({
-        country: PropTypes.string.isRequired,
-        city: PropTypes.string.isRequired,
+        country: PropTypes.string,
+        city: PropTypes.string,
         place: PropTypes.string,
         stepNb: PropTypes.number,
-        departure: PropTypes.string.isRequired,
-        arrival: PropTypes.string.isRequired,
+        departure: PropTypes.string,
+        arrival: PropTypes.string,
     })
 };
