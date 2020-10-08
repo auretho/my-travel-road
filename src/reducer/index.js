@@ -3,10 +3,12 @@ import createAccount from './createAccount';
 import login from './login';
 import newTravel from './newTravel';
 import countries from './countries';
+import user from './user';
 
 export default combineReducers({
     createAccount,
     login,
     newTravel,
     countries,
+    user
 });

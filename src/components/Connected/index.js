@@ -1,11 +1,12 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import ConsultProfil from './ConsultProfil';
-import EditProfil from './EditProfil';
+import PrivateProfile from '../../containers/PrivateProfile';
+import EditProfile from '../../containers/EditProfile';
 import Home from './Home';
 import NewTravel from '../../containers/NewTravel';
 import TravelName from '../../containers/TravelName';
 import Profile from './Profile';
+import PublicProfile from '../../containers/PublicProfile';
 import './styles.scss';
 
 
@@ -14,12 +15,12 @@ import './styles.scss';
 const Connected = () => (
     <div className='connected'>
 
-        <Route path="/profile">
-            <ConsultProfil />
+        <Route path="/private-profile">
+            <PrivateProfile />
         </Route>
 
         <Route path="/edit-profile">
-            <EditProfil />
+            <EditProfile />
         </Route>
 
         <Route path="/home">
@@ -36,6 +37,10 @@ const Connected = () => (
 
         <Route path="/public-profil">
             <Profile />
+        </Route >
+        
+        <Route path="/public-profile">
+            <PublicProfile />
         </Route>
 
     </div>

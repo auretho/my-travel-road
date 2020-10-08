@@ -10,7 +10,7 @@ const Nav = ({ loggedMessage, handleLogout}) => {
         <NavLink exact className="navigation-link" to="/home">
             Accueil
         </NavLink>
-        <NavLink exact className="navigation-link" to="/profile">
+        <NavLink exact className="navigation-link" to="/private-profile">
             Profil  
         </NavLink>
         <NavLink exact className="navigation-link" to="/my-travels">

@@ -17,7 +17,7 @@ const initialState = {
         creationMessage: ''   
 };
 
-const user = (state = initialState, action = {}) => {
+const signup = (state = initialState, action = {}) => {
     switch (action.type) {
         case FORM_INPUT_CHANGE:
             return {
@@ -48,4 +48,4 @@ const user = (state = initialState, action = {}) => {
     }
 }
 
-export default user;
+export default signup;
