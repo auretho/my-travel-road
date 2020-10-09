@@ -27,8 +27,10 @@ return (
         <Contact />
       </Route>
 
-      
-      <AboutUs />
+      <Route path="/about-us">
+        <AboutUs />
+      </Route>
+     
     </div>
   );
 };

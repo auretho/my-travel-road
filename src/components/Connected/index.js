@@ -38,6 +38,10 @@ const Connected = () => (
             <PublicProfile />
         </Route>
 
+        
+        <ConsultTravel />
+        
+
     </div>
 );
 
