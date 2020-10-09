@@ -29,6 +29,9 @@ const Form = ({
             <div className="form-main">  
                 <form onSubmit={handleSubmit}>
                         <div className="form-input">
+                            <div className="form-signUpMessage">
+                            <p>{creationMessage}</p> 
+                            </div>
                             <div className="form-content">
                                 <Field name="firstname" type="text" placeholder="Prénom" onChange={changeField} value={firstname} />
                         

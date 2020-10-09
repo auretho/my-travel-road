@@ -59,7 +59,7 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                 </div>
                     
                 <div className="bottom-block">
-                <Map center={[43.696319580078125,7.270940780639648]} zoom={2}>
+                <Map center={[43.696319580078125,7.270940780639648]} zoom={4}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

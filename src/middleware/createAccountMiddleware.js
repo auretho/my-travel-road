@@ -1,13 +1,13 @@
 import axios from 'axios';
-import {  FORM_INPUT_SUBMIT } from '../actions/createAccount-actions';
+import {  SIGN_UP_INPUT_SUBMIT, signUpSuccess, signUpError} from '../actions/createAccount-actions';
 
 
 export default (store) => (next) => (action) => {
     next(action);
-    // const { dispatch } = store;
+    const { dispatch } = store;
     // console.log('je veux laisser passer cette action', action)
     switch (action.type){
-        case FORM_INPUT_SUBMIT:
+        case SIGN_UP_INPUT_SUBMIT:
           axios({
             method: 'post',
             url:  'http://localhost:3001/create-account',
@@ -22,9 +22,11 @@ export default (store) => (next) => (action) => {
           .then((res) => {
             const serverResponse = res.data;
             console.log(serverResponse);
+            dispatch(signUpSuccess(serverResponse));
           })
           .catch((err) => {
             console.error(err);
+            dispatch(signUpError())
           })
           break;      
         default:
