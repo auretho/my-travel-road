@@ -6,6 +6,7 @@ import Home from './Home';
 import NewTravel from '../../containers/NewTravel';
 import TravelName from '../../containers/TravelName';
 import Profile from './Profile';
+import ConsultTravel from './ConsultTravel';
 import './styles.scss';
 
 
@@ -37,6 +38,9 @@ const Connected = () => (
         <Route path="/public-profil">
             <Profile />
         </Route>
+
+        
+        <ConsultTravel />
 
     </div>
 );
