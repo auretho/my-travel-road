@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
@@ -12,16 +12,14 @@ import countryList from './countryList';
 import './style.scss';
 
 
-const NewTravel = ({fetchCountries, location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
-    useEffect(() => {
-        fetchCountries();
-    });
+const NewTravel = ({fetchCountries, countryData, location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
 
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
         handleChange({
             [name]: value,
         });
+        fetchCountries();
       };
 
       const handleInputSubmit = (evt) => {
@@ -39,6 +37,7 @@ const NewTravel = ({fetchCountries, location, country, departure, step, opened, 
                         <h1 className="newTravel-title">{location}</h1>
                         <h3 className="newTravel-country">Pays de départ: {country}</h3>
                         <h4 className="newTravel-departure">Date de départ: {departure}</h4>
+
                     </div>
 
                     <button className={opened ? 'newTravel-create opened' : 'newTravel-create'}
@@ -53,29 +52,34 @@ const NewTravel = ({fetchCountries, location, country, departure, step, opened, 
                     <label htmlFor="steps-select" className="steps-select">
                         <select name="steps" id="steps">
                             <option value="">--Choisissez une étape--</option>
-                            <option value="step">{step.country}</option>
-                            <option value="step">Etape 2</option>
-                            <option value="step">Etape 3</option>
-                            <option value="step">Etape 4</option>
+                            <option value="step">{countryData.name}</option>
+
                         </select>
                     </label>
                 </div>
                     
                 <div className="bottom-block">
-                <Map center={[43.696319580078125,7.270940780639648]} zoom={13}>
+                <Map center={[43.696319580078125,7.270940780639648]} zoom={2}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         />
-                        {data.map((place) => (
-                            <Marker 
-                                key={place.id} 
-                                position={[place.x, place.y]}
-                                onClick={()=> {
-                                    setActiveLocation(place)
-                                }} 
-                            />
-                        ))}
+                        {/* ===================MARKER ON MAP======================== */}
+                        {
+                            countryData.latlng && countryData.latlng.map((data) => {
+                                return(
+                                <Marker 
+                                    key={data} 
+                                    position={[countryData.latlng[0],countryData.latlng[1]]}
+                                    onClick={()=> {
+                                        setActiveLocation(data)
+                                    }} 
+                                />
+                            )})
+                        }
+                        {/* ======================================================= */}
+
+
                         {activeLocation && (
                             <Popup 
                                 position={[ activeLocation.x, activeLocation.y ]}
