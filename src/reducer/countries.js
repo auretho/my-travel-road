@@ -10,7 +10,7 @@ switch (action.type) {
   case FETCH_COUNTRIES_SUCCESS:
     return {
       ...state,
-      countryData: [{...action.payload}],
+      countryData: {...action.payload},
       error: null,
       
     };
