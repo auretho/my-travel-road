@@ -39,8 +39,9 @@ const Connected = () => (
             <PublicProfile />
         </Route>
 
-        
+        <Route path="/my-travels" >
         <ConsultTravel />
+        </Route>
         
 
     </div>

@@ -49,7 +49,7 @@ const login = (state = initialState, action = {}) => {
                 isLogged: false,
                 opened: false,
                 pseudo: '',
-                loggedMessage: `raté ducon`,
+                loggedMessage: "t'as fait une boulette mec!",
             };
             case LOGOUT_SUCCESS:
                 return {

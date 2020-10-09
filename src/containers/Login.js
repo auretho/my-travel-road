@@ -9,7 +9,8 @@ const mapState = (state) => ({
     password: state.login.password,
     isLogged: state.login.isLogged,
     loading: state.login.loading,
-    pseudo: state.login.pseudo
+    pseudo: state.login.pseudo,
+    loggedMessage: state.login.loggedMessage,
 });
 
 const mapDispatch = (dispatch) => ({
