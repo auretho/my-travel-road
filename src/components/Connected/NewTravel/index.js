@@ -11,6 +11,18 @@ import './style.scss';
 const NewTravel = ({fetchCountries, countryData, location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
     console.log(countryData)
 
+    // countryData.map((country) => (
+    //     country.map((coord) => (
+    //         <Marker 
+    //             key={country} 
+    //             position={[country.latlng[0],country.latlng[1]]}
+    //             onClick={()=> {
+    //                 setActiveLocation(country)
+    //             }} 
+    //         />
+    //     ))
+    // ))
+
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
         handleChange({
@@ -63,17 +75,18 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                         />
                         {/* ===================MARKER ON MAP======================== */}
                         {
-                            countryData.latlng && countryData.latlng.map((data) => {
+                            countryData[0] && countryData.map((country) => {
+                                console.log(country);
                                 return(
-                                <Marker 
-                                    key={data} 
-                                    position={[countryData.latlng[0],countryData.latlng[1]]}
-                                    onClick={()=> {
-                                        setActiveLocation(data)
-                                    }} 
-                                />
-                            )})
-                            
+                                    <Marker 
+                                        key={country.name} 
+                                        position={[country.latlng[0],country.latlng[1]]}
+                                        onClick={()=> {
+                                            setActiveLocation(country)
+                                        }} 
+                                    />
+                                )
+                            })
                         }
                         {/* ======================================================= */}
 
