@@ -12,17 +12,17 @@ export default (store) => (next) => (action) => {
                     method: 'post',
                     url: 'http//localhost:3001/edit-profile',
                     data: {
-                        firstname: store.getState().user.firstanme,
-                        lastname: store.getState().user.lastname,
-                        pseudo: store.getState().user.pseudo,
-                        email: store.getState().user.email,
-                        currentPassword: store.getState().user.currentPassword,
-                        newPassword: store.getState().user.password1,
-                        city: store.getState().user.city,
-                        cityCode: store.getState().user.cityCode,
-                        avatar: store.getState().user.avatar,
-                        cover: store.getState().user.cover,
-                        description: store.getState().user.description                      
+                        firstname: store.getState().editProfile.firstanme,
+                        lastname: store.getState().editProfile.lastname,
+                        pseudo: store.getState().editProfile.pseudo,
+                        email: store.getState().editProfile.email,
+                        currentPassword: store.getState().editProfile.currentPassword,
+                        newPassword: store.getState().editProfile.password1,
+                        city: store.getState().editProfile.city,
+                        cityCode: store.getState().editProfile.cityCode,
+                        avatar: store.getState().editProfile.avatar,
+                        cover: store.getState().editProfile.cover,
+                        description: store.getState().editProfile.description                      
                     },
                 })
                 .then((res) => {
