@@ -13,7 +13,7 @@ import './styles.scss';
 const App = ({ checkLoginAuth, isLogged } ) => {
   useEffect(() => {
     checkLoginAuth();
-} /*,[] */);
+} );
 return (
     <div className="app">
       <Header />

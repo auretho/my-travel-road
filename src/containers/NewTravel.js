@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import NewTravel from '../components/Connected/NewTravel';
 import { toggleNewStepButton, newStepInputChange, newStepFormSubmit} from '../actions/travel-actions';
+import { fetchCountries } from '../actions/countries-actions';
 
 const mapState = (state) => ({
     location: state.newTravel.location,
@@ -22,6 +23,10 @@ const mapDispatch = (dispatch) => ({
     handleSubmit: () => {
       dispatch(newStepFormSubmit());
     },
-    
+
+    fetchCountries: () => {
+      // console.log('je vais chercher un pays');
+      dispatch(fetchCountries());
+    },
 });
 export default connect(mapState, mapDispatch)(NewTravel);

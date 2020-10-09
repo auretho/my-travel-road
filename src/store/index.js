@@ -3,6 +3,8 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import createAccountMiddleware from '../middleware/createAccountMiddleware';
 import loginMiddleware from '../middleware/loginMiddleware';
 import travelMiddleware from '../middleware/travelMiddleware';
+import countriesMiddleware from '../middleware/countriesMiddleware';
+import editProfileMiddleware from '../middleware/editProfileMiddleware';
 
 import reducer from '../reducer';
 
@@ -14,6 +16,8 @@ const enhancers = composeEnhancers(
         createAccountMiddleware,
         loginMiddleware,
         travelMiddleware,
+        countriesMiddleware,
+        editProfileMiddleware,
     ),
 );
 

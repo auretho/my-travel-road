@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
 import "@fortawesome/fontawesome-free/js/all";
 
 import data from './data';
+import countryList from './countryList';
+
+
 
 import './style.scss';
 
 
-const NewTravel = ({location, country, departure, step, newStep, opened, onToggle, handleChange, handleSubmit} ) => {
+const NewTravel = ({fetchCountries, location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
+    useEffect(() => {
+        fetchCountries();
+    });
 
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
@@ -88,13 +94,39 @@ const NewTravel = ({location, country, departure, step, newStep, opened, onToggl
                 <form className="newStep-form" onSubmit={handleInputSubmit}>
                     <label>
                     <h1>Pays<span>*</span></h1>
-                        <input type="text" 
-                               name="country" 
+
+{/*================== LISTE DEROULANTE COUNTRIES ===============*/}
+                    <select name="countryList" className="newStep-input" value={step.country} onChange={handleInputChange}>
+                        <option value="Liste des pays">Choisir un pays</option>
+                        {
+                        countryList.map((country) => {
+                            return (
+                                <option key={country} value={country}>{country}</option>
+                            );    
+                        })
+                        }
+                        
+
+                    </select>
+{/* ============================================================== */}
+                    </label>
+                    <label>
+                    <h1>Date de départ<span>*</span></h1>
+                        <input type="date" 
+                               name="departure" 
                                className="newStep-input" 
-                               placeholder="Pays" 
-                               value={step.country} 
+                               placeholder="Date de départ" 
+                               value={step.departure} 
                                onChange={handleInputChange}/>
                     </label>
+                    <label>
+                    <h1>Date d'arrivée</h1>
+                        <input type="date" 
+                               name="arrival" 
+                               className="newStep-inputb" 
+                               placeholder="Date d'arrivée" 
+                               value={step.arrival} 
+                               onChange={handleInputChange }/>
     {/* ========================================================                  
     !!A METTRE EN V2!!
                     <label>
@@ -126,24 +158,9 @@ const NewTravel = ({location, country, departure, step, newStep, opened, onToggl
                                onChange={handleInputChange}/>
                     </label>
     ======================================================== */}
-                    <label>
-                    <h1>Date de départ<span>*</span></h1>
-                        <input type="date" 
-                               name="departure" 
-                               className="newStep-input" 
-                               placeholder="Date de départ" 
-                               value={step.departure} 
-                               onChange={handleInputChange}/>
-                    </label>
-                    <label>
-                    <h1>Date d'arrivée</h1>
-                        <input type="date" 
-                               name="arrival" 
-                               className="newStep-input" 
-                               placeholder="Date d'arrivée" 
-                               value={step.arrival} 
-                               onChange={handleInputChange }/>
+                    
             </label>
+
                     <button className="newStep-button">Ajouter nouvelle étape</button>
                 </form>
             </div>
@@ -154,14 +171,14 @@ export default NewTravel;
 
 NewTravel.propTypes = {
     location: PropTypes.string.isRequired,
-    continent: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
     departure: PropTypes.string.isRequired,
     step: PropTypes.shape({
         country: PropTypes.string,
         city: PropTypes.string,
         place: PropTypes.string,
-        stepNb: PropTypes.number,
-        departure: PropTypes.string,
-        arrival: PropTypes.string,
+        // stepNb: PropTypes.number,
+        departure: PropTypes.string.isRequired,
+        arrival: PropTypes.string.isRequired,
     })
 };

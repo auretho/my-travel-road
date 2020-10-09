@@ -5,13 +5,12 @@ import { TRAVEL_FORM_SUBMIT,
          NEWSTEP_FORM_SUBMIT, 
          newStepSuccess, 
          newStepError} from '../actions/travel-actions';
-import newTravel from '../reducer/newTravel';
 
 
 export default (store) => (next) => (action) => {
     next(action);
     const { dispatch } = store;
-    console.log('je veux laisser passer cette action', action)
+    // console.log('je veux laisser passer cette action', action)
     switch (action.type){
         case TRAVEL_FORM_SUBMIT:
           axios({
