@@ -73,6 +73,7 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                                     }} 
                                 />
                             )})
+                            
                         }
                         {/* ======================================================= */}
 

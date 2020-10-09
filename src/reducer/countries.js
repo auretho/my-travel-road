@@ -10,7 +10,7 @@ switch (action.type) {
   case FETCH_COUNTRIES_SUCCESS:
     return {
       ...state,
-      countryData: {...action.payload},
+      countryData: [...state.countryData, {...action.payload}],
       error: null,
       
     };
@@ -27,3 +27,4 @@ switch (action.type) {
 }
 
 export default countries;
+
