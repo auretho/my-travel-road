@@ -4,18 +4,18 @@ import { editUserChange, editUserSubmit } from '../actions/profile-actions';
 
 
 const mapState =(state) => ({
-    firstname: state.user.firstname,
-    lastname: state.user.lastname,
-    pseudo: state.user.pseudo,
-    email: state.user.email,
-    city: state.user.city,
-    cityCode: state.user.cityCode,
-    description: state.user.description,
-    password1: state.user.password1,
-    password2: state.user.password2,
-    avatar: state.user.avatar,
-    cover: state.user.cover,
-    editMessage: state.user.editMessage,
+    firstname: state.editProfile.firstname,
+    lastname: state.editProfile.lastname,
+    pseudo: state.editProfile.pseudo,
+    email: state.editProfile.email,
+    city: state.editProfile.city,
+    cityCode: state.editProfile.cityCode,
+    description: state.editProfile.description,
+    password1: state.editProfile.password1,
+    password2: state.editProfile.password2,
+    avatar: state.editProfile.avatar,
+    cover: state.editProfile.cover,
+    editMessage: state.editProfile.editMessage,
     
 });
 

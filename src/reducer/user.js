@@ -1,4 +1,3 @@
-import { EDIT_USER_CHANGE } from '../actions/profile-actions';
 
 
 const initialState = {
@@ -19,11 +18,6 @@ const initialState = {
 
 const user = (state = initialState, action = {}) => {
     switch (action.type) {
-            case EDIT_USER_CHANGE:
-                return {
-                    ...state,
-                    ...action.payload,
-                };
             
         default:
             return state;

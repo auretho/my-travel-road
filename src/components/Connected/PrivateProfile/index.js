@@ -50,10 +50,10 @@ const privateProfile = ({
                     <h2 className="consult-name">{pseudo}<span>&#x2661;</span></h2>
                     <img className="consult-avat"src={avatarpicture} alt=""/>
                     <Link to='/my-travels' >
-                        <button className="consult-pseudo-button">Mes voyages</button>
+                        <button className="consult-pseudo button">Mes voyages</button>
                     </Link>
                     <Link to='/public-profile' >
-                        <button className="consult-pseudo-button">Ma vue publique</button>
+                        <button className="consult-pseudo button">Ma vue publique</button>
                     </Link>
             </div>
             

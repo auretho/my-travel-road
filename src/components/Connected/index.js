@@ -5,7 +5,6 @@ import EditProfile from '../../containers/EditProfile';
 import Home from './Home';
 import NewTravel from '../../containers/NewTravel';
 import TravelName from '../../containers/TravelName';
-import Profile from './Profile';
 import PublicProfile from '../../containers/PublicProfile';
 import './styles.scss';
 
@@ -35,10 +34,6 @@ const Connected = () => (
             <TravelName />
         </Route>
 
-        <Route path="/public-profil">
-            <Profile />
-        </Route >
-        
         <Route path="/public-profile">
             <PublicProfile />
         </Route>
