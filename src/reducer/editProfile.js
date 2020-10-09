@@ -1,4 +1,4 @@
-import { EDIT_USER_CHANGE } from '../actions/profile-actions';
+import { EDIT_USER_CHANGE, EDIT_USER_ERROR, EDIT_USER_SUCCESS } from '../actions/profile-actions';
 
 
 const initialState = {
@@ -24,6 +24,40 @@ const user = (state = initialState, action = {}) => {
                     ...state,
                     ...action.payload,
                 };
+            case EDIT_USER_ERROR:
+                return{
+                    ...state,
+                    editMessage: "Les changements n'ont pas été enregistrés",
+                    firstname: '',
+                    lastname: '',
+                    pseudo: "",
+                    email: '',
+                    city: '',
+                    cityCode: '',
+                    description: "",
+                    cover: "",
+                    avatar: "",
+                    currentPassword: "",
+                    password1: "",
+                    password2: "",
+                }
+            case EDIT_USER_SUCCESS:
+                return{
+                    ...state,
+                    editMessage: "Les changements ont bien été enregistrés",
+                    firstname: '',
+                    lastname: '',
+                    pseudo: "",
+                    email: '',
+                    city: '',
+                    cityCode: '',
+                    description: "",
+                    cover: "",
+                    avatar: "",
+                    currentPassword: "",
+                    password1: "",
+                    password2: "",
+                }
             
         default:
             return state;

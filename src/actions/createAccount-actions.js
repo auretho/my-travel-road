@@ -1,25 +1,25 @@
-export const FORM_INPUT_CHANGE = 'FORM_INPUT_CHANGE';
-export const FORM_INPUT_SUBMIT = 'FORM_INPUT_SUBMIT';
-export const CREATION_SUCCESS = 'CREATION_SUCCESS';
-export const CREATION_ERROR = 'CREATION_ERROR';
+export const SIGN_UP_INPUT_CHANGE = 'SIGN_UP_INPUT_CHANGE';
+export const SIGN_UP_INPUT_SUBMIT = 'SIGN_UP_INPUT_SUBMIT';
+export const SIGN_UP_SUCCESS = 'SIGN_UP_SUCCESS';
+export const SIGN_UP_ERROR = 'SIGN_UP_ERROR';
 
 
 // action pour chaque changement dans un input
-export const formInputChange = (payload) => ({
-    type: FORM_INPUT_CHANGE,
+export const SignUpInputChange = (payload) => ({
+    type: SIGN_UP_INPUT_CHANGE,
     payload,
   });
   
   // action pour la soumission des inputs
-  export const formInputSubmit = () => ({
-    type: FORM_INPUT_SUBMIT,
+  export const SignUpInputSubmit = () => ({
+    type: SIGN_UP_INPUT_SUBMIT,
   });
   
-  export const creationSuccess = (payload) => ({
-    type: CREATION_SUCCESS,
+  export const signUpSuccess = (payload) => ({
+    type: SIGN_UP_SUCCESS,
     payload,
   });
   
-  export const creationError = () => ({
-    type: CREATION_ERROR,
+  export const signUpError = () => ({
+    type: SIGN_UP_ERROR,
   });
