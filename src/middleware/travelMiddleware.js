@@ -24,7 +24,7 @@ export default (store) => (next) => (action) => {
           })
           .then((res) => {
             const serverResponse = res.data;
-            console.log(serverResponse);
+            // console.log(serverResponse);
             dispatch(travelSuccess(serverResponse));
           })
           .catch((err) => {

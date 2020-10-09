@@ -9,6 +9,7 @@ const mapState = (state) => ({
     departure: state.newTravel.departure,
     opened: state.newTravel.opened,
     step: state.newTravel.step, 
+    countryData: state.countries.countryData,
 });
 
 const mapDispatch = (dispatch) => ({
