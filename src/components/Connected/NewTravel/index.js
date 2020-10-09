@@ -53,9 +53,7 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                         <select name="steps" id="steps">
                             <option value="">--Choisissez une étape--</option>
                             <option value="step">{countryData.name}</option>
-                            <option value="step">Etape 2</option>
-                            <option value="step">Etape 3</option>
-                            <option value="step">Etape 4</option>
+
                         </select>
                     </label>
                 </div>
