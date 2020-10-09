@@ -1,4 +1,4 @@
-
+import { EDIT_USER_SUCCESS } from '../actions/profile-actions';
 
 const initialState = {
     firstname: 'John',
@@ -13,12 +13,15 @@ const initialState = {
     currentPassword: "",
     password1: "",
     password2: "",
-    editMessage:"",
 }
 
 const user = (state = initialState, action = {}) => {
     switch (action.type) {
-            
+        case EDIT_USER_SUCCESS:
+            return{
+                ...state,
+                ...action.payload,
+            }
         default:
             return state;
     }

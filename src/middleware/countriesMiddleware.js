@@ -20,7 +20,7 @@ export default (store) => (next) => (action) => {
               )} 
             );
             console.log(selectedCountry);
-            dispatch(fetchCountriesSuccess(APIdatas));
+            dispatch(fetchCountriesSuccess(selectedCountry));
           })
           .catch((err) => {
             console.error(err);

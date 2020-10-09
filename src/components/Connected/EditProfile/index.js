@@ -71,6 +71,7 @@ const EditProfile = ({
                             <img className="avat2" src={cove} alt="" />
                         </div>
                     <button className="right-first-button" >Editer votre photo de couverture</button>                
+                        <p className="right-editMessage">{editMessage}</p>
                     </div>
                 </div>
                 

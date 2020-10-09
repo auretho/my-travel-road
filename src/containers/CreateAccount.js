@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Form from '../components/Welcome/Form';
-import { formInputChange, formInputSubmit } from '../actions/createAccount-actions';
+import { SignUpInputChange,SignUpInputSubmit } from '../actions/createAccount-actions';
 
 // récupère l'état du Form 
 const mapState = (state) => ({
@@ -20,10 +20,10 @@ const mapDispatch = (dispatch) => ({
         const text = {
           [name]: value,
         };
-        dispatch(formInputChange(text));
+        dispatch(SignUpInputChange(text));
     },
     onInputSubmit: () => {
-    dispatch(formInputSubmit() )
+    dispatch(SignUpInputSubmit() )
 
     },
 });
