@@ -32,6 +32,9 @@ const Login = ({
 
   return (
     <div className='login'>
+        <div>
+          <p>{loggedMessage}</p>
+        </div>
           <div className="connection-zone">
             <button
             className={opened ? 'connection-button opened' : 'connection-button'}
@@ -82,9 +85,6 @@ Login.propTypes = {
   onToggle: PropTypes.func.isRequired,
 };
 
-Login.defaultProps = {
-  isLogged: false,
-  loggedMessage: 'Connecté',
-};
+
 
 export default Login;
