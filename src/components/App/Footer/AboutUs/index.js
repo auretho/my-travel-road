@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.scss';
 import aurel from '../AboutUs/aurel.jpg';
 import jerem from '../AboutUs/jerem.jpg';
-import jerom from '../AboutUs/jerom.png';
+import jerome from '../AboutUs/jerome.png';
 import melo from '../AboutUs/melo.jpg';
 import sara from '../AboutUs/sara.jpeg';
 
@@ -15,7 +15,7 @@ const AboutUs = () => {
             <div className="about-elements">
                 <div className="about-elt1">
                     <h4 className="about-name">Jérôme</h4>
-                    <img className="about-avatar"src={jerom} alt=""/>
+                    <img className="about-avatar"src={jerome} alt=""/>
                     <p>Product Owner</p>
                 </div>
 
