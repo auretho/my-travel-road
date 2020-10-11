@@ -32,6 +32,11 @@
         background-color: #1968B9;
         color: white;
         font-weight: bold;
+        transition: background-color 0.3s;
+    
+        &:hover{
+            background-color: #f0f;
+        }
     
     }
 
@@ -66,7 +71,12 @@
         font-weight: bold;
         position: relative;
         top:50px;
-        left: -400px; 
+        left: -400px;
+        transition: background-color 0.3s;
+    
+        &:hover{
+            background-color: #f0f;
+        }
         
     }
     

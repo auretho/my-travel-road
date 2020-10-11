@@ -74,6 +74,10 @@
         color: black;
         font-weight: bold;
         font-size: 15px;
+        transition: background-color 0.3s;
+        &:hover{
+            background-color: #f0f;
+        }
     }
 
     &-avatar{
@@ -92,6 +96,10 @@
         color: black;
         font-weight: bold;
         font-size: 15px;
+        transition: background-color 0.3s;
+        &:hover{
+            background-color: #f0f;
+        }
         
     }
 
@@ -109,6 +117,11 @@
         color:white;
         font-weight: bold;
         font-size: 17px;
+        transition: background-color 0.3s;
+        &:hover{
+            background-color: #f0f;
+        }
+        
     }
 
     &-fourth-button{
@@ -119,6 +132,11 @@
         color: white;
         font-weight: bold;
         font-size: 17px;
+        transition: background-color 0.3s;
+        &:hover{
+            background-color: #f0f;
+        }
+        
         
     }
     

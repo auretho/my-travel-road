@@ -20,7 +20,7 @@ const EditProfile = ({
     editMessage,
     onInputSubmit,
     onInputChange,
-    onInputSelectAvatar,
+    
     
     }) => {
         const handleSubmit = (evt) => {
@@ -32,11 +32,6 @@ const EditProfile = ({
             onInputChange({
                 [name]: value,
             });
-        };
-        const fileSelectedHandler = (evt) => {
-            console.log("je suis fileSelectedHandler", evt.target.files[0]);
-            const {toto} = evt.target.files[0];
-            onInputSelectAvatar ({toto});
         };
         
     return (
@@ -81,7 +76,6 @@ const EditProfile = ({
                     </div>
                 </div>
                 
-            
 
             <div className="right-button">
                 <Link to="/private-profile" >
@@ -90,7 +84,8 @@ const EditProfile = ({
                     <button className="right-fourth-button" type="submit" >Enregistrer</button>
             </div>
             </form>
-            <input name="avatar" type="file" onChange={ fileSelectedHandler } />
+             
+        
         </main>
     </div>
   );
