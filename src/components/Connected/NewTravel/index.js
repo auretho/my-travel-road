@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
+import {Map, Marker, Popup, TileLayer, Polyline} from 'react-leaflet';
 import "@fortawesome/fontawesome-free/js/all";
 
 import countryList from './countryList';
@@ -9,19 +9,6 @@ import './style.scss';
 
 
 const NewTravel = ({fetchCountries, countryData, location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
-    console.log(countryData)
-
-    // countryData.map((country) => (
-    //     country.map((coord) => (
-    //         <Marker 
-    //             key={country} 
-    //             position={[country.latlng[0],country.latlng[1]]}
-    //             onClick={()=> {
-    //                 setActiveLocation(country)
-    //             }} 
-    //         />
-    //     ))
-    // ))
 
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
@@ -46,7 +33,6 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                         <h1 className="newTravel-title">{location}</h1>
                         <h3 className="newTravel-country">Pays de départ: {country}</h3>
                         <h4 className="newTravel-departure">Date de départ: {departure}</h4>
-
                     </div>
 
                     <button className={opened ? 'newTravel-create opened' : 'newTravel-create'}
@@ -61,14 +47,14 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                     <label htmlFor="steps-select" className="steps-select">
                         <select name="steps" id="steps">
                             <option value="">--Choisissez une étape--</option>
-                            <option value="step">{countryData.name}</option>
+                            <option value="step">{country.name}</option>
 
                         </select>
                     </label>
                 </div>
                     
                 <div className="bottom-block">
-                <Map center={[43.696319580078125,7.270940780639648]} zoom={4}>
+                <Map center={[43.696319580078125,7.270940780639648]} zoom={3}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -76,10 +62,10 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                         {/* ===================MARKER ON MAP======================== */}
                         {
                             countryData[0] && countryData.map((country) => {
-                                console.log(country);
                                 return(
                                     <Marker 
                                         key={country.name} 
+                                        className="marker"
                                         position={[country.latlng[0],country.latlng[1]]}
                                         onClick={()=> {
                                             setActiveLocation(country)
@@ -87,6 +73,16 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                                     />
                                 )
                             })
+                        }
+                        {
+                            countryData[1] &&      
+                            <Polyline 
+                                key={1} 
+                                positions={[[countryData[0].latlng[0], countryData[0].latlng[1]], 
+                                            [countryData[1].latlng[0], countryData[1].latlng[1]],]} 
+                                color={'red'} 
+                                dashArray={"5,5"}/>
+                                
                         }
                         {/* ======================================================= */}
 

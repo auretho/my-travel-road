@@ -10,13 +10,13 @@ export default (store) => (next) => (action) => {
         case SIGN_UP_INPUT_SUBMIT:
           axios({
             method: 'post',
-            url:  'http://localhost:3001/create-account',
+            url:  'http://127.0.0.1:8000/api/register',
             data: {
               firstname: store.getState().createAccount.firstname,
               lastname: store.getState().createAccount.lastname,
-              pseudo: store.getState().createAccount.pseudo,
+              nickname: store.getState().createAccount.pseudo,
               email: store.getState().createAccount.email,
-              passpass: store.getState().createAccount.password1,
+              password: store.getState().createAccount.password1,
             },
           })
           .then((res) => {

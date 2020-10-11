@@ -39,8 +39,8 @@ const login = (state = initialState, action = {}) => {
                 ...state,
                 loading: false,
                 isLogged: true,
-                pseudo: action.payload.pseudo,
-                loggedMessage: `Bienvenue ${action.payload.pseudo}`,
+                pseudo: action.payload.user.nickname,
+                loggedMessage: `Bienvenue ${action.payload.user.nickname}`,
             };
             case LOGIN_ERROR:
                 return {
@@ -49,6 +49,7 @@ const login = (state = initialState, action = {}) => {
                 isLogged: false,
                 opened: false,
                 pseudo: '',
+                loggedMessage: `raté ducon`,
             };
             case LOGOUT_SUCCESS:
                 return {

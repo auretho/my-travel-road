@@ -15,14 +15,16 @@ import {  CHECK_AUTH,
 
     switch (action.type){
         case CHECK_AUTH:
+          const token = localStorage.getItem('token');
         axios({
-          //headers: { Authorization: `Bearer ${token}`},
+          headers: { Authorization: `Bearer ${token}`},
           method: 'post',
           url: 'http://127.0.0.1:8000/isLogged',
           //withCredentials: true, // le serveur doit savoir qui je suis pour me répondre
         })
           .then((res) => {
             const { data } = res;
+            console.log({data});
             // Si je suis connecté
             if (data.logged) {
               dispatch(loginSuccess(data));

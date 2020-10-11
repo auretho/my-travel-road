@@ -47,11 +47,11 @@ const Form = ({
 
                                 <Field name="password2" type="password" placeholder="Retaper votre mot de passe" onChange={changeField} value={password2} />
                             </div>
-                            <div className="form-content">
+                            {/* <div className="form-content">
                                 <Field name="city" type="text" placeholder="Ville" onChange={changeField} value={city} />
 
                                 <Field name="cityCode" type="number" placeholder="Code Postal" onChange={changeField} value={cityCode} />
-                            </div> 
+                            </div>  */}
                         </div>                           
                         
                         <div className="form-radio">
