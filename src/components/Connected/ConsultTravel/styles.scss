@@ -67,15 +67,8 @@
 
 @media(max-width:480px){
   .travel{
-    background-color: pink;
     &-avatar{
       width: 50px;
     }
-  }
-}
-
-@media(max-width:1600px){
-  .travel{
-    background-color: pink;
   }
 }
