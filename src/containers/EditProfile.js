@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import EditProfile from '../components/Connected/EditProfile';
-import { editUserChange, editUserSubmit} from '../actions/profile-actions';
+import { editUserChange, editUserSubmit, toggleEditUserUploadCover, toggleEditUserUploadAvatar} from '../actions/profile-actions';
 
 
 const mapState =(state) => ({
@@ -16,6 +16,8 @@ const mapState =(state) => ({
     avatar: state.editProfile.avatar,
     cover: state.editProfile.cover,
     editMessage: state.editProfile.editMessage,
+    openedCover: state.editProfile.openedCover,
+    openedAvatar: state.editProfile.openedAvatar,
     
     
 });
@@ -26,9 +28,13 @@ const mapDispatch = (dispatch) => ({
     },
     onInputSubmit: () => {
         dispatch(editUserSubmit() )
-
     },
-    
+    onToggleCover: () => {
+        dispatch(toggleEditUserUploadCover());
+      },
+      onToggleAvatar: () => {
+        dispatch(toggleEditUserUploadAvatar());
+      },
 });
 
 

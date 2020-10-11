@@ -1,4 +1,9 @@
-import { EDIT_USER_CHANGE, EDIT_USER_ERROR, EDIT_USER_SUCCESS,} from '../actions/profile-actions';
+import {    EDIT_USER_CHANGE, 
+            EDIT_USER_ERROR, 
+            EDIT_USER_SUCCESS, 
+            TOGGLE_EDIT_USER_UPLOAD_COVER,
+            TOGGLE_EDIT_USER_UPLOAD_AVATAR,
+        } from '../actions/profile-actions';
 
 
 const initialState = {
@@ -15,6 +20,8 @@ const initialState = {
     password1: "",
     password2: "",
     editMessage:"",
+    openedCover: false,
+    openedAvatar: false,
 }
 
 const user = (state = initialState, action = {}) => {
@@ -57,6 +64,16 @@ const user = (state = initialState, action = {}) => {
                     currentPassword: "",
                     password1: "",
                     password2: "",
+                }
+            case TOGGLE_EDIT_USER_UPLOAD_COVER:
+                return{
+                    ...state,
+                    openedCover: !state.openedCover,
+                }
+            case TOGGLE_EDIT_USER_UPLOAD_AVATAR:
+                return{
+                    ...state,
+                    openedAvatar: !state.openedAvatar,
                 }
             
         default:

@@ -3,13 +3,14 @@
     flex-direction: row;
     border-radius: 5px;
     background-color:#dae7f4 ;
-    max-width: 90%;
+    max-width: 75%;
     margin: auto;
     align-items: center;
 
     //Partie de gauche
     &-form{
         width: 50%;
+        padding: 1.5em;
     }
     &-title{
         font-weight: bold;
@@ -63,11 +64,19 @@
     }
 
     &-avatar{
+        margin-top: 2em;
         border: 3px solid black;
         border-radius: 50%;
         max-width: 20%;
     }
-
+    &-uploadAvatar{
+        display: flex;
+        align-items: center;
+        margin: 1em;
+        &.closed {
+            display:none;
+          }
+    }
 
 
     &-button{
@@ -84,6 +93,9 @@
         &:hover{
             background-color: #f0f;
         }
+        &.opened {
+            display:none;
+          }
     }
     
 }
