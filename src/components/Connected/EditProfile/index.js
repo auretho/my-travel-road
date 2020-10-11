@@ -34,60 +34,47 @@ const EditProfile = ({
             });
         };
         
-    return (
-      <div className="edit">
-          <main className="edit-main">
-              
-            <form onSubmit={handleSubmit}>
-                <div className="profil">
-                    <div className="left">
-                        <div className="left-profil">
-                            <h5 className="left-title">Editer votre profil</h5>
-                            <input className="left-input" name="lastname" type="text" placeholder="Nom" onChange={handleInputChange} value={lastname} /><br/>
-                            <input className="left-input" name="firstname" type="text" placeholder="Prénom" onChange={handleInputChange} value={firstname} /><br/>
-                            <input className="left-input" name="email" type="text" placeholder="Email" onChange={handleInputChange} value={email} /><br/>
-                            <input className="left-input" name="city" type="text" placeholder="Ville" onChange={handleInputChange} value={city} /><br/>
-                            <input className="left-input" name="cityCode" type="number" placeholder="Code Postal" onChange={handleInputChange} value={cityCode} /><br/>
+    return (              
+            <div className="editProfile">
+                    <form className="editProfile-form" onSubmit={handleSubmit}>
+                        <div className="editProfile-info">
+                            <h5 className="editProfile-title">Editer votre profil</h5>
+                            <input className="editProfile-input" name="lastname" type="text" placeholder="Nom" onChange={handleInputChange} value={lastname} /><br/>
+                            <input className="editProfile-input" name="firstname" type="text" placeholder="Prénom" onChange={handleInputChange} value={firstname} /><br/>
+                            <input className="editProfile-input" name="email" type="text" placeholder="Email" onChange={handleInputChange} value={email} /><br/>
+                            {/* <input className="left-input" name="city" type="text" placeholder="Ville" onChange={handleInputChange} value={city} /><br/>
+                            <input className="left-input" name="cityCode" type="number" placeholder="Code Postal" onChange={handleInputChange} value={cityCode} /><br/> */}
+                            <input className="editProfile-input" name="pseudo" type="text" placeholder="Pseudonyme" onChange={handleInputChange} value={pseudo} /><br/>
                         </div>
 
-                        <div className="left-password">
-                            <h5 className="left-title">Modifier votre mot de passe</h5>
-                            <input className="left-input" name="oldpassword" type="password" placeholder="Mot de passe actuel" onChange={handleInputChange} value={oldPassword} /><br/>
-                            <input className="left-input" name="password1" type="password" placeholder="Nouveau mot de passe" onChange={handleInputChange} value={password1} /><br/>
-                            <input className="left-input" name="password2" type="password" placeholder="retaper votre nouveau mot de passe" onChange={handleInputChange} value={password2} /><br/>
-                            
-                        <div className="right-avatar">
-                            <img className="avat"src={avata} alt=""/>
+                        <div className="editProfile-password">
+                            <h5 className="editProfile-title">Modifier votre mot de passe</h5>
+                            <input className="editProfile-input" name="oldpassword" type="password" placeholder="Mot de passe actuel" onChange={handleInputChange} value={oldPassword} /><br/>
+                            <input className="editProfile-input" name="password1" type="password" placeholder="Nouveau mot de passe" onChange={handleInputChange} value={password1} /><br/>
+                            <input className="editProfile-input" name="password2" type="password" placeholder="retaper votre nouveau mot de passe" onChange={handleInputChange} value={password2} /><br/>
                         </div>
                         
-                        <button className="right-second-button" >Editer votre avatar</button>
+                        
+                        <div className="editProfile-buttons">
+                            <Link to="/private-profile" >
+                                <button className="editProfile-button" >Annuler</button>
+                            </Link>
+                                <button className="editProfile-button" type="submit" >Enregistrer</button>
                         </div>
-                    </div>
-                    
-
-                    <div className="right">
-                        <div className="right-picture">
-                            <h5 className="left-title">Modifier votre pseudonyme</h5>
-                            <input className="right-input" name="pseudo" type="text" placeholder="Pseudonyme" onChange={handleInputChange} value={pseudo} /><br/>
-                            <img className="avat2" src={cove} alt="" />
-                        </div>
-                    <button className="right-first-button" >Editer votre photo de couverture</button>                
-                        <p className="right-editMessage">{editMessage}</p>
-                    </div>
-                </div>
+                                <p className="editProfile-editMessage">{editMessage}</p>
+                    </form>
+                
                 
 
-            <div className="right-button">
-                <Link to="/private-profile" >
-                    <button className="right-third-button" >Annuler</button>
-                </Link>
-                    <button className="right-fourth-button" type="submit" >Enregistrer</button>
+                
+                    <div className="editProfile-picture">
+                        <img className="editProfile-cover" src={cove} alt="" />
+                        <button className="editProfile-button" >Editer votre photo de couverture</button>                
+                        <img className="editProfile-avatar"src={avata} alt=""/>
+                        <button className="editProfile-button" >Editer votre avatar</button>
+                    </div>
+                
             </div>
-            </form>
-             
-        
-        </main>
-    </div>
   );
 };
 
