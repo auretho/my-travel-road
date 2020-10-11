@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import EditProfile from '../components/Connected/EditProfile';
-import { editUserChange, editUserSubmit } from '../actions/profile-actions';
+import { editUserChange, editUserSubmit, editUserSelectAvatar } from '../actions/profile-actions';
 
 
 const mapState =(state) => ({
@@ -16,6 +16,7 @@ const mapState =(state) => ({
     avatar: state.editProfile.avatar,
     cover: state.editProfile.cover,
     editMessage: state.editProfile.editMessage,
+    selectedAvatarFile: state.editProfile.selectedAvatarFile,
     
 });
 
@@ -26,6 +27,9 @@ const mapDispatch = (dispatch) => ({
     onInputSubmit: () => {
         dispatch(editUserSubmit() )
 
+    },
+    onInputSelectAvatar: (object) => {
+        dispatch(editUserSelectAvatar(object))
     },
 });
 

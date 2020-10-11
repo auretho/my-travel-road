@@ -1,4 +1,4 @@
-import { EDIT_USER_CHANGE, EDIT_USER_ERROR, EDIT_USER_SUCCESS } from '../actions/profile-actions';
+import { EDIT_USER_CHANGE, EDIT_USER_ERROR, EDIT_USER_SUCCESS, EDIT_USER_SELECT_AVATAR} from '../actions/profile-actions';
 
 
 const initialState = {
@@ -15,6 +15,7 @@ const initialState = {
     password1: "",
     password2: "",
     editMessage:"",
+    selectedAvatarFile: null,
 }
 
 const user = (state = initialState, action = {}) => {
@@ -57,6 +58,11 @@ const user = (state = initialState, action = {}) => {
                     currentPassword: "",
                     password1: "",
                     password2: "",
+                }
+            case EDIT_USER_SELECT_AVATAR:
+                return{
+                    ...state,
+                    selectedAvatarFile: action.payload,
                 }
             
         default:
