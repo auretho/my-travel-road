@@ -10,6 +10,10 @@ import './style.scss';
 
 const NewTravel = ({fetchCountries, countryData, location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
 
+    countryData.map((country) => ( 
+        console.log(country)
+    ))
+
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
         handleChange({
@@ -75,13 +79,21 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                             })
                         }
                         {
-                            countryData[1] &&      
-                            <Polyline 
-                                key={1} 
-                                positions={[[countryData[0].latlng[0], countryData[0].latlng[1]], 
-                                            [countryData[1].latlng[0], countryData[1].latlng[1]],]} 
-                                color={'red'} 
-                                dashArray={"5,5"}/>
+                            countryData[1] && countryData.map(({ latlng }) => {
+                                // console.log(latlng[0] -1);
+                                console.log(countryData[countryData.length - 1].latlng[0]);
+                                console.log(countryData[countryData.length - 2].latlng[0]);
+                                return(
+                                <Polyline 
+                                    key={1} 
+                                    positions={[
+                                        [countryData[countryData.length - 1].latlng[0], countryData[countryData.length - 1].latlng[1]],
+                                        [countryData[countryData.length - 2].latlng[0], countryData[countryData.length - 2].latlng[1]], 
+                                               ]} 
+                                    color={'red'} 
+                                    dashArray={"5,5"}/>
+                                )
+                            })
                                 
                         }
                         {/* ======================================================= */}
