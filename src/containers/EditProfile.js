@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import EditProfile from '../components/Connected/EditProfile';
-import { editUserChange, editUserSubmit } from '../actions/profile-actions';
+import { editUserChange, editUserSubmit} from '../actions/profile-actions';
 
 
 const mapState =(state) => ({
@@ -17,6 +17,7 @@ const mapState =(state) => ({
     cover: state.editProfile.cover,
     editMessage: state.editProfile.editMessage,
     
+    
 });
 
 const mapDispatch = (dispatch) => ({
@@ -27,6 +28,7 @@ const mapDispatch = (dispatch) => ({
         dispatch(editUserSubmit() )
 
     },
+    
 });
 
 

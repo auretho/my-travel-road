@@ -1,4 +1,4 @@
-import { EDIT_USER_CHANGE, EDIT_USER_ERROR, EDIT_USER_SUCCESS } from '../actions/profile-actions';
+import { EDIT_USER_CHANGE, EDIT_USER_ERROR, EDIT_USER_SUCCESS,} from '../actions/profile-actions';
 
 
 const initialState = {

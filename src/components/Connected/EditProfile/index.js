@@ -21,6 +21,7 @@ const EditProfile = ({
     onInputSubmit,
     onInputChange,
     
+    
     }) => {
         const handleSubmit = (evt) => {
             evt.preventDefault();
@@ -75,7 +76,6 @@ const EditProfile = ({
                     </div>
                 </div>
                 
-            
 
             <div className="right-button">
                 <Link to="/private-profile" >
@@ -84,6 +84,8 @@ const EditProfile = ({
                     <button className="right-fourth-button" type="submit" >Enregistrer</button>
             </div>
             </form>
+             
+        
         </main>
     </div>
   );
