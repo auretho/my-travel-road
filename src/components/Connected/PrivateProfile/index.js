@@ -17,26 +17,26 @@ const privateProfile = ({ userData }) => {
                 
                 <div className="privateProfile-profil">
                     <h6><b>Nom</b></h6>
-                    <p>{lastname}</p>
+                    <p>{userData.lastname}</p>
                     
                     <h6><b>Prénom</b></h6>
-                    <p>{firstname}</p>
+                    <p>{userData.firstname}</p>
                     
                     <h6><b>Email</b></h6>
-                    <p>{email}</p>
+                    <p>{userData.email}</p>
                     
                     <h6><b>Ville</b></h6>
-                    <p>{city}</p>
+                    <p>{userData.city}</p>
                     
                     <h6><b>Code Postal</b></h6>
-                    <p>{cityCode}</p>
+                    <p>{userData.postal}</p>
                 </div>
 
                 <div className="privateProfile-article">
                     <article>
                         <h4 className="privateProfile-titleDescription">A Propos de vous</h4>
                             <p className="privateProfile-description">
-                                {description}
+                                {userData.presentation}
                             </p>
                     </article>
                 </div>
@@ -58,13 +58,13 @@ const privateProfile = ({ userData }) => {
             <div className="privateProfile-images">
 
                 <div className="privateProfile-photo">
-                    <img className="privateProfile-cover" src={pic} alt="" />
+                    <img className="privateProfile-cover" src={userData.cover} alt="" />
                 </div>
 
                 <div className="privateProfile-picture">
-                    <img className="privateProfile-avatar"src={avatarpicture} alt=""/>
+                    <img className="privateProfile-avatar"src={userData.avatar} alt=""/>
 
-                    <p className="privateProfile-name">{pseudo}</p>            
+                    <p className="privateProfile-name">{userData.nickname}</p>            
                 </div>
 
                 
