@@ -8,14 +8,15 @@ const DeleteAccount = () => {
         const token = localStorage.getItem('token');
         axios({
             headers: { Authorization: `Bearer ${token}`},
-            method: 'post',
+            method: 'delete',
             url: `http://127.0.0.1:8000/api/user/delete`,  
         })
           .then((response) => {
             console.log('la reponse', response);
+            window.location.assign('/');
           })
           .catch((error) => {
-            console.log(error);
+            console.log("y'a eu une erreur chef!",error);
           });
       };
 
