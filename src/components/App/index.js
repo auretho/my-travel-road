@@ -23,11 +23,11 @@ return (
       { isLogged ? <Redirect to="/home" /> : <Redirect to="/login" /> }
 
         <Footer />
-      <Route path="/contact-us">
+      <Route exact path="/contact-us">
         <Contact />
       </Route>
 
-      <Route path="/about-us">
+      <Route exact path="/about-us">
         <AboutUs />
       </Route>
      

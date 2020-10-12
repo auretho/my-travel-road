@@ -6,7 +6,7 @@ import {  SIGN_UP_INPUT_CHANGE,
 
 const initialState = {
         user: {},
-        firstname: 'Auré',
+        firstname: '',
         lastname: '',
         email: '',
         pseudo:'',
@@ -14,7 +14,8 @@ const initialState = {
         password2:'',
         city:'',
         cityCode: '',
-        creationMessage: ''   
+        creationMessage: '',
+        failedMessage: '',  
 };
 
 const signup = (state = initialState, action = {}) => {
@@ -32,15 +33,24 @@ const signup = (state = initialState, action = {}) => {
         case SIGN_UP_SUCCESS:
           return {
             ...state,
-            creationMessage: `Le compte ${action.payload.email} a été crée`
+            creationMessage: `Le compte ${action.payload.email} a été crée, vous pouvez vous connecter.`,
+            firstname: '',
+            lastname: '',
+            email: '',
+            pseudo:'',
+            password1:'',
+            password2:'',
+            city:'',
+            cityCode: '',
+            failedMessage: "",
           };
           
         case SIGN_UP_ERROR:
           return {
             ...state,
             user: {},
-            creationMessage: 'La création du compte a échoué'
-
+            failedMessage: 'La création du compte a échoué',
+            creationMessage: '',
           };
           
         default:

@@ -14,12 +14,22 @@
 
     }
 
-    &-signUpMessage{
+    &-signUpSuccess{
         display: flex;
         justify-content: center;
         font-weight: bold;
-        font-size: 1.2em;
-        color: red;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+        font-size: 1.5em;
+        color: rgb(47, 184, 34);
+        
+    }
+    &-signUpFailed{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.5em;
+        color: rgb(168, 20, 20);
+        text-shadow:1px 1px 2px rgb(0, 0, 0);
     }
     
     &-radio{        

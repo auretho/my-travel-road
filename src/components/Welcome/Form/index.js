@@ -16,6 +16,7 @@ const Form = ({
     city,
     cityCode,
     creationMessage,
+    failedMessage,
     // les props qui viennent de container
     changeField,
     onInputSubmit
@@ -29,8 +30,11 @@ const Form = ({
             <div className="form-main">  
                 <form onSubmit={handleSubmit}>
                         <div className="form-input">
-                            <div className="form-signUpMessage">
+                            <div className="form-signUpSuccess">
                             <p>{creationMessage}</p> 
+                            </div>
+                            <div className="form-signUpFailed">
+                            <p>{failedMessage}</p> 
                             </div>
                             <div className="form-content">
                                 <Field name="firstname" type="text" placeholder="Prénom" onChange={changeField} value={firstname} />
@@ -47,16 +51,16 @@ const Form = ({
 
                                 <Field name="password2" type="password" placeholder="Retaper votre mot de passe" onChange={changeField} value={password2} />
                             </div>
-                            {/* <div className="form-content">
+                            <div className="form-content">
                                 <Field name="city" type="text" placeholder="Ville" onChange={changeField} value={city} />
 
                                 <Field name="cityCode" type="number" placeholder="Code Postal" onChange={changeField} value={cityCode} />
-                            </div>  */}
+                            </div> 
                         </div>                           
                         
-                        <div className="form-radio">
+                        {/* <div className="form-radio">
                             <input type="radio" />Je certifie avoir plus de 18 ans
-                        </div>
+                        </div> */}
                         
                         <div className="form-buttons">
                             <Link to='/login'>
@@ -82,4 +86,5 @@ Form.propTypes = {
     onChange:PropTypes.func,
     onSubmit:PropTypes.func,
     creationMessage:PropTypes.string.isRequired,
+    failedMessage:PropTypes.string.isRequired,
 }

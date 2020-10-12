@@ -13,6 +13,7 @@ const mapState = (state) => ({
     city: state.createAccount.city,
     cityCode: state.createAccount.cityCode,
     creationMessage: state.createAccount.creationMessage,
+    failedMessage: state.createAccount.failedMessage,
 });
 
 const mapDispatch = (dispatch) => ({

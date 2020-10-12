@@ -14,16 +14,16 @@ export default (store) => (next) => (action) => {
                     method: 'patch',
                     url: 'http://127.0.0.1:8000/api/user/edit',
                     data: {
-                        firstname: store.getState().editProfile.firstanme,
+                        firstname: store.getState().editProfile.firstname,
                         lastname: store.getState().editProfile.lastname,
                         email: store.getState().editProfile.email,
-                        pseudo: store.getState().editProfile.pseudo,
-                        description: store.getState().editProfile.description,
+                        nickname: store.getState().editProfile.pseudo,
+                        presentation: store.getState().editProfile.description,
                         city: store.getState().editProfile.city,
-                        cityCode: store.getState().editProfile.cityCode,
+                        postal: store.getState().editProfile.cityCode,
                         currentPassword: store.getState().editProfile.currentPassword,
                         newPassword: store.getState().editProfile.password1,                     
-                    },
+                    }
                 })
                 .then((res) => {
                     const serverResponse = res.data;
