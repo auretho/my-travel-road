@@ -11,16 +11,18 @@ import ameNord from './img/amerique-nord.jpg';
 import './style.scss';
 import './custom.scss';
 
-const Home = ({firstname}) => (
+const Home = ({data}) =>{ 
+    return(
     <div className="home">
         <div className="welcome-message">
-            <h1>Bienvenue {firstname}!</h1>
+            <h1>Bienvenue {data.user.nickname}!</h1>
             <Link to="/travel">
                 <button className="new-travel">
                     Créer un voyage
                 </button>
             </Link>
         </div>
+
 
         <Carousel className="item-div ">
             <Carousel.Item className="item">
@@ -30,10 +32,16 @@ const Home = ({firstname}) => (
                 alt="First slide"
                 />
                 <Carousel.Caption className="position-sticky">
-                <h3>Argentine 2017</h3>
+                <h3>{data.travels[0].title}</h3>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item className="item">
+        </Carousel>   
+            
+            
+            
+            
+            
+            {/* <Carousel.Item className="item">
                 <img
                 className="d-block w-100 h-100 voyage-picture"
                 src={ameNord}
@@ -54,11 +62,10 @@ const Home = ({firstname}) => (
                 <Carousel.Caption className="position-sticky">
                 <h3>Tanzanie 2009</h3>
                 </Carousel.Caption>
-            </Carousel.Item>
-        </Carousel>   
+            </Carousel.Item> */}
     </div>
         
-)
+)}
 
 export default Home;
 

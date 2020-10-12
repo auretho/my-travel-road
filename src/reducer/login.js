@@ -12,9 +12,10 @@ const initialState = {
     loading: false,
     email: '',
     password:'',
-    isLogged: true,
+    isLogged: false,
     pseudo: '',
-    loggedMessage: ''    
+    loggedMessage: '',
+    data: '', 
 };
 
 const login = (state = initialState, action = {}) => {
@@ -40,7 +41,8 @@ const login = (state = initialState, action = {}) => {
                 loading: false,
                 isLogged: true,
                 pseudo: action.payload.user.nickname,
-                loggedMessage: `Bienvenue ${action.payload.user.nickname}`,
+                loggedMessage: '',
+                data: action.payload,
             };
             case LOGIN_ERROR:
                 return {
@@ -49,7 +51,7 @@ const login = (state = initialState, action = {}) => {
                 isLogged: false,
                 opened: false,
                 pseudo: '',
-                loggedMessage: "t'as fait une boulette mec!",
+                loggedMessage: '"Erreur de connexion"',
             };
             case LOGOUT_SUCCESS:
                 return {

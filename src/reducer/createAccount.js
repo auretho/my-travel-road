@@ -6,7 +6,7 @@ import {  SIGN_UP_INPUT_CHANGE,
 
 const initialState = {
         user: {},
-        firstname: '',
+        firstname: 'Auré',
         lastname: '',
         email: '',
         pseudo:'',
