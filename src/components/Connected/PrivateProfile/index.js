@@ -9,7 +9,7 @@ import './styles.scss';
 
 
 const privateProfile = ({ userData }) => {
-    console.log(userData)
+    // console.log(userData)
     return (
         <div className="privateProfile">
             
