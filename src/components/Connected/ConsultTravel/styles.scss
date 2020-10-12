@@ -22,10 +22,8 @@
     padding: 10px;
     background-color: #699198;
     border-radius: 10px;
-    justify-content: space-between;
-    
-   
-    
+    margin: 2em;
+  
   }
 
   &-nav{
@@ -37,8 +35,8 @@
     color: black;
     border-radius: 10px;
     font-weight: bold;
-    
-    
+    margin-right: 2em;
+    margin-top: 1em;
   }
 
   &-lien{
@@ -121,16 +119,28 @@
 
      &-navigation{
       margin-left: 170px;
-      margin-top: 70px;
-      
+      margin-bottom: 2px;
+      //display: inline;
+      //padding: 5px;
+      //padding: 1px;
+    
       
      }
+
+     &-list{
+       display: flex;
+       //margin: auto;
+       //margin-left: 10em;
+       font-size: 2px;
+       padding: 1px;
+       margin-bottom: 10px;
+       
+   
+     }
+
+     
+     
   
   }
 }
 
-@media(max-width:1600px){
-  .travel{
-    
-  }
-}
