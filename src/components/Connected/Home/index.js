@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import PropTypes from 'prop-types';
 
-import afrique from './img/afrique.jpg';
-import ameSud from './img/amerique-sud.jpg';
-import ameNord from './img/amerique-nord.jpg';
+// import afrique from './img/afrique.jpg';
+// import ameSud from './img/amerique-sud.jpg';
+// import ameNord from './img/amerique-nord.jpg';
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.scss';
@@ -23,21 +23,27 @@ const Home = ({data}) =>{
             </Link>
         </div>
 
-
         <Carousel className="item-div ">
-            <Carousel.Item className="item">
-                <img
-                className="d-block w-100 h-100 voyage-picture"
-                src={ameSud}
-                alt="First slide"
-                />
-                <Carousel.Caption className="position-sticky">
-                <h3>{data.travels[0].title}</h3>
-                </Carousel.Caption>
-            </Carousel.Item>
-        </Carousel>   
-            
-            
+        {
+            data.travels.map((travel) => {
+            console.log(travel);
+                return (
+                <Carousel.Item key={travel.id} className="item">
+                    <img
+                    className="d-block w-100 h-100 voyage-picture"
+                    src={travel.cover}
+                    alt="slide"
+                    />
+                    <Carousel.Caption className="position-sticky">
+                    <h3>{travel.title}</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                )
+            })
+        } 
+        </Carousel>  
+
+        
             
             
             
