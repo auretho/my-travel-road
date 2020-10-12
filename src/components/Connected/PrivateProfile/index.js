@@ -20,50 +20,63 @@ const privateProfile = ({
     description,
 }) => {
     return (
-        <div className="consult">
-            <div className="consult-cover">
-                <img className="consult-content" src={pic} alt="" />
-        </div>
+        <div className="privateProfile">
             
-             <div className="consult-profil">
-                <h6><b>Nom</b></h6>
-                <p>{lastname}</p>
+            <div className="privateProfile-infos">
                 
-                <h6><b>Prénom</b></h6>
-                <p>{firstname}</p>
-                
-                <h6><b>Email</b></h6>
-                <p>{email}</p>
-                
-                <h6><b>Ville</b></h6>
-                <p>{city}</p>
-                
-                <h6><b>Code Postal</b></h6>
-                <p>{cityCode}</p>
-                <Link to='/edit-profile' >
-                    <button className="consult-button">Editer le profil</button>
-                </Link>
-             </div>
-            
-            <div className="consult-pseudo">
-                {/*<button className="consult-public">Profil public</button>*/}
-                    <h2 className="consult-name">{pseudo}<span>&#x2661;</span></h2>
-                    <img className="consult-avat"src={avatarpicture} alt=""/>
-                    <Link to='/my-travels' >
-                        <button className="consult-pseudo button">Mes voyages</button>
+                <div className="privateProfile-profil">
+                    <h6><b>Nom</b></h6>
+                    <p>{lastname}</p>
+                    
+                    <h6><b>Prénom</b></h6>
+                    <p>{firstname}</p>
+                    
+                    <h6><b>Email</b></h6>
+                    <p>{email}</p>
+                    
+                    <h6><b>Ville</b></h6>
+                    <p>{city}</p>
+                    
+                    <h6><b>Code Postal</b></h6>
+                    <p>{cityCode}</p>
+                </div>
+
+                <div className="privateProfile-article">
+                    <article>
+                        <h4 className="privateProfile-titleDescription">A Propos de vous</h4>
+                            <p className="privateProfile-description">
+                                {description}
+                            </p>
+                    </article>
+                </div>
+
+                <div className="privateProfile-buttons">
+                    <Link to='/edit-profile' >
+                        <button className="privateProfile-button">Editer le profil</button>
                     </Link>
                     <Link to='/public-profile' >
-                        <button className="consult-pseudo button">Ma vue publique</button>
+                        <button className="privateProfile-button">Ma vue publique</button>
+                    </Link>                
+                    <Link to='/delete-account' >
+                        <button className="privateProfile-delete">Supprimer mon compte</button>
                     </Link>
+                </div>
+
             </div>
-            
-            <div className="consult-article">
-                <article>
-                    <h4>A Propos</h4>
-                        <p>
-                            {description}
-                        </p>
-                </article>
+
+            <div className="privateProfile-images">
+
+                <div className="privateProfile-photo">
+                    <img className="privateProfile-cover" src={pic} alt="" />
+                </div>
+
+                <div className="privateProfile-picture">
+                    <img className="privateProfile-avatar"src={avatarpicture} alt=""/>
+
+                    <p className="privateProfile-name">{pseudo}</p>            
+                </div>
+
+                
             </div>
         </div>
 

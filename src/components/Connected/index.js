@@ -7,6 +7,7 @@ import NewTravel from '../../containers/NewTravel';
 import TravelName from '../../containers/TravelName';
 import PublicProfile from '../../containers/PublicProfile';
 import ConsultTravel from '../Connected/ConsultTravel';
+import DeleteAccount from '../Connected/DeleteAccount';
 import './styles.scss';
 
 
@@ -17,6 +18,10 @@ const Connected = () => (
 
         <Route path="/private-profile">
             <PrivateProfile />
+        </Route>
+        
+        <Route path="/delete-account">
+            <DeleteAccount />
         </Route>
 
         <Route path="/edit-profile">

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles.scss';
 import { Link } from 'react-router-dom';
+import './styles.scss';
 import avata from './avatar.jpeg';
 import cove from './cover.jpg';
 import Upload from '../Upload';
