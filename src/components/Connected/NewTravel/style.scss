@@ -1,7 +1,7 @@
 .leaflet-container{
     position: relative;
     height: 65vh;
-    width: 100vw;
+    width: 100%;
     margin: auto;
     z-index: 0;
 }
@@ -63,6 +63,7 @@
 
 .bottom-block{
     height: 100%;
+    width: auto;
 }
 
 .fa-map-marked-alt{

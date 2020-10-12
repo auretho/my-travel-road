@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 1em 2em;
-    height: 15vh;
 
     &-left{
         display: flex;
@@ -14,9 +13,6 @@
         height: 100px;
         transition: background-color 0.3s;
     
-        // &:hover{
-        //     background-color: #f0f;
-        // }
     }
 }
     
