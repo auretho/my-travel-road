@@ -24,20 +24,14 @@ const PublicProfile = ({ datas }) => {
         </div>
 
         <div className="past-travels">
-            <div className="voyage">
-                <img src={datas.travels.cover} alt="Voyage Afrique"/>
-                <h2>{datas.travels.title}</h2>
-            </div>
-
-            <div className="voyage">
-                <img src={datas.travels.cover} alt="Voyage Amerique du Sud"/>
-                <h2>{datas.travels.title}</h2>
-            </div>
-
-            <div className="voyage">
-                <img src={datas.travels.cover} alt="Voyage Amerique du Nord"/>
-                <h2>{datas.travels.title}</h2>
-            </div>
+            {
+                datas.travels.map((travel) => (
+                <div className="voyage">
+                    <img src={travel.cover} alt={travel.title}/>
+                    <h2>{travel.title}</h2>
+                </div>
+                ))
+            }
         </div>
     </div>
 );
