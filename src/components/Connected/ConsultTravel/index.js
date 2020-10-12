@@ -9,7 +9,7 @@ const ConsultTravel = () => {
     return(
         <div className="travel">
             <div className="travel-navigation">
-                <nav>
+                <nav className="travel-nav1">
                     <ul>
                         <li className="travel-list"><a className="travel-lien" href="#Tous">Tous</a></li>
                         <li className="travel-list"><a className="travel-lien" href="#En cours">En cours </a></li>
