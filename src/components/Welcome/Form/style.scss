@@ -57,5 +57,22 @@
 }
 
 
+@media(max-width:480px){
+    .form{
+        width: 100%;
+        &-content{
+            font-size: 10px;
+        }
 
+        &-radio{
+            font-size: 10px;
+        }
+
+        &-buttons{
+            font-size: 15px;
+            margin-right: 10px;
+            
+        }
+    }
+}
 
