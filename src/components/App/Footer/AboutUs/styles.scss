@@ -69,7 +69,16 @@
     }
 }
 
+@media(max-width:480px){
+    .about{
+        margin-left: 100px;
 
+        &-title{
+            font-size: 20px;
+        }
+    }
+
+}
 
 
 
