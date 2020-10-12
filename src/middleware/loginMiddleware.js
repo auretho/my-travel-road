@@ -20,7 +20,6 @@ import {  CHECK_AUTH,
           headers: { Authorization: `Bearer ${token}`},
           method: 'post',
           url: 'http://127.0.0.1:8000/isLogged',
-          //withCredentials: true, // le serveur doit savoir qui je suis pour me répondre
         })
           .then((res) => {
             const { data } = res;
@@ -44,7 +43,6 @@ import {  CHECK_AUTH,
                   username: store.getState().login.email,
                   password: store.getState().login.password,
               },
-              //withCredentials: true,
             })            
             .then((res) => {
               const serverResponse = res.data;
@@ -75,10 +73,10 @@ import {  CHECK_AUTH,
             });
           break;
           case LOGIN_INPUT_LOGOUT:
+            
             axios({
               method: 'post',
               url: 'http://127.0.0.1:8000/logout',
-              withCredentials: true,
             })
             .then((res) => {
                 const { data } =res;

@@ -8,9 +8,11 @@ export default (store) => (next) => (action) => {
 
     switch (action.type){
             case EDIT_USER_SUBMIT:
+              const token = localStorage.getItem('token');
                 axios({
-                    method: 'post',
-                    url: 'http//localhost:3001/edit-profile',
+                    headers: { Authorization: `Bearer ${token}`},
+                    method: 'patch',
+                    url: 'http://127.0.0.1:8000/api/user/edit',
                     data: {
                         firstname: store.getState().editProfile.firstanme,
                         lastname: store.getState().editProfile.lastname,
