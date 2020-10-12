@@ -13,18 +13,20 @@ export default (store) => (next) => (action) => {
     // console.log('je veux laisser passer cette action', action)
     switch (action.type){
         case TRAVEL_FORM_SUBMIT:
+          const token = localStorage.getItem('token');
           axios({
+            headers: { Authorization: `Bearer ${token}`},
             method: 'post',
-            url:  'http://localhost:3001/travel',
+            url:  'http://127.0.0.1:8000/api/travel/add',
             data: {
-              location: store.getState().newTravel.location,
+              title: store.getState().newTravel.location,
               country: store.getState().newTravel.country,
-              departure: store.getState().newTravel.departure,
+              departure_at: store.getState().newTravel.departure,
             },
           })
           .then((res) => {
             const serverResponse = res.data;
-            // console.log(serverResponse);
+            console.log(serverResponse);
             dispatch(travelSuccess(serverResponse));
           })
           .catch((err) => {
