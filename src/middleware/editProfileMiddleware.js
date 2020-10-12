@@ -14,15 +14,13 @@ export default (store) => (next) => (action) => {
                     data: {
                         firstname: store.getState().editProfile.firstanme,
                         lastname: store.getState().editProfile.lastname,
-                        pseudo: store.getState().editProfile.pseudo,
                         email: store.getState().editProfile.email,
-                        currentPassword: store.getState().editProfile.currentPassword,
-                        newPassword: store.getState().editProfile.password1,
+                        pseudo: store.getState().editProfile.pseudo,
+                        description: store.getState().editProfile.description,
                         city: store.getState().editProfile.city,
                         cityCode: store.getState().editProfile.cityCode,
-                        avatar: store.getState().editProfile.avatar,
-                        cover: store.getState().editProfile.cover,
-                        description: store.getState().editProfile.description                      
+                        currentPassword: store.getState().editProfile.currentPassword,
+                        newPassword: store.getState().editProfile.password1,                     
                     },
                 })
                 .then((res) => {

@@ -7,11 +7,11 @@ import {    EDIT_USER_CHANGE,
 
 
 const initialState = {
-    firstname: '',
-    lastname: '',
+    firstname: "",
+    lastname: "",
     pseudo: "",
-    email: '',
-    city: '',
+    email: "",
+    city: "",
     cityCode: '',
     description: "",
     cover: "",
