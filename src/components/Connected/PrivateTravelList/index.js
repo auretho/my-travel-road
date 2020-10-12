@@ -1,15 +1,13 @@
 import React from 'react';
 import './styles.scss';
-import card from '../ConsultTravel/mountains.jpg';
-import card2 from '../ConsultTravel/foret.jpg';
+import card from '../PrivateTravelList/mountains.jpg';
+import card2 from '../PrivateTravelList/foret.jpg';
 
-
-
-const ConsultTravel = () => {
+const PrivateTravelList = ({ data }) => {
     return(
         <div className="travel">
             <div className="travel-navigation">
-                <nav>
+                <nav className="travel-nav1">
                     <ul>
                         <li className="travel-list"><a className="travel-lien" href="#Tous">Tous</a></li>
                         <li className="travel-list"><a className="travel-lien" href="#En cours">En cours </a></li>
@@ -27,13 +25,14 @@ const ConsultTravel = () => {
                     </select>
             </div>
 
+
             <div className="travel-card">
                 <img className="travel-avatar"src={card} alt=""/>
                 <div className="travel-img">
                     <h4>Road Trip au Canada</h4>
                     <p>Départ: 27 juillet 2020</p>
                     <button className="travel-supp">Archiver</button>
-                </div>
+            </div>
             
                        
                 <img className="travel-avatar"src={card2} alt=""/>
@@ -52,4 +51,4 @@ const ConsultTravel = () => {
     );
 }
 
-export default ConsultTravel;
+export default PrivateTravelList;

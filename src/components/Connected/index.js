@@ -2,12 +2,12 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import PrivateProfile from '../../containers/PrivateProfile';
 import EditProfile from '../../containers/EditProfile';
-import Home from './Home';
+import Home from '../../containers/Home';
 import NewTravel from '../../containers/NewTravel';
 import TravelName from '../../containers/TravelName';
 import PublicProfile from '../../containers/PublicProfile';
-import ConsultTravel from '../Connected/ConsultTravel';
 import DeleteAccount from '../Connected/DeleteAccount';
+import PrivateTravelList from '../../containers/PrivateTravelList';
 import './styles.scss';
 
 
@@ -45,7 +45,7 @@ const Connected = () => (
         </Route>
 
         <Route path="/my-travels" >
-        <ConsultTravel />
+        <PrivateTravelList />
         </Route>
         
 

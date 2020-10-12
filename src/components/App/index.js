@@ -10,10 +10,10 @@ import Connected from '../Connected';
 import AboutUs from './Footer/AboutUs'
 import './styles.scss';
 
-const App = ({ checkLoginAuth, isLogged } ) => {
-  useEffect(() => {
-    checkLoginAuth();
-} );
+const App = ({ /*checkLoginAuth,*/ isLogged } ) => {
+//   useEffect(() => {
+//     checkLoginAuth();
+// } );
 return (
     <div className="app">
       <Header />

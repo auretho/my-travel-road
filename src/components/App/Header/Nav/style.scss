@@ -4,14 +4,14 @@
 
     &-link {
         margin: 1em;
-        color: #fff;
+        color:#fff;
         font-weight: bold;
-        text-shadow: 1px 1px 2px rgb(33, 33, 33);
+        text-shadow: 1px 1px 2px black;
     }
     
     &-link:hover{
         text-decoration: none;
-        color: #f0f;
+        color: #1968B9;
     }
     &-message{
         text-align: right;
@@ -44,8 +44,19 @@
 
 .active{
     padding-bottom: .3em;
-    border-bottom: .2em solid #0f0;
+    border-bottom: .2em solid #323232;
 }
 
+@media(max-width:480px){
+    .navigation{
+        margin-top: 50px;
+        margin-left: 5px;
+
+        &-button{
+            margin-left: -30px;
+            padding: 10px;
+        }
+    }
+}
 
 
