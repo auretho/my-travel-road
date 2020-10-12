@@ -21,17 +21,17 @@ const TravelName = ({location, country, departure, handleChange, handleSubmit, r
     <div className="travelName">
         <form className="travelName-form" onSubmit={handleInputSubmit}>
             <label>
-            <h1>Nom du voyage<span>*</span></h1>
+            <h1>Titre de ton voyage<span>*</span></h1>
                 <input type="text" 
                         name="location" 
                         className="travelName-input" 
-                        placeholder="Nom du voyage" 
+                        placeholder="Titre de ton voyage" 
                         value={location}
                         onChange={handleInputChange} 
                         />
             </label>
             <label>
-            <h1>Pays<span>*</span></h1>
+            <h1>Pays de départ<span>*</span></h1>
                 <input type="text" 
                         name="country" 
                         className="travelName-input" 
