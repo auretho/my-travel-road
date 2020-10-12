@@ -16,5 +16,22 @@
         list-style: none;
         font-size: 0.7rem;
         text-decoration: none;
+        margin-right: 20px;
     }
+}
+
+@media(max-width:480px){
+    .footer{
+        width: 100%;
+
+        &-list{
+            display: flex;
+        }
+
+        &-content{
+            margin-right: 50px;
+        }
+    }
+
+    
 }

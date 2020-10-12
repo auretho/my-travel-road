@@ -44,3 +44,31 @@
         }
     }
 }
+
+@media(max-width:480px){
+    .main{
+        padding: 5em;
+
+        &-container{
+            margin-top: -60px;
+        }
+
+        &-connect{
+            margin-bottom: 50px;
+            font-size: 10px;
+        }
+
+        &-content{
+            font-size: 10px;
+        }
+
+        &-button{
+            margin-bottom: 15px;
+        }
+
+        &-title{
+            font-size: 20px;
+        }
+    }
+}
+
