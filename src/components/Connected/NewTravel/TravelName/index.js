@@ -18,13 +18,13 @@ const TravelName = ({location, country, departure, handleChange, handleSubmit, r
     if (redirection) return <Redirect to="/create-travel" />;
 
     return(
-    <div className="travel">
-        <form className="travel-form" onSubmit={handleInputSubmit}>
+    <div className="travelName">
+        <form className="travelName-form" onSubmit={handleInputSubmit}>
             <label>
             <h1>Nom du voyage<span>*</span></h1>
                 <input type="text" 
                         name="location" 
-                        className="travel-input" 
+                        className="travelName-input" 
                         placeholder="Nom du voyage" 
                         value={location}
                         onChange={handleInputChange} 
@@ -34,7 +34,7 @@ const TravelName = ({location, country, departure, handleChange, handleSubmit, r
             <h1>Pays<span>*</span></h1>
                 <input type="text" 
                         name="country" 
-                        className="travel-input" 
+                        className="travelName-input" 
                         placeholder="Pays de départ" 
                         value={country}
                         onChange={handleInputChange}
@@ -44,7 +44,7 @@ const TravelName = ({location, country, departure, handleChange, handleSubmit, r
             <h1>Date de départ<span>*</span></h1>
                 <input type="date" 
                         name="departure" 
-                        className="travel-input" 
+                        className="travelName-input" 
                         placeholder="Date de départ" 
                         value={departure}
                         onChange={handleInputChange}

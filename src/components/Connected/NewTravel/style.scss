@@ -1,13 +1,13 @@
 .leaflet-container{
     position: relative;
-    height: 60vh;
+    height: 65vh;
     width: 100vw;
     margin: auto;
     z-index: 0;
 }
 
-.travel{
-    position: relative;
+.travel-new{
+    padding-top: 1em;
 }
 
 .newTravel{
@@ -59,7 +59,10 @@
 .top-block{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 2em;
+}
+
+.bottom-block{
+    height: 100%;
 }
 
 .fa-map-marked-alt{

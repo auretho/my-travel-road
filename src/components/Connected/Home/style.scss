@@ -2,7 +2,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    height: 85vh;
 }
 
 .welcome-message h1{
@@ -38,23 +37,25 @@
 .item-div{
     width: 80%;
     margin: auto;
+    height: 100%;
 }
 
 .carousel-inner{
-    height: 55vh;
+    height: 400px;
+    width: 100%;
     border-radius: 5px;
     box-shadow: 5px 0px 10px #777;
 }
-
-// .voyage-picture{
-    // height: auto;
-    // object-fit: contain;
-// }
 
 .carousel-caption h3{
     color: #fff;
     text-shadow: 1px 1px 5px black;
     font-size: 2em;
     font-weight: bold;
+}
+
+.voyage-picture{
+    height: 100%;
+    width: auto;
 }
 

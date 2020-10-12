@@ -26,7 +26,7 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
     const [ activeLocation, setActiveLocation ] = React.useState(null);
       
     return(
-        <div className="travel">
+        <div className="travel-new">
             <div className={opened ? 'newTravel-closed' : 'newTravel'}>
                 <div className="top-block">
                     <div>
