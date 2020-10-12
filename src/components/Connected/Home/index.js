@@ -25,9 +25,7 @@ const Home = ({data}) =>{
 
         <Carousel className="item-div ">
         {
-            data.travels.map((travel) => {
-            console.log(travel);
-                return (
+            data.travels.map((travel) => (
                 <Carousel.Item key={travel.id} className="item">
                     <img
                     className="d-block w-100 h-100 voyage-picture"
@@ -39,7 +37,7 @@ const Home = ({data}) =>{
                     </Carousel.Caption>
                 </Carousel.Item>
                 )
-            })
+            )
         } 
         </Carousel>  
 

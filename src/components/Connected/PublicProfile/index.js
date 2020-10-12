@@ -1,63 +1,65 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cove from './img/voyage.jpg';
-import avata from './img/avatar.png';
-import afrique from './img/afrique.jpg';
-import ameSud from './img/amerique-sud.jpg';
-import ameNord from './img/amerique-nord.jpg';
+// import cove from './img/voyage.jpg';
+// import avata from './img/avatar.png';
+// import afrique from './img/afrique.jpg';
+// import ameSud from './img/amerique-sud.jpg';
+// import ameNord from './img/amerique-nord.jpg';
 
 import './style.scss';
 
-const PublicProfile = ({
-    pseudo,
-    avatar,
-    cover,
-    description,
-    travelCover,
-    travelTitle,
-    }) => {
+const PublicProfile = ({ datas }) => {
     return (
     <div className="profile">
         <div className="profile-photo">
-            <img src={cove} alt="fond d'écran" className="profile-cover"/>
+            <img src={datas.user.cover} alt="fond d'écran" className="profile-cover"/>
         </div>
         <div className="profile-picture">
-            <img src={avata} alt="avatar" className="profile-avatar"/>
-            <h2 className="profile-pseudo">{pseudo}</h2>
+            <img src={datas.user.avatar} alt="avatar" className="profile-avatar"/>
+            <h2 className="profile-pseudo">{datas.user.nickname}</h2>
         </div>
         <div className="profile-journal">
             <h2 className='profile-title'>Journal de bord</h2>
-            <p>{description}</p>
+            <p>{datas.user.presentation}</p>
         </div>
 
         <div className="past-travels">
             <div className="voyage">
-                <img src={afrique} alt="Voyage Afrique"/>
-                <h2>{travelTitle}</h2>
+                <img src={datas.travels.cover} alt="Voyage Afrique"/>
+                <h2>{datas.travels.title}</h2>
             </div>
 
             <div className="voyage">
-                <img src={ameSud} alt="Voyage Amerique du Sud"/>
-                <h2>{travelTitle}</h2>
+                <img src={datas.travels.cover} alt="Voyage Amerique du Sud"/>
+                <h2>{datas.travels.title}</h2>
             </div>
 
             <div className="voyage">
-                <img src={ameNord} alt="Voyage Amerique du Nord"/>
-                <h2>{travelTitle}</h2>
+                <img src={datas.travels.cover} alt="Voyage Amerique du Nord"/>
+                <h2>{datas.travels.title}</h2>
             </div>
         </div>
     </div>
 );
 };
 
-PublicProfile.protoTypes = {
-    pseudo: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    cover: PropTypes.string.isRequired,
-    descritpion: PropTypes.string.isRequired,
-    travelCover: PropTypes.string.isRequired,
-    travelTitle: PropTypes.string.isRequired,
-
-};
 
 export default PublicProfile;
+
+PublicProfile.protoTypes = {
+    datas: PropTypes.arrayOf(
+        PropTypes.shape({
+            pseudo: PropTypes.string.isRequired,
+            avatar: PropTypes.string.isRequired,
+            cover: PropTypes.string.isRequired,
+            presentation: PropTypes.string.isRequired,
+        }),
+        PropTypes.shape({
+            cover: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+        })
+    )
+    
+    
+
+};
