@@ -47,12 +47,34 @@
        
     }
 
+    &-info {
+        margin-top: 30px;
+    }
+
+    &-label{
+        font-weight: bold;
+    }
 }
 
-p {
-    margin-top: 30px;
+@media(max-width:480px){
+    .contact{
+        margin: 0px;
+
+        &-button{
+            margin-left: 340px;
+        }
+
+        &-form{
+            width: 100%;
+            margin-left: 50px;
+        }
+
+        &-intro{
+            width: 60vh;
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+    }
+    
 }
 
-label {
-    font-weight: bold;
-}
