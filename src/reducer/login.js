@@ -40,9 +40,9 @@ const login = (state = initialState, action = {}) => {
                 ...state,
                 loading: false,
                 isLogged: true,
+                data: action.payload,
                 nickname: action.payload.user.nickname,
                 loggedMessage: '',
-                data: action.payload,
             };
             case LOGIN_ERROR:
                 return {
