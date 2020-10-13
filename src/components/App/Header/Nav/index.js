@@ -16,6 +16,14 @@ const Nav = ({ loggedMessage, handleLogout}) => {
         <NavLink exact className="navigation-link" to="/my-travels">
             Mes voyages
         </NavLink>
+
+        <NavLink exact className="navigation-link" to="/my-travel-view">
+            PrivateTravelView
+        </NavLink>
+
+        <NavLink exact className="navigation-link" to="/travel-view">
+            PublicTravelView
+        </NavLink>
     
     <div className="navigation-logged">
     <p className="navigation-message">

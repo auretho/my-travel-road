@@ -8,6 +8,9 @@ import TravelName from '../../containers/TravelName';
 import PublicProfile from '../../containers/PublicProfile';
 import DeleteAccount from '../Connected/DeleteAccount';
 import PrivateTravelList from '../../containers/PrivateTravelList';
+import PrivateTravelView from './PrivateTravelView';
+import PublicTravelView from './PublicTravelView';
+
 import './styles.scss';
 
 
@@ -47,6 +50,16 @@ const Connected = () => (
         <Route path="/my-travels" >
         <PrivateTravelList />
         </Route>
+
+        <Route path="/my-travel-view" >
+        <PrivateTravelView />
+        </Route>
+
+        <Route path="/travel-view" >
+        <PublicTravelView />
+        </Route>
+
+
         
 
     </div>
