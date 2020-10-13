@@ -5,14 +5,15 @@
     &-form{
         display: flex;
         flex-direction: column;
-        background-color: lightblue;
+        // background-color: lightblue;
         width: 45%;
         margin: auto;
         margin-top: 5em;
         padding: 2em;
         border-radius: 5px;
         box-shadow: 0px 0px 5px #777; 
-
+        background-image: url('./doodle.jpg');
+        background-size: cover;
     }
 
     &-form label{
@@ -22,8 +23,10 @@
     }
 
     &-form h1{
-        color: #fff;
-        font-size: 1em;
+        // color: #fff;
+        // font-size: 1em;
+        font-size: 1.5em;
+        color: #1774C7;
         font-weight: bold;
         text-shadow: 1px 1px 2px grey;
     }

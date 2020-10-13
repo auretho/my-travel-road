@@ -132,3 +132,25 @@
         margin: 1em auto 0;
     }
 }
+
+.leaflet-popup-content { 
+    width:auto !important; 
+    text-align: center;
+}
+
+.popup{
+    &-name{
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    &-city{
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    &-image{
+        height: 30px;
+        width: 50px;
+    }
+}

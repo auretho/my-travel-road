@@ -9,6 +9,9 @@ import './style.scss';
 
 
 const NewTravel = ({fetchCountries, countryData, location, country, departure, step, opened, onToggle, handleChange, handleSubmit} ) => {
+console.log(countryData)
+
+
 
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
@@ -18,10 +21,10 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
         fetchCountries();
     };
 
-      const handleInputSubmit = (evt) => {
+    const handleInputSubmit = (evt) => {
         evt.preventDefault();
         handleSubmit();
-      };
+    };
 
     const [ activeLocation, setActiveLocation ] = React.useState(null);
       
@@ -74,11 +77,27 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                                 )
                             })
                         }
+                        {   activeLocation && 
+                            <Popup 
+                                position={[ activeLocation.latlng[0],activeLocation.latlng[1] ]}
+                                onClose={()=> {
+                                    setActiveLocation(null);
+                                }}
+                            >
+                                <div>
+                                    <h1 className="popup-name">{activeLocation.name}</h1>
+                                    <h3 className="popup-city">{activeLocation.capital}</h3>
+                                    <img className="popup-image" src={activeLocation.flag} alt="flag"/>
+                                </div>
+                            </Popup>
+                            
+                        })   
+                        
                         {
                             countryData[1] && countryData.map(({ latlng }) => {
                                 return(
                                 <Polyline 
-                                    key={1} 
+                                    key={latlng} 
                                     positions={[
                                         [countryData[0].latlng[0], countryData[0].latlng[1]],
                                         [countryData[countryData.length - 2].latlng[0], countryData[countryData.length - 2].latlng[1]], 
@@ -93,16 +112,7 @@ const NewTravel = ({fetchCountries, countryData, location, country, departure, s
                         {/* ======================================================= */}
 
 
-                        {activeLocation && (
-                            <Popup 
-                                position={[ activeLocation.x, activeLocation.y ]}
-                            >
-                                <div>
-                                    <h2>{activeLocation.name}</h2>
-                                    <h3>{activeLocation.context}</h3>
-                                </div>
-                            </Popup>
-                        )}
+                        
                     </Map>
                 </div>
             </div>
