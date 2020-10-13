@@ -24,11 +24,7 @@ const TravelName = ({location, country, departure, handleChange, handleSubmit, r
             <h1>Titre de ton voyage<span>*</span></h1>
                 <input type="text" 
                         name="location" 
-<<<<<<< HEAD
-                        className="travel-input" 
-=======
                         className="travelName-input" 
->>>>>>> overall-css
                         placeholder="Titre de ton voyage" 
                         value={location}
                         onChange={handleInputChange} 

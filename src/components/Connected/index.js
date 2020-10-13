@@ -10,6 +10,8 @@ import DeleteAccount from '../Connected/DeleteAccount';
 import PrivateTravelList from '../../containers/PrivateTravelList';
 import PrivateTravelView from './PrivateTravelView';
 import PublicTravelView from './PublicTravelView';
+import AboutUs from '../App/Footer/AboutUs';
+import Contact from '../App/Footer/Contact';
 
 import './styles.scss';
 
@@ -48,18 +50,24 @@ const Connected = () => (
         </Route>
 
         <Route path="/my-travels" >
-        <PrivateTravelList />
+            <PrivateTravelList />
         </Route>
 
         <Route path="/my-travel-view" >
-        <PrivateTravelView />
+            <PrivateTravelView />
         </Route>
 
         <Route path="/travel-view" >
-        <PublicTravelView />
+            <PublicTravelView />
         </Route>
 
-
+        <Route exact path="/about-us">
+            <AboutUs />
+        </Route>
+        
+        <Route exact path="/contact-us">
+            <Contact />
+        </Route>
         
 
     </div>
