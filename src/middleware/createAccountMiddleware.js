@@ -14,7 +14,7 @@ export default (store) => (next) => (action) => {
             data: {
               firstname: store.getState().createAccount.firstname,
               lastname: store.getState().createAccount.lastname,
-              nickname: store.getState().createAccount.pseudo,
+              nickname: store.getState().createAccount.nickname,
               email: store.getState().createAccount.email,
               password: store.getState().createAccount.password1,
             },

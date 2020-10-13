@@ -17,7 +17,7 @@ export default (store) => (next) => (action) => {
                         firstname: store.getState().editProfile.firstname,
                         lastname: store.getState().editProfile.lastname,
                         email: store.getState().editProfile.email,
-                        nickname: store.getState().editProfile.pseudo,
+                        nickname: store.getState().editProfile.nickname,
                         presentation: store.getState().editProfile.description,
                         city: store.getState().editProfile.city,
                         postal: store.getState().editProfile.cityCode,

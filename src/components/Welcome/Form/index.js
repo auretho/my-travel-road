@@ -9,7 +9,7 @@ const Form = ({
     // les props du composant statique
     firstname,
     lastname,
-    pseudo,
+    nickname,
     email,
     password1,
     password2,
@@ -42,7 +42,7 @@ const Form = ({
                                 <Field name="lastname" type="text" placeholder="Nom de famille" onChange={changeField} value={lastname} />
                             </div>
                             <div className="form-content">                          
-                                <Field name="pseudo" type="text" placeholder="Pseudonyme" onChange={changeField} value={pseudo} />
+                                <Field name="nickname" type="text" placeholder="Pseudonyme" onChange={changeField} value={nickname} />
 
                                 <Field name="email" type="email" placeholder="Adresse Email" onChange={changeField} value={email} />
                             </div>
@@ -78,7 +78,7 @@ export default Form;
 Form.propTypes = {
     firstname: PropTypes.string.isRequired,
     lastname:PropTypes.string.isRequired,
-    pseudo: PropTypes.string,
+    nickname: PropTypes.string,
     email: PropTypes.string.isRequired,
     password:PropTypes.string,
     city:PropTypes.string,

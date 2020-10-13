@@ -82,10 +82,11 @@
     } 
         
     &-cover{
-        height: 150px;
-        width: 150px;
+        height: 400px;
+        width: 650px;
         border: 1px solid black;
-        border-radius: 50%;
+        background-color: pink;
+        border-radius: 5px;
     }
     &-picture{
         display: flex;
@@ -93,8 +94,10 @@
         justify-content: center;
     }
     &-avatar{
+        height: 150px;
+        width: 150px;
         border-radius: 50%;
-        width: 15%;
+        background-color: yellow;
         margin: 1em;
         
     }

@@ -12,29 +12,11 @@
 
     &-logo{
         height: 100px;
-        transition: background-color 0.3s;
-    
         &:hover{
-            background-color: #f0f;
+            transition: filter .6s;
+            filter: drop-shadow(2px 2px 3px #1968B9);
         }
     }
-
-    // &-title{
-    //     font-weight: bold;
-    //     font-size: 1.5em;
-    // }
-
-    // &-button{
-    //     background-color: #1774C7;
-    //     color: #FFF;
-    //     font-size: 1em;
-    //     font-weight: bold;
-    //     padding: .7em 1em;
-    //     border-radius: 3px;
-    //     border: none;
-    //     box-shadow: 1px 1px 2px lightblue;
-    // }
-
 }
     
 

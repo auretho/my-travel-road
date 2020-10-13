@@ -8,6 +8,7 @@ import { TRAVEL_INPUT_CHANGE,
          NEWSTEP_SUCCESS,
          NEWSTEP_ERROR 
      } from '../actions/travel-actions';
+import {FETCH_TRAVELS_SUCCESS, FETCH_TRAVELS_ERROR} from '../actions/privateTravelList-actions';
          
 
 const initialState = {
@@ -33,6 +34,7 @@ const initialState = {
         arrival: '',
         },
     newStep: [],
+    allTravels: [],
 };
 
 const newTravel = (state = initialState, action = {}) => {
@@ -91,7 +93,15 @@ const newTravel = (state = initialState, action = {}) => {
                 redirection: true,
                 step:{country: '', departure: '', arrival: ''},
             };
-        
+        case FETCH_TRAVELS_SUCCESS:
+            return {
+                ...state,
+                allTravels: {...action.payload},
+              };
+        case FETCH_TRAVELS_ERROR:
+            return {
+                ...state,
+            };
         default:
             return state;
     }

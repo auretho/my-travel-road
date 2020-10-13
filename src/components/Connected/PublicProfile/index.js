@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 const PublicProfile = ({ datas }) => {
+    console.log(datas.travels)
     return (
     <div className="profile">
         <div className="profile-photo">

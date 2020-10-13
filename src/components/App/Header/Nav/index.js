@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import './style.scss';
 
-const Nav = ({ loggedMessage, handleLogout}) => { 
+const Nav = ({ loggedMessage, handleLogout, fetchTravels}) => { 
     return (
     <div className="navigation">
         <NavLink exact className="navigation-link" to="/home">
@@ -13,7 +13,7 @@ const Nav = ({ loggedMessage, handleLogout}) => {
         <NavLink exact className="navigation-link" to="/private-profile">
             Profil  
         </NavLink>
-        <NavLink exact className="navigation-link" to="/my-travels">
+        <NavLink exact className="navigation-link" to="/my-travels" onClick={fetchTravels}>
             Mes voyages
         </NavLink>
 
