@@ -3,7 +3,7 @@ import { EDIT_USER_SUCCESS } from '../actions/profile-actions';
 const initialState = {
     firstname: 'John',
     lastname: 'Deuf',
-    pseudo: "DuhR",
+    nickname: "DuhR",
     email: 'JohnDeufDurH@Grokif.miam',
     city: 'MyTravelTown',
     cityCode: 69999,

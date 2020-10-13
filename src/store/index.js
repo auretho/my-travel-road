@@ -5,6 +5,7 @@ import loginMiddleware from '../middleware/loginMiddleware';
 import travelMiddleware from '../middleware/travelMiddleware';
 import countriesMiddleware from '../middleware/countriesMiddleware';
 import editProfileMiddleware from '../middleware/editProfileMiddleware';
+import privateTravelsMiddleware from '../middleware/privateTravelsMiddleware';
 
 import reducer from '../reducer';
 
@@ -18,6 +19,7 @@ const enhancers = composeEnhancers(
         travelMiddleware,
         countriesMiddleware,
         editProfileMiddleware,
+        privateTravelsMiddleware,
     ),
 );
 

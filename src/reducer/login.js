@@ -13,7 +13,7 @@ const initialState = {
     email: 'telo@telo.fr',
     password:'telo',
     isLogged: false,
-    pseudo: '',
+    nickname: '',
     loggedMessage: '',
     data: '', 
 };
@@ -40,7 +40,7 @@ const login = (state = initialState, action = {}) => {
                 ...state,
                 loading: false,
                 isLogged: true,
-                pseudo: action.payload.user.nickname,
+                nickname: action.payload.user.nickname,
                 loggedMessage: '',
                 data: action.payload,
             };
@@ -50,14 +50,14 @@ const login = (state = initialState, action = {}) => {
                 loading: false,
                 isLogged: false,
                 opened: false,
-                pseudo: '',
+                nickname: '',
                 loggedMessage: '"Erreur de connexion"',
             };
             case LOGOUT_SUCCESS:
                 return {
                 ...state,
                 isLogged: false,
-                pseudo: '',
+                nickname: '',
                 loggedMessage: '',
             };
             case LOGOUT_ERROR:

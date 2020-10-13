@@ -3,7 +3,10 @@ import './styles.scss';
 import card from '../PrivateTravelList/mountains.jpg';
 import card2 from '../PrivateTravelList/foret.jpg';
 
-const PrivateTravelList = ({ data }) => {
+const PrivateTravelList = ({ allTravels }) => {
+
+    console.log(allTravels)
+
     return(
         <div className="travel">
             <div className="travel-navigation">

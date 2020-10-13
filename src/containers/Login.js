@@ -9,7 +9,7 @@ const mapState = (state) => ({
     password: state.login.password,
     isLogged: state.login.isLogged,
     loading: state.login.loading,
-    pseudo: state.login.pseudo,
+    nickname: state.login.nickname,
     loggedMessage: state.login.loggedMessage,
 });
 

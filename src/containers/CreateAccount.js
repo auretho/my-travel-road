@@ -6,7 +6,7 @@ import { SignUpInputChange,SignUpInputSubmit } from '../actions/createAccount-ac
 const mapState = (state) => ({
     firstname: state.createAccount.firstname,
     lastname: state.createAccount.lastname,
-    pseudo: state.createAccount.pseudo,
+    nickname: state.createAccount.nickname,
     email: state.createAccount.email,
     password1 : state.createAccount.password1,
     password2: state.createAccount.password2,

@@ -26,7 +26,6 @@ const mapDispatch = (dispatch) => ({
     },
 
     fetchCountries: () => {
-      // console.log('je vais chercher un pays');
       dispatch(fetchCountries());
     },
 });
