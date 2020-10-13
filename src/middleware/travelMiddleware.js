@@ -1,10 +1,12 @@
 import axios from 'axios';
-import { TRAVEL_FORM_SUBMIT, 
-         travelSuccess, 
-         travelError, 
-         NEWSTEP_FORM_SUBMIT, 
-         newStepSuccess, 
-         newStepError} from '../actions/travel-actions';
+import {  TRAVEL_FORM_SUBMIT, 
+          travelSuccess, 
+          travelError, 
+          NEWSTEP_FORM_SUBMIT, 
+          newStepSuccess, 
+          newStepError,
+          CHECK_PUBLIC_TRAVEL,
+        } from '../actions/travel-actions';
 
 
 export default (store) => (next) => (action) => {
@@ -17,7 +19,7 @@ export default (store) => (next) => (action) => {
           axios({
             headers: { Authorization: `Bearer ${token}`},
             method: 'post',
-            url:  'http://127.0.0.1:8000/api/travel/add',
+            url:  'http://54.198.22.9/api/travel/add',
             data: {
               title: store.getState().newTravel.location,
               country: store.getState().newTravel.country,
@@ -38,7 +40,7 @@ export default (store) => (next) => (action) => {
         case NEWSTEP_FORM_SUBMIT:
           axios({
             method: 'post',
-            url:  'http://localhost:3001/create-travel',
+            url:  'http://54.198.22.9/create-travel',
             data: {
               step: store.getState().newTravel.step,
               // country: store.getState().newTravel.country,
@@ -57,7 +59,26 @@ export default (store) => (next) => (action) => {
             console.log('ERREUR!!')
             dispatch(newStepError());
           })
-          break;  
+          break;
+
+          // case NEWSTEP_FORM_SUBMIT:
+          // const {pathToCall} = action.payload;
+          // console.log(action.payload)  
+          // axios({
+          //   headers: { Authorization: `Bearer ${token}`},
+          //   method: 'get',
+          //   url:  'http://localhost:3001/create-travel/${pathToCall}',
+          // })
+          // .then((res) => {
+          //   const serverResponse = res.data;
+          //   console.log(serverResponse);
+          // })
+          // .catch((err) => {
+          //   console.error(err);
+          // })
+          
+          // break;
+
         default:
           break;
     } 

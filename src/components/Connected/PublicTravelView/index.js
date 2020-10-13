@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import pic from './cover.jpg';
 import avatarpicture from './face.jpg';
 import './styles.scss';
 
 const PublicTravelView = () => {
+
     return(
         <div className="pubTravView">
             <div className="pubTravView-header">
                 <div className="pubTravView-infos">
-                    <h2 className="pubTravView-title">Titre du voyage</h2>
+                    <h2 className="pubTravView-title">Titre</h2>
                     <p className="pubTravView-date">date de départ: 00/00/0000</p>
                 </div>
 
@@ -44,3 +45,15 @@ const PublicTravelView = () => {
 
 
 export default PublicTravelView;
+
+
+
+
+// const { pathToCall } = action.payload;
+//       axios({
+//         method: 'get',
+//         url: `http://ec2-23-20-252-110.compute-1.amazonaws.com/api/fiction/la-montre-du-temps/path/${pathToCall}`,
+//         headers: {
+//           authorization: `Bearer ${cookies.get('token').token}`,
+//         },
+//       })

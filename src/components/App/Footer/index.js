@@ -13,7 +13,7 @@ const Footer = () => (
           <Link to="/contact-us" className='footer-content'>Contactez nous</Link>
         </li>
         <li>
-          <Link to="https://nsm09.casimages.com/img/2020/09/27//20092709390317254117047041.gif" className='footer-content'>Mentions légales</Link>
+          <Link to="/mentions-legales" className='footer-content'>Mentions légales</Link>
         </li>
       </ul>
            </div>

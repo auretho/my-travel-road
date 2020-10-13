@@ -12,7 +12,7 @@ export default (store) => (next) => (action) => {
                 axios({
                     headers: { Authorization: `Bearer ${token}`},
                     method: 'patch',
-                    url: 'http://127.0.0.1:8000/api/user/edit',
+                    url: 'http://54.198.22.9/api/user/edit',
                     data: {
                         firstname: store.getState().editProfile.firstname,
                         lastname: store.getState().editProfile.lastname,

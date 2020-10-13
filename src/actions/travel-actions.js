@@ -3,6 +3,8 @@ export const TRAVEL_FORM_SUBMIT = 'TRAVEL_FORM_SUBMIT';
 export const TRAVEL_SUCCESS = 'TRAVEL_SUCCESS';
 export const TRAVEL_ERROR = 'TRAVEL_ERROR';
 
+export const CHECK_PUBLIC_TRAVEL = 'CHECK_PUBLIC_TRAVEL';
+
 export const TOGGLE_NEWSTEP_BUTTON = 'TOGGLE_NEWSTEP_BUTTON';
 export const NEWSTEP_INPUT_CHANGE = 'NEWSTEP_INPUT_CHANGE';
 export const NEWSTEP_FORM_SUBMIT = 'NEWSTEP_FORM_SUBMIT';
@@ -48,4 +50,9 @@ export const newStepSuccess = (payload) => ({
 
 export const newStepError = () => ({
   type: NEWSTEP_ERROR,  
+});
+
+export const checkPublicTravel = (payload) => ({
+  type: CHECK_PUBLIC_TRAVEL,
+  payload
 });

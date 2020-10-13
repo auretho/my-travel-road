@@ -9,7 +9,7 @@ const DeleteAccount = () => {
         axios({
             headers: { Authorization: `Bearer ${token}`},
             method: 'delete',
-            url: `http://127.0.0.1:8000/api/user/delete`,  
+            url: `http://54.198.22.9/api/user/delete`,  
         })
           .then((response) => {
             console.log('la reponse', response);

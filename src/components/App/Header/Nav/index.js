@@ -20,10 +20,6 @@ const Nav = ({ loggedMessage, handleLogout, fetchTravels}) => {
         <NavLink exact className="navigation-link" to="/my-travel-view">
             PrivateTravelView
         </NavLink>
-
-        <NavLink exact className="navigation-link" to="/travel-view">
-            PublicTravelView
-        </NavLink>
     
     <div className="navigation-logged">
     <p className="navigation-message">

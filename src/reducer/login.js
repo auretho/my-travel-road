@@ -10,8 +10,8 @@ import {TOGGLE_LOGIN_FORM,
 const initialState = {
     opened: false,
     loading: false,
-    email: 'telo@telo.fr',
-    password:'telo',
+    email: 'jeremy.fernagut@gmail.com',
+    password:'123',
     isLogged: false,
     nickname: '',
     loggedMessage: '',
@@ -51,7 +51,7 @@ const login = (state = initialState, action = {}) => {
                 isLogged: false,
                 opened: false,
                 nickname: '',
-                loggedMessage: '"Erreur de connexion"',
+                loggedMessage: 'Erreur de connexion',
             };
             case LOGOUT_SUCCESS:
                 return {

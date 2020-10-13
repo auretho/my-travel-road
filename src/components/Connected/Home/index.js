@@ -5,8 +5,12 @@ import PropTypes from 'prop-types';
 import './style.scss';
 import './custom.scss';
 
-const Home = ({data}) =>{ 
+const Home = ({data, handleToto}) =>{ 
     console.log(data);
+
+    const toto = () => {
+        handleToto();
+    }
     return(
     <div className="home">
         <div className="welcome-message">
@@ -30,9 +34,9 @@ const Home = ({data}) =>{
                     <Carousel.Caption className="position-sticky">   
                     <h3>{travel.title}</h3>
                     
-                    <Link to={`/travel-view/${travel.id}`}>
-                        <button className="carousel-button">Visiter</button>
-                    </Link>
+                    {/* <Link to={`/travel-view/${travel.id}`}> */}
+                        <button type="button" className="carousel-button" onclick={toto}>Visiter le voyage</button>
+                    {/* </Link> */}
 
                     </Carousel.Caption>
                 </Carousel.Item>
