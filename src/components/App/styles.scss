@@ -1,4 +1,5 @@
 .app {
+<<<<<<< HEAD
     // background-image: url("./van.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,4 +10,13 @@
 a:hover{
     text-decoration: none;
     color: grey;
+=======
+    height: 100vh;
+    // background-image: url("./nuages.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+>>>>>>> overall-css
 }

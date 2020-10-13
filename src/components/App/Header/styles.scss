@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 1em 2em;
-    height: 15vh;
 
     &-left{
         display: flex;
@@ -12,10 +11,15 @@
 
     &-logo{
         height: 100px;
+<<<<<<< HEAD
         &:hover{
             transition: filter .6s;
             filter: drop-shadow(2px 2px 3px #1968B9);
         }
+=======
+        transition: background-color 0.3s;
+    
+>>>>>>> overall-css
     }
 }
     

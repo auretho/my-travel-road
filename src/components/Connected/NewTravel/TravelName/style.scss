@@ -1,16 +1,23 @@
-.travel{
+.travelName{
     height: 70vh;
     margin-top: 2em;
     
     &-form{
+        background-image: url('../doodle.jpg');
+        background-size: cover;
+        // opacity: .9;
         display: flex;
         flex-direction: column;
+<<<<<<< HEAD
         // background-color: lightblue;
         width: 45%;
+=======
+        background-color: lightblue;
+        max-width: 40%;
+>>>>>>> overall-css
         margin: auto;
-        margin-top: 5em;
         padding: 2em;
-        border-radius: 5px;
+        border-radius: 8px;
         box-shadow: 0px 0px 5px #777; 
         background-image: url('./doodle.jpg');
         background-size: cover;
@@ -23,12 +30,17 @@
     }
 
     &-form h1{
+<<<<<<< HEAD
         // color: #fff;
         // font-size: 1em;
         font-size: 1.5em;
         color: #1774C7;
+=======
+        color: rgb(0, 99, 181);
+        font-size: 1.3em;
+>>>>>>> overall-css
         font-weight: bold;
-        text-shadow: 1px 1px 2px grey;
+        text-shadow: 2px 2px 3px rgb(164, 221, 254);
     }
 
     &-form span{
