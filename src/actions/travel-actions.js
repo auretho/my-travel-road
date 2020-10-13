@@ -9,7 +9,6 @@ export const NEWSTEP_FORM_SUBMIT = 'NEWSTEP_FORM_SUBMIT';
 export const NEWSTEP_SUCCESS = 'NEWSTEP_SUCCESS';
 export const NEWSTEP_ERROR = 'NEWSTEP_ERROR';
 
-
 export const travelInputChange = (payload) => ({
   type: TRAVEL_INPUT_CHANGE,
   payload,

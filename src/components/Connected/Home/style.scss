@@ -39,6 +39,29 @@
     width: 80%;
     margin: auto;
 }
+.position-sticky{
+    display: flex;
+    justify-content: space-around;
+}
+.carousel{
+
+    &-button{
+        
+        margin: 1em 2em 2em 2em;
+        padding: .6em 1.8em;
+        font-size: .9em;
+        font-weight: bold;
+        background-color: #1774C7;
+        color: #FFF;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 1px 1px 2px black;
+        transition: background-color 0.3s;
+        &:hover{
+            background-color: #f0f;
+        }
+    }
+}
 
 .carousel-inner{
     height: 55vh;
@@ -74,4 +97,5 @@
         margin-right: 20px;
     }
 
-}   
+}
+
