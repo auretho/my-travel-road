@@ -1,14 +1,11 @@
 .about{
-    
     text-align: center;
-   
 
     &-avatar{
         border-radius: 50%;
         width: 120px;
         height: 120px;
         border: solid 3px black;
- 
     }
 
     &-scrum {
@@ -33,9 +30,8 @@
     }
 
     &-elt1{
-        display: flex;
         flex-wrap: wrap;
-        margin-top: 60px;
+        margin-top: 1em;
         justify-content: center;
     }
 
@@ -52,20 +48,23 @@
     }
 
     &-title{
-        //border-radius: 50px;
-        //border: solid 3px #323232;
-        //padding: 20px;  
         font-weight: bold; 
         color: #323232;
         padding: 20px;
         width: 50vw;
         margin:auto;
-        border-bottom: solid 3px purple;
-    
+        border-bottom: solid 3px purple;    
     }
 
     &-name{
         font-weight: bold;
+    }
+
+    &-scrum, &-back{
+        margin: 0 5em;
+    }
+    &-front, &-master{
+        margin: 0 14em;
     }
 }
 
