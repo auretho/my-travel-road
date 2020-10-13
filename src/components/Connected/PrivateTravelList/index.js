@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
+
 import add from './add-marker-location.png';
 import './styles.scss';
 
@@ -40,13 +42,15 @@ const PrivateTravelList = ({ allTravels }) => {
                     </div>
                 ))
             }
-
-                <div className="travelList-card">
+            <Link to="/create-travel">
+                <div className="travelList-card newcard">
                     <img className="travelList-avatar marker"src={add} alt=""/>
-                    <div className="travelList-img">
-                        
+                    <div className="marker-title">
+                    <h2 >Créer un voyage</h2>
                     </div>
                 </div>
+            </Link>
+            
             </div>
         </div>
     );

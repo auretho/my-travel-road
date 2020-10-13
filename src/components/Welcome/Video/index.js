@@ -2,7 +2,7 @@ import React from 'react';
 import Test from './Sea.mp4';
 
 const Video = () => (
-    <div>
+    <div className="video">
         <video className='app-video'
                 autoPlay loop muted
                 style={{

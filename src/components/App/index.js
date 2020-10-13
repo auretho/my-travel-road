@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import Header from '../../containers/Header';
 import Footer from './Footer';
 import Welcome from '../Welcome';
-import Contact from './Footer/Contact';
 import Connected from '../Connected';
-import AboutUs from './Footer/AboutUs'
 import './styles.scss';
 
 const App = ({ checkLoginAuth, isLogged } ) => {
@@ -22,15 +20,7 @@ return (
 
       { isLogged ? <Redirect to="/home" /> : <Redirect to="/login" /> }
 
-        <Footer />
-      <Route exact path="/contact-us">
-        <Contact />
-      </Route>
-
-      <Route exact path="/about-us">
-        <AboutUs />
-      </Route>
-     
+      <Footer />
     </div>
   );
 };

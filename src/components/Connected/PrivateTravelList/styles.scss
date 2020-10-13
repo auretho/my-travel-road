@@ -83,6 +83,24 @@
   opacity: .1;
 }
 
+.marker-title{
+  visibility: hidden;
+  position: relative;
+  top: -150px;
+}
+
+.marker-title h2{
+  font-weight: bold;
+}
+
+.newcard:hover{
+  opacity: .6;
+}
+
+.newcard:hover .marker-title{
+  visibility: visible;
+}
+
 @media(max-width:480px){
   .travelList{
     &-avatar{

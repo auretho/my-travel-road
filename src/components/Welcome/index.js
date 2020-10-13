@@ -1,17 +1,17 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Main from './Main';
 import Form from '../../containers/CreateAccount';
+import AboutUs from '../App/Footer/AboutUs'
+import Contact from '../App/Footer/Contact';
 import Video from './Video';
 
 import './styles.scss';
 
-
-
-
 const Welcome = () => (
     <div className='welcome'>
         
+    <Switch>
       <Route path="/login">
         <Main />
       </Route>      
@@ -19,6 +19,15 @@ const Welcome = () => (
       <Route path="/create-account">
         <Form />      
       </Route>
+
+      <Route exact path="/about-us">
+        <AboutUs />
+      </Route>
+      
+      <Route exact path="/contact-us">
+        <Contact />
+      </Route>
+    </Switch>
 
       <Video />
      
