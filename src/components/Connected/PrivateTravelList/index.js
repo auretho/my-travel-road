@@ -1,46 +1,52 @@
 import React from 'react';
+import add from './add-marker-location.png';
 import './styles.scss';
-import card from '../PrivateTravelList/mountains.jpg';
-import card2 from '../PrivateTravelList/foret.jpg';
 
 const PrivateTravelList = ({ allTravels }) => {
     console.log(allTravels)
     console.log(allTravels.archive)
 
     return(
-        <div className="travel">
-            <div className="travel-navigation">
-                <nav className="travel-nav1">
+        <div className="travelList">
+            <div className="travelList-navigation">
+                <nav className="travelList-nav1">
                     <ul>
-                        <li className="travel-list"><a className="travel-lien" href="#Tous">Tous</a></li>
-                        <li className="travel-list"><a className="travel-lien" href="#En cours">En cours </a></li>
-                        <li className="travel-list"><a className="travel-lien" href="#Archivé">Archiver</a></li>
+                        <li className="travelList-list"><a className="travelList-lien" href="#Tous">Tous</a></li>
+                        <li className="travelList-list"><a className="travelList-lien" href="#En cours">En cours </a></li>
+                        <li className="travelList-list"><a className="travelList-lien" href="#Archivé">Archiver</a></li>
                     </ul>
                 </nav>
             </div>
 
-            <div className="travel-navigation">
-                    <select className="travel-nav">
-                        <option className="travel-list">Trier par</option>
-                        <option className="travel-list">Date</option>
-                        <option className="travel-list">Pays</option>
-                        <option className="travel-list">Catégorie</option>
+            <div className="travelList-navigation">
+                    <select className="travelList-nav">
+                        <option className="travelList-list">Trier par</option>
+                        <option className="travelList-list">Date</option>
+                        <option className="travelList-list">Pays</option>
+                        <option className="travelList-list">Catégorie</option>
                     </select>
             </div>
             
-            <div className="test-test">
+            <div className="travelList-allTravels">
             {
                 allTravels.archive && allTravels.archive.map((travel) => (
-                    <div className="travel-card">
-                        <img className="travel-avatar"src={travel.cover} alt=""/>
-                        <div className="travel-img">
+                    <div className="travelList-card">
+                        <img className="travelList-avatar"src={travel.cover} alt=""/>
+                        <div className="travelList-img">
                             <h4>{travel.title}</h4>
                             <p>Départ: {travel.departure_at}</p>
-                            <button className="travel-supp">Archiver</button>
+                            <button className="travelList-supp">Archiver</button>
                         </div>
                     </div>
                 ))
             }
+
+                <div className="travelList-card">
+                    <img className="travelList-avatar marker"src={add} alt=""/>
+                    <div className="travelList-img">
+                        
+                    </div>
+                </div>
             </div>
         </div>
     );
