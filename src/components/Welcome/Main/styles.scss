@@ -1,5 +1,9 @@
 .main {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 7em;
     text-align: center;
 
     &-title{
@@ -13,19 +17,10 @@
         padding: 20px;
         text-align: center;
         color: #fff;
-        // font-size: 1em;
     }
     
     &-connect{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         color: #fff;
-        margin-top: 1em;
-    }
-
-    &-second{
-        padding: 5px;
     }
 
     &-button{
@@ -34,7 +29,7 @@
         color: #FFF;
         font-size: 1em;
         font-weight: bold;
-        padding: 0.5em;
+        padding: 0.5em 2em;
         border-radius: 3px;
         border: none;
         transition: background-color 0.3s;

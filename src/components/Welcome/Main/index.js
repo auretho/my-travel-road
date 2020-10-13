@@ -8,7 +8,7 @@ const Main = () => (
         <div className='main-container'>
             <h2 className='main-title'>Préparez, voyagez et partagez</h2>
                 <p className='main-content'>
-                    Créer votre propre journal de bord intéractif<br />
+                    Créez votre propre journal de bord intéractif!<br />
                     Vous placez simplement des étapes pour créer la route de votre voyage
                      où vous pourrez y ajouter toutes vos photos, commentaires et bien plus.<br />
                     Vous partagerez vos expériences uniques avec une communauté dédiée aux voyages de tout genre.<br />
@@ -18,8 +18,7 @@ const Main = () => (
                 </p>
         </div>        
         <div className='main-connect'>
-            <p className='main-first'>Première   visite ?</p>
-            <p className= 'main-second'>Créer gratuitement un compte</p>
+            <p className= 'main-second'>Première visite? Créez gratuitement un compte!</p>
             <Link to='/create-account'>
                 <button className='main-button'> 
                     Créer mon compte

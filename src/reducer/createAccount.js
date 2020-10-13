@@ -33,7 +33,7 @@ const signup = (state = initialState, action = {}) => {
         case SIGN_UP_SUCCESS:
           return {
             ...state,
-            creationMessage: `Le compte ${action.payload.email} a été crée, vous pouvez vous connecter.`,
+            creationMessage: `Le compte ${action.payload.email} a bien été créé, vous pouvez vous connecter!`,
             firstname: '',
             lastname: '',
             email: '',
