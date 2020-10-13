@@ -12,6 +12,7 @@ import './style.scss';
 import './custom.scss';
 
 const Home = ({data}) =>{ 
+    console.log(data);
     return(
     <div className="home">
         <div className="welcome-message">
@@ -34,6 +35,11 @@ const Home = ({data}) =>{
                     />
                     <Carousel.Caption className="position-sticky">
                     <h3>{travel.title}</h3>
+                    
+                    <Link to={`/travel-view/${travel.id}`}>
+                        <button className="carousel-button">Visiter</button>
+                    </Link>
+
                     </Carousel.Caption>
                 </Carousel.Item>
                 )
