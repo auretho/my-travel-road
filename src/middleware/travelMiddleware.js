@@ -17,7 +17,7 @@ export default (store) => (next) => (action) => {
           axios({
             headers: { Authorization: `Bearer ${token}`},
             method: 'post',
-            url:  'http://127.0.0.1:8000/api/travel/add',
+            url:  'http://54.198.22.9/api/travel/add',
             data: {
               title: store.getState().newTravel.location,
               country: store.getState().newTravel.country,
@@ -38,7 +38,7 @@ export default (store) => (next) => (action) => {
         case NEWSTEP_FORM_SUBMIT:
           axios({
             method: 'post',
-            url:  'http://localhost:3001/create-travel',
+            url:  'http://54.198.22.9/create-travel',
             data: {
               step: store.getState().newTravel.step,
               // country: store.getState().newTravel.country,

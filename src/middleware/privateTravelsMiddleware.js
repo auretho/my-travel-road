@@ -12,7 +12,7 @@ export default (store) => (next) => (action) => {
           axios({
             headers: { Authorization: `Bearer ${token}`},
             method: 'get',
-            url:  'http://127.0.0.1:8000/api/travel/user',
+            url:  'http://54.198.22.9/api/travel/user',
           })
           .then((res) => {
             const serverResponse = res.data;

@@ -19,7 +19,7 @@ import {  CHECK_AUTH,
         axios({
           headers: { Authorization: `Bearer ${token}`},
           method: 'post',
-          url: 'http://127.0.0.1:8000/isLogged',
+          url: 'http://54.198.22.9/isLogged',
         })
           .then((res) => {
             const { data } = res;
@@ -38,7 +38,7 @@ import {  CHECK_AUTH,
         case LOGIN_INPUT_SUBMIT:
             axios({
               method: 'post',
-              url:  'http://127.0.0.1:8000/api/login_check',
+              url:  'http://54.198.22.9/api/login_check',
               data: {
                   username: store.getState().login.email,
                   password: store.getState().login.password,
@@ -55,7 +55,7 @@ import {  CHECK_AUTH,
               axios({
                 headers: { Authorization: `Bearer ${serverResponse.token}` },
                 method: 'get',
-                url:  'http://127.0.0.1:8000/api/home',
+                url:  'http://54.198.22.9/api/home',
                 //withCredentials: true,
               })
               .then((res) => {
@@ -76,7 +76,7 @@ import {  CHECK_AUTH,
             
             axios({
               method: 'post',
-              url: 'http://127.0.0.1:8000/logout',
+              url: 'http://54.198.22.9/logout',
             })
             .then((res) => {
                 const { data } =res;
