@@ -9,6 +9,10 @@ export const NEWSTEP_FORM_SUBMIT = 'NEWSTEP_FORM_SUBMIT';
 export const NEWSTEP_SUCCESS = 'NEWSTEP_SUCCESS';
 export const NEWSTEP_ERROR = 'NEWSTEP_ERROR';
 
+export const FETCH_TRAVEL_DATA = 'FETCH_TRAVEL_DATA';
+export const FETCH_TRAVEL_DATA_SUCCESS = 'FETCH_TRAVEL_DATA_SUCCESS';
+export const FETCH_TRAVEL_DATA_ERROR = 'FETCH_TRAVEL_DATA_ERROR';
+
 export const travelInputChange = (payload) => ({
   type: TRAVEL_INPUT_CHANGE,
   payload,
@@ -40,7 +44,6 @@ export const newStepFormSubmit = () => ({
   type: NEWSTEP_FORM_SUBMIT,
 });
 
-
 export const newStepSuccess = (payload) => ({
   type: NEWSTEP_SUCCESS,
   payload
@@ -48,4 +51,18 @@ export const newStepSuccess = (payload) => ({
 
 export const newStepError = () => ({
   type: NEWSTEP_ERROR,  
+});
+
+export const fetchTravelData = (id) => ({
+  type: FETCH_TRAVEL_DATA,
+  id,
+});
+
+export const fetchTravelDataSuccess = (payload) => ({
+  type: FETCH_TRAVEL_DATA_SUCCESS,
+  payload
+});
+
+export const fetchTravelDataError = () => ({
+  type: FETCH_TRAVEL_DATA_ERROR,  
 });

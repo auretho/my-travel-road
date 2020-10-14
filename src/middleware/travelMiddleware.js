@@ -1,10 +1,15 @@
 import axios from 'axios';
+import { useParams } from "react-router";
+
 import { TRAVEL_FORM_SUBMIT, 
          travelSuccess, 
          travelError, 
          NEWSTEP_FORM_SUBMIT, 
          newStepSuccess, 
-         newStepError} from '../actions/travel-actions';
+         newStepError, 
+         FETCH_TRAVEL_DATA, 
+         fetchTravelDataSuccess, 
+         fetchTravelDataError} from '../actions/travel-actions';
 
 
 export default (store) => (next) => (action) => {
@@ -58,6 +63,27 @@ export default (store) => (next) => (action) => {
             dispatch(newStepError());
           })
           break;  
+        
+        case FETCH_TRAVEL_DATA:
+          const tokenExpected = localStorage.getItem('token');
+          let { id } = useParams();
+
+          axios({
+            headers: { Authorization: `Bearer ${tokenExpected}`},
+            method: 'get',
+            url:  `http://54.198.22.9/api/travel/${id}/detail`,
+          })
+          .then((res) => {
+            const serverResponse = res.data;
+            console.log(serverResponse);
+            dispatch(fetchTravelDataSuccess(serverResponse));
+          })
+          .catch((err) => {
+            console.error(err);
+            dispatch(fetchTravelDataError());
+          })
+          break;
+        
         default:
           break;
     } 

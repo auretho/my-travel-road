@@ -6,12 +6,16 @@ import { TRAVEL_INPUT_CHANGE,
          NEWSTEP_INPUT_CHANGE, 
          NEWSTEP_FORM_SUBMIT, 
          NEWSTEP_SUCCESS,
-         NEWSTEP_ERROR 
+         NEWSTEP_ERROR, 
+         FETCH_TRAVEL_DATA_SUCCESS,
+         FETCH_TRAVEL_DATA_ERROR
      } from '../actions/travel-actions';
 import {FETCH_TRAVELS_SUCCESS, FETCH_TRAVELS_ERROR} from '../actions/privateTravelList-actions';
          
 
 const initialState = {
+    allTravels: [],
+    travelData: '',
     id: '',
     location: '',
     coverPic: '',
@@ -34,12 +38,12 @@ const initialState = {
         arrival: '',
         },
     newStep: [],
-    allTravels: [],
+
 };
 
 const newTravel = (state = initialState, action = {}) => {
     switch (action.type) {
-        //===================TRAVEL ACTIONS ===================
+        //=================== NEWTRAVEL ACTIONS ===================
         case TRAVEL_INPUT_CHANGE:
             return {
                 ...state,
@@ -59,7 +63,7 @@ const newTravel = (state = initialState, action = {}) => {
                 ...state,
                 redirection: true,
             };
-        //===================NEWSTEP ACTIONS ===================
+        //=================== NEWSTEP ACTIONS ===================
         case TOGGLE_NEWSTEP_BUTTON:
             return {
                 ...state,
@@ -99,6 +103,16 @@ const newTravel = (state = initialState, action = {}) => {
                 allTravels: {...action.payload},
               };
         case FETCH_TRAVELS_ERROR:
+            return {
+                ...state,
+            };
+        //=================== GET TRAVEL DATAS ===================
+        case FETCH_TRAVEL_DATA_SUCCESS:
+            return {
+                ...state,
+                travelData: {...action.payload},
+              };
+        case FETCH_TRAVEL_DATA_ERROR:
             return {
                 ...state,
             };

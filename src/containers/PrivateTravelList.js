@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PrivateTravelList from '../components/Connected/PrivateTravelList';
-import {fetchTravels} from '../actions/privateTravelList-actions';
+import {fetchTravels} from '../actions/privateTravelList-actions'
 
 
 const mapState = (state) => ({

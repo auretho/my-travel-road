@@ -9,7 +9,7 @@ import PublicProfile from '../../containers/PublicProfile';
 import DeleteAccount from '../Connected/DeleteAccount';
 import PrivateTravelList from '../../containers/PrivateTravelList';
 import PrivateTravelView from './PrivateTravelView';
-import PublicTravelView from './PublicTravelView';
+import PublicTravelView from '../../containers/PublicTravelView';
 import AboutUs from '../App/Footer/AboutUs';
 import Contact from '../App/Footer/Contact';
 import LegalNotice from '../App/Footer/LegalNotice'
@@ -59,7 +59,7 @@ const Connected = () => (
             <PrivateTravelView />
         </Route>
 
-        <Route path="/travel-view" >
+        <Route path="/travel-view/:id" >
             <PublicTravelView />
         </Route>
 

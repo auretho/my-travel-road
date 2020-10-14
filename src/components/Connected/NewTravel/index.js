@@ -124,7 +124,7 @@ console.log(countryData)
 
 {/*================== LISTE DEROULANTE COUNTRIES ===============*/}
                     <select name="countryList" className="newStep-input" value={step.country} onChange={handleInputChange}>
-                        <option value="Liste des pays">Choisir un pays</option>
+                        {/* <option value="Liste des pays">Choisir un pays</option> */}
                         {
                         countryList.map((country) => {
                             return (
