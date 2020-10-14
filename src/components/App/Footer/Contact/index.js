@@ -8,33 +8,36 @@ const Contact = () => {
     return (
         <div className="contact">
             <div className="contact-intro">
-                <h1>Contactez-nous</h1>
-                <p>Merci de remplir vos informations et nous vous répondrons dans les plus brefs délais.</p>
+                <h1 className="contact-title">Contactez-nous</h1>
+                <p className="contact-legend">Merci de remplir vos informations et 
+                nous vous répondrons dans les plus brefs délais.</p>
             </div>
             
-            <div className="contact-form">
-                <form>
-                    <label for="name">Nom </label>
-                        <input className="contact-input" type="text" /><br/>
-                    
-                    <label for="name">Prénom </label>
-                        <input className="contact-input" type="text" /><br/>
-                    
-                    <label for="name">Email</label>
-                        <input className="contact-input" type="text" /><br/>
-                    
-                    <label for="name">Téléphone* </label>
-                        <input className="contact-input" type="number" /><br/>
-                    
-                    <label for="name">Sujet du message*</label>
-                        <input className="contact-input" type="text" /><br/>
-                    
-                    <label for="name">Message*</label>
-                        <textarea className="contact-input" type="text" rows="7"></textarea><br/>
-                    
+            
+                <form className="contact-form">
+                    <div>                    
+                        <input className="contact-input" placeholder="Nom" type="text" />                    
+                    </div>
+                    <div>                    
+                        <input className="contact-input" placeholder="Prénom" type="text" />                    
+                    </div>
+                    <div>                
+                        <input className="contact-input" placeholder="Email" type="text" />                    
+                    </div>
+                    <div>                
+                        <input className="contact-input" placeholder="Téléphone" type="number" />                    
+                    </div>
+                    <div>                
+                        <input className="contact-input" placeholder="Sujet du message" type="text" />                    
+                    </div>
+                    <div>                
+                        <textarea className="contact-input" placeholder="Entrez votre message" type="text" rows="7"></textarea>                    
+                    </div>
+                    <div>
                     <button className="contact-button"type="submit">Envoyer</button>
+                    </div>
                 </form>
-            </div>
+            
         </div>
     );
     }   

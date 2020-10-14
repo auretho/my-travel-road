@@ -1,58 +1,54 @@
 .contact{
-    margin-left: 50vh;
-    width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 70%;
 
     &-intro{
-        background-color: #dae7f4;
-        width: 80vh;
-        padding: 20px;
-        margin-top: 15px;
-        border-radius: 15px;
-        border: 6px solid #1968B9;
-    
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 1em;
+        background-color: #dfdfdf;
+        text-align: center;
+        width: 60%;
+    }
+    &-title{
+        font-weight: bold;
+    }
+    &-legend{
+        font-weight: bold;
     }
 
     &-form{
-        background-color: #dae7f4;
-        width: 50%;
-        height: 50%;
-        padding: 20px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        border-radius: 15px;
-        border: 6px solid #1968B9;
-    }
-
-    &-input{
-        width: 100%; 
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
+        width: 60%;
+        border: 2px solid black;
         border-radius: 5px;
-        border: 1px solid #1968B9;
-        
-        
+        background-color: #dfdfdf;
+        margin-top: 1em;
+        text-align: center;
+        padding: 1em;
     }
-
+    &-input{
+        width: 80%;
+        margin: 1em;
+        padding: 0.5em;        
+    }
     &-button{
-        margin: 5px;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: #00325E ;
-        color: white;
         font-weight: bold;
-        font-size: 17px;
-        margin-left: 93vh;
-       
-    }
-
-}
-
-p {
-    margin-top: 30px;
-}
-
-label {
-    font-weight: bold;
+        font-size: 1em;
+        color: #fff;
+        background-color: #1774C7;
+        border-radius: .3em;
+        border: 0;
+        padding: .5em 1em;
+        margin: 20px;
+        box-shadow: 1px 1px 2px lightblue;
+        transition: background-color 0.3s;
+    
+          &:hover{
+              background-color: rgb(0, 136, 255);
+          }
+        }
+    
 }
