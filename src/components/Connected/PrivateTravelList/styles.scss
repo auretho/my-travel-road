@@ -80,7 +80,13 @@
 }
 
 .marker{
-  opacity: .1;
+  opacity: .7;
+  padding: 1em 3em; 
+  background-color: rgba(255, 255, 255, 0.475);
+}
+
+.newcard{
+
 }
 
 .marker-title{
@@ -94,7 +100,8 @@
 }
 
 .newcard:hover{
-  opacity: .6;
+  opacity: 1;
+  text-shadow: 1px 1px 2px grey;
 }
 
 .newcard:hover .marker-title{
