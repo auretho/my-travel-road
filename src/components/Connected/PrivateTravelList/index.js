@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import jeremy from './jeremy.png';
-import add from './add-marker-location.png';
+import add from './localisation.png';
 import './styles.scss';
 
 const PrivateTravelList = ({ allTravels }) => {
