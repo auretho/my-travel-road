@@ -13,7 +13,8 @@ const App = ({ checkLoginAuth, isLogged } ) => {
     checkLoginAuth();
  } );
 return (
-    <div className="app">
+    <div className={ isLogged ? 'app' : 'app-welcome'}>
+
       <Header />
 
       { isLogged ? <Connected />  : <Welcome /> }
