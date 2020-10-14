@@ -16,6 +16,7 @@ const privateProfile = ({ userData }) => {
             <div className="privateProfile-infos">
                 
                 <div className="privateProfile-profil">
+                    <h4 className="privateProfile-titleProfile">Informations personnelles :</h4>
                     <h6><b>Nom</b></h6>
                     <p>{userData.lastname}</p>
                     
@@ -34,7 +35,7 @@ const privateProfile = ({ userData }) => {
 
                 <div className="privateProfile-article">
                     <article>
-                        <h4 className="privateProfile-titleDescription">A Propos de vous</h4>
+                        <h4 className="privateProfile-titleDescription">A propos de vous :</h4>
                             <p className="privateProfile-description">
                                 {userData.presentation}
                             </p>

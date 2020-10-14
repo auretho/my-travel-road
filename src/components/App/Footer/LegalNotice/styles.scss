@@ -1,0 +1,25 @@
+.legalNotice{
+    width: 80%;
+    margin-top: 5%;
+    margin: 2em 10%;
+    
+    
+
+    &-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+    }
+    &-title{
+        font-weight: bold;
+        font-size: 2em;
+    }
+    &-theEnd{
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-top: 2em;
+        
+    }
+}

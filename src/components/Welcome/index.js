@@ -4,6 +4,7 @@ import Main from './Main';
 import Form from '../../containers/CreateAccount';
 import AboutUs from '../App/Footer/AboutUs'
 import Contact from '../App/Footer/Contact';
+import LegalNotice from '../App/Footer/LegalNotice'
 import Video from './Video';
 
 import './styles.scss';
@@ -26,6 +27,10 @@ const Welcome = () => (
       
       <Route exact path="/contact-us">
         <Contact />
+      </Route>
+
+      <Route exact path="/legal-notice">
+        <LegalNotice />
       </Route>
     </Switch>
 

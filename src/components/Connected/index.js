@@ -12,6 +12,8 @@ import PrivateTravelView from './PrivateTravelView';
 import PublicTravelView from './PublicTravelView';
 import AboutUs from '../App/Footer/AboutUs';
 import Contact from '../App/Footer/Contact';
+import LegalNotice from '../App/Footer/LegalNotice'
+
 
 import './styles.scss';
 
@@ -68,6 +70,10 @@ const Connected = () => (
         <Route exact path="/contact-us">
             <Contact />
         </Route>
+
+        <Route exact path="/legal-notice">
+        <LegalNotice />
+      </Route>
         
 
     </div>

@@ -19,7 +19,7 @@ const Footer = () => (
           </Link>
         </li>
         <li>
-          <Link to="https://nsm09.casimages.com/img/2020/09/27//20092709390317254117047041.gif" className='footer-content'>
+          <Link to="/legal-notice" className='footer-content'>
             Mentions légales
           </Link>
         </li>
