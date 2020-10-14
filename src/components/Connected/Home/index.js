@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import Carousel from 'react-bootstrap/Carousel';
 import PropTypes from 'prop-types';
-import { useParams } from "react-router";
 
 
 import './style.scss';
@@ -10,10 +9,6 @@ import './custom.scss';
 
 const Home = ({data}) =>{ 
     console.log(data);
-
-    let { id } = useParams();
-    console.log(id);
-
 
     return(
     <div className="home">

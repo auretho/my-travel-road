@@ -1,40 +1,51 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
+// import { Link } from 'react-router-dom'; 
+// import PropTypes from 'prop-types';
 import {Map, Marker, Popup, TileLayer, Polyline} from 'react-leaflet';
-
-import pic from './cover.jpg';
-import avatarpicture from './face.jpg';
 import './styles.scss';
 
 
-const PublicTravelView = () => {
-
-
-    return(
+const PublicTravelView = ({data, travelData, fetchTravelData}) => {
+    
+    fetchTravelData();
+    // console.log(travelData.travel)
+     return(
         <div className="pubTravView">
+        {
+        travelData.travel && 
             <div className="pubTravView-header">
                 <div className="pubTravView-infos">
-                    <h2 className="pubTravView-title">Titre du voyage</h2>
-                    <p className="pubTravView-date">date de départ: 00/00/0000</p>
+                    <h2 className="pubTravView-title">{travelData.travel.title}</h2>
+                    {/* <p className="pubTravView-date">date de départ: {travelData.travel.departure_at}</p> */}
                 </div>
-
+            </div>
+        }
+        { travelData.user && travelData.user.map((user)=>{
+            console.log(travelData.user);
+            return(
+            <div>
                 <div className="pubTravView-photo">
-                    <img className="pubTravView-cover" src={pic} alt="" />
+                    <img className="pubTravView-cover" src={user.cover} alt="" />
+                        
+                    {/* <Link to={`/public-profil/${id}`}> */}
                         <div className="pubTravView-picture">
-                            <img className="pubTravView-avatar"src={avatarpicture} alt=""/>
-                            <p className="pubTravView-name">PSEUDO</p>            
+                            <img className="pubTravView-avatar"src={user.avatar} alt=""/>
+                            <p className="pubTravView-name">{user.nickname}</p>            
                         </div>
+                    {/* </Link> */}
                 </div>
+            </div>
+        )})
+            
+        }
+            <div>
                 <div className="pubTravView-content">                    
-                <select name="steps" id="steps">
-                            <option value="">--Choisissez une étape--</option>
-                            <option value="step">flagada</option>
+                    <select name="steps" id="steps">
+                        <option value="">--Choisissez une étape--</option>
+                        <option value="step">flagada</option>
 
-                        </select>
-
+                    </select>
                 </div>
-                
             </div>
             <div className="pubTravView-main">
                     {/* ============================TESTS MAP==================================== */}
@@ -94,7 +105,7 @@ const PublicTravelView = () => {
                     </Map>
                 </div>
                     {/* ================================================================ */}
-
+        
         </div>
     )
 };

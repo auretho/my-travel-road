@@ -9,7 +9,7 @@ import PublicProfile from '../../containers/PublicProfile';
 import DeleteAccount from '../Connected/DeleteAccount';
 import PrivateTravelList from '../../containers/PrivateTravelList';
 import PrivateTravelView from './PrivateTravelView';
-import PublicTravelView from './PublicTravelView';
+import PublicTravelView from '../../containers/PublicTravelView';
 import AboutUs from '../App/Footer/AboutUs';
 import Contact from '../App/Footer/Contact';
 
