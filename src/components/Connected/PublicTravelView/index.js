@@ -7,8 +7,8 @@ import './styles.scss';
 
 const PublicTravelView = ({data, travelData, fetchTravelData}) => {
     
+    // console.log(travelData)
     fetchTravelData();
-    // console.log(travelData.travel)
      return(
         <div className="pubTravView">
         {
