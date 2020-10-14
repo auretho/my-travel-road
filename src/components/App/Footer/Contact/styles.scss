@@ -55,26 +55,124 @@
         font-weight: bold;
     }
 }
-
+//-----------------------------------------------------------
 @media(max-width:480px){
     .contact{
         margin: 0px;
+        
 
         &-button{
-            margin-left: 340px;
+            margin: 0%;
         }
 
         &-form{
             width: 100%;
-            margin-left: 50px;
+            margin-left: 60px;
+            
         }
 
         &-intro{
-            width: 60vh;
-            margin-left: 50px;
+            width: 470px;
+            margin-left: 60px;
             margin-top: 70px;
         }
     }
     
 }
 
+@media(max-width: 768px){
+    .contact{
+        margin: 0px;
+        
+
+        &-button{
+            margin: 0%;
+        }
+
+        &-form{
+            width: 100%;
+            margin-left: 30px;
+            
+        }
+
+        &-intro{
+            width: 100%;
+            margin-left: 30px;
+            margin-top: 70px;
+        }
+    }
+    
+}
+
+@media (max-width: 1024px){
+    .contact{
+        margin: 0px;
+        
+
+        &-button{
+            margin: 0%;
+        }
+
+        &-form{
+            width: 100%;
+            margin-left: 30px;
+            
+        }
+
+        &-intro{
+            width: 100%;
+            margin-left: 30px;
+            margin-top: 70px;
+        }
+    }
+    
+    }
+
+
+@media screen and (min-width: 1024px) and (max-width: 1600px){
+    .contact{
+        margin: 0px;
+        
+
+        &-button{
+            margin: 0%;
+        }
+
+        &-form{
+            width: 100%;
+            margin-left: 30px;
+            
+        }
+
+        &-intro{
+            width: 100%;
+            margin-left: 30px;
+            margin-top: 70px;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 1600px){
+    .contact{
+        margin: 0px;
+        
+
+        &-button{
+            margin: 0%;
+        }
+
+        &-form{
+            width: 100%;
+            margin-left: 30px;
+            
+        }
+
+        &-intro{
+            width: 100%;
+            margin-left: 30px;
+            margin-top: 70px;
+        }
+    }
+    
+}
