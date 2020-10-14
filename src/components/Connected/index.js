@@ -57,7 +57,7 @@ const Connected = () => (
             <PrivateTravelView />
         </Route>
 
-        <Route path="/travel-view" >
+        <Route path="/travel-view/:id" >
             <PublicTravelView />
         </Route>
 
