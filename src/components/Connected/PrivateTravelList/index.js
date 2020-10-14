@@ -42,7 +42,7 @@ const PrivateTravelList = ({ allTravels }) => {
                     </div>
                 ))
             }
-            <Link to="/create-travel">
+            <Link to="/travel">
                 <div className="travelList-card newcard">
                     <img className="travelList-avatar marker"src={add} alt=""/>
                     <div className="marker-title">
