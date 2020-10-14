@@ -29,7 +29,7 @@ const PublicProfile = ({ datas }) => {
                 datas.travels.map((travel) => (
                 <div className="voyage">
                     <img src={travel.cover} alt={travel.title} className="travel-cover"/>
-                    <h2>{travel.title}</h2>
+                    <h2 className="voyage-title">{travel.title}</h2>
                 </div>
                 ))
             }
