@@ -12,11 +12,12 @@
         height: 100%;
         object-fit: cover; 
         border-radius: 5px;
+        box-shadow: 2px 2px 5px black;
     }
     
     &-photo{
         margin: auto;
-        width: 80%;
+        width: 80vw;
         height: 400px;
     }
     
@@ -31,8 +32,12 @@
         left: -60px;
         height: 200px;
         filter: drop-shadow(2px 2px 2px black);
-        
+        border-radius: 50%;
     }    
+
+    .voyage{
+        // width: 300px;
+    }
     
     &-pseudo{
         position: relative;
@@ -73,7 +78,8 @@
     width: 80%;
     margin: 4em auto;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    // justify-content: space-between;
 }
 
 .past-travels img{
@@ -81,6 +87,10 @@
     height: 280px;
     border-radius: 5px;
     box-shadow: 2px 2px 2px grey;
+}
+
+.travel-cover{
+    box-shadow: 2px 2px 5px black;
 }
 //===========================================================
 //MOBILE - max. 480px 
@@ -214,10 +224,6 @@
 //LAPTOP - min. 1600px 
 //===========================================================
 @media screen and (min-width: 1600px){
-    .voyage{
-        float: left;
-        width: 50%;
-    }
 
     .past-travels img{
         width: 550px;

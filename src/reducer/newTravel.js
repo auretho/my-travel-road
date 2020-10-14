@@ -14,8 +14,8 @@ import {FETCH_TRAVELS_SUCCESS, FETCH_TRAVELS_ERROR} from '../actions/privateTrav
          
 
 const initialState = {
-    allTravels: [],
-    travelData: '',
+    allTravels: '',
+    travelData: [],
     id: '',
     location: '',
     coverPic: '',
@@ -100,7 +100,7 @@ const newTravel = (state = initialState, action = {}) => {
         case FETCH_TRAVELS_SUCCESS:
             return {
                 ...state,
-                allTravels: {...action.payload},
+                allTravels: action.payload,
               };
         case FETCH_TRAVELS_ERROR:
             return {

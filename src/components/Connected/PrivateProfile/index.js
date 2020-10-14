@@ -56,7 +56,7 @@ const privateProfile = ({ userData }) => {
 
             </div>
 
-            <div className="privateProfile-images">
+            <div className="privateProfile-infos">
 
                 <div className="privateProfile-photo">
                     <img className="privateProfile-cover" src={userData.cover} alt="" />
