@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-
+import jeremy from './jeremy.png';
 import add from './add-marker-location.png';
 import './styles.scss';
 
@@ -35,8 +35,13 @@ const PrivateTravelList = ({ allTravels }) => {
                         <img className="travelList-avatar"src={travelDetails.cover} alt=""/>
                         <div className="travelList-img">
                             <h4>{travelDetails.title}</h4>
+                            <div className="travelList-date">
                             <p>Départ: {travelObject.departureAt[0]}</p>
-                            <button className="travelList-supp">Archiver</button>
+                            <Link to='/delete-travel' >
+                                <img className="travelList-delete" src={jeremy} />
+                            </Link>
+                            </div>
+                            {/* <button className="travelList-supp">Archiver</button> */}
                         </div>
                     </div>
                 ))))

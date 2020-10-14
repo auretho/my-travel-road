@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './styles.scss';
 
-const DeleteAccount = () => {
-        const onDeleteAccount = () => {
+const DeleteTravel = () => {
+        const onDeleteTravel = () => {
         const token = localStorage.getItem('token');
         axios({
             headers: { Authorization: `Bearer ${token}`},
             method: 'delete',
-            url: `http://54.198.22.9/api/user/delete`,  
+            url: `http://54.198.22.9/api/travel/{id}/delete`,  
         })
           .then((response) => {
             console.log('la reponse', response);
@@ -21,19 +21,19 @@ const DeleteAccount = () => {
       };
 
     return (
-        <div className="delAccount">
-            <div className="delAccount-advertissement">
-                <h2 className="delAccount-title">Attention</h2>
-                <p className="delAccount-content">
-                    Vous allez suppimer définitivement votre compte et toutes vos données.<br/>
+        <div className="delTravel">
+            <div className="delTravel-advertissement">
+                <h2 className="delTravel-title">Attention</h2>
+                <p className="delTravel-content">
+                    Vous allez suppimer définitivement le voyage et toutes ses données.<br/>
                     Voulez-vous vraiment continuer?</p>
             </div>
-            <div className="delAccount-button">
+            <div className="delTravel-button">
 
-                <button className="delAccount-delete" onClick={() => {onDeleteAccount();}}>Supprimer mon compte</button>
+                <button className="delTravel-delete" onClick={() => {onDeleteTravel();}}>Supprimer le voyage</button>
 
                 <Link to='/private-profile'>
-                <button className="delAccount-cancel">Annuler</button>
+                <button className="delTravel-cancel">Annuler</button>
                 </Link>
             </div>
             
@@ -42,4 +42,4 @@ const DeleteAccount = () => {
 
 
 
-export default DeleteAccount;
+export default DeleteTravel;
