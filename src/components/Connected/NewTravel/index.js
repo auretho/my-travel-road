@@ -137,16 +137,16 @@ console.log(countryData)
                     </select>
 {/* ============================================================== */}
                     </label>
-                    <label>
+                    {/* <label>
                     <h1>Date de départ<span>*</span></h1>
                         <input type="date" 
                                name="departure" 
                                className="newStep-input" 
                                placeholder="Date de départ" 
                                value={step.departure} 
-                               onChange={handleInputChange}/>
-                    </label>
-                    <label>
+                               onChange={handleInputChange}/> */}
+                    {/* </label> */} 
+                    {/* <label>
                     <h1>Date d'arrivée</h1>
                         <input type="date" 
                                name="arrival" 
@@ -186,7 +186,7 @@ console.log(countryData)
                     </label>
     ======================================================== */}
                     
-            </label>
+            {/* </label> */}
 
                     <button className="newStep-button">Ajouter nouvelle étape</button>
                 </form>

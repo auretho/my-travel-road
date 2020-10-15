@@ -25,7 +25,8 @@ const EditProfile = ({
     openedCover,
     openedAvatar,
     onToggleCover,
-    onToggleAvatar,    
+    onToggleAvatar,
+    loginData,    
     
     }) => {
         const handleSubmit = (evt) => {
@@ -38,24 +39,26 @@ const EditProfile = ({
                 [name]: value,
             });
         };
+
+        console.log(loginData);
         
     return (              
             <div className="editProfile">
                     <form className="editProfile-form" onSubmit={handleSubmit}>
                         <div className="editProfile-info">
                             <h5 className="editProfile-title">Editez votre profil</h5>
-                            <input className="editProfile-input" name="lastname" type="text" placeholder="Nom" onChange={handleInputChange} value={lastname} />
-                            <input className="editProfile-input" name="firstname" type="text" placeholder="Prénom" onChange={handleInputChange} value={firstname} />
-                            <input className="editProfile-input" name="email" type="text" placeholder="Email" onChange={handleInputChange} value={email} />
-                            <input className="editProfile-input" name="pseudo" type="text" placeholder="Pseudonyme" onChange={handleInputChange} value={pseudo} />
+                            <input className="editProfile-input" name="lastname" type="text" placeholder={loginData.lastname} onChange={handleInputChange} value={lastname} />
+                            <input className="editProfile-input" name="firstname" type="text" placeholder={loginData.firstname} onChange={handleInputChange} value={firstname} />
+                            <input className="editProfile-input" name="email" type="text" placeholder={loginData.email} onChange={handleInputChange} value={email} />
+                            <input className="editProfile-input" name="pseudo" type="text" placeholder={loginData.nickname} onChange={handleInputChange} value={pseudo} />
                                 <div className="editProfile-cityInfo">
-                                    <input className="editProfile-input-city" name="city" type="text" placeholder="Ville" onChange={handleInputChange} value={city} />
-                                    <input className="editProfile-input-cityCode" name="cityCode" type="number" placeholder="Code Postal" onChange={handleInputChange} value={cityCode} />
+                                    <input className="editProfile-input-city" name="city" type="text" placeholder={loginData.city} onChange={handleInputChange} value={city} />
+                                    <input className="editProfile-input-cityCode" name="cityCode" type="number" placeholder={loginData.postal} onChange={handleInputChange} value={cityCode} />
                                 </div>
                         </div>
                         <div className="editProfile-description">
                             <h5 className="editProfile-title">A propos de vous</h5>
-                            <textarea className="editProfile-input" name="description" type="text" placeholder="Tapez quelques lignes à propos de vous" onChange={handleInputChange} value={description} />
+                            <textarea className="editProfile-input" name="description" type="text" placeholder={loginData.presentation} onChange={handleInputChange} value={description} />
                         </div>
                         <div className="editProfile-password">
                             <h5 className="editProfile-title">Modifiez votre mot de passe</h5>
@@ -78,7 +81,7 @@ const EditProfile = ({
 
                 
                     <div className="editProfile-picture">
-                        <img className="editProfile-cover" src={cove} alt="" />
+                        <img className="editProfile-cover" src={loginData.cover} alt="" />
                         <button className={openedCover ? 'editProfile-button opened' : 'editProfile-button'} 
                         type="button" onClick={onToggleCover}>Editer votre photo de couverture</button> 
                         <div className={!openedCover ? 'editProfile-uploadAvatar closed' : 'editProfile-uploadAvatar'}>
@@ -86,7 +89,7 @@ const EditProfile = ({
                         <button className='editProfile-button cancel' type="button" onClick={onToggleCover}>Annuler</button>
 
                         </div>
-                        <img className="editProfile-avatar"src={avata} alt=""/>
+                        <img className="editProfile-avatar"src={loginData.avatar} alt=""/>
                         <button className={openedAvatar ? 'editProfile-button opened' : 'editProfile-button'}
                         type="button" onClick={onToggleAvatar}>Editer votre avatar</button>
                         <div className={!openedAvatar ? 'editProfile-uploadAvatar closed' : 'editProfile-uploadAvatar'}>

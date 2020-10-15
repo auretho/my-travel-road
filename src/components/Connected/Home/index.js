@@ -34,7 +34,7 @@ const Home = ({data}) =>{
                     <h3>{travel.title}</h3>
                     
                     <Link to={`/travel-view/${travel.id}`}>
-                        <button className="carousel-button">Visiter</button>
+                        <button className="carousel-button">Voir ce voyage</button>
                     </Link>
 
                     </Carousel.Caption>

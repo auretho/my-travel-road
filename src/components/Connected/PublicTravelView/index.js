@@ -25,7 +25,7 @@ const PublicTravelView = ({data, travelData, fetchTravelData}) => {
             console.log(travelData.user);
             return(
                 <div className="pubTravView-photo">
-                    <img className="pubTravView-cover" src={user.cover} alt="" />
+                    <img className="pubTravView-cover" src={travelData.travel.cover} alt="" />
                         
                     {/* <Link to={`/public-profil/${id}`}> */}
                         <div className="pubTravView-picture">

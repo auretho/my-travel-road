@@ -25,7 +25,7 @@ const DeleteAccount = () => {
             <div className="delAccount-advertissement">
                 <h2 className="delAccount-title">Attention</h2>
                 <p className="delAccount-content">
-                    Vous allez suppimer définitivement votre compte et toutes vos données.<br/>
+                    Vous allez supprimer définitivement votre compte et toutes vos données.<br/>
                     Voulez-vous vraiment continuer?</p>
             </div>
             <div className="delAccount-button">

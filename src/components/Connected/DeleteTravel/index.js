@@ -25,14 +25,14 @@ const DeleteTravel = () => {
             <div className="delTravel-advertissement">
                 <h2 className="delTravel-title">Attention</h2>
                 <p className="delTravel-content">
-                    Vous allez suppimer définitivement le voyage et toutes ses données.<br/>
+                    Vous allez supprimer définitivement le voyage et toutes ses données.<br/>
                     Voulez-vous vraiment continuer?</p>
             </div>
             <div className="delTravel-button">
 
                 <button className="delTravel-delete" onClick={() => {onDeleteTravel();}}>Supprimer le voyage</button>
 
-                <Link to='/private-profile'>
+                <Link to='/my-travels'>
                 <button className="delTravel-cancel">Annuler</button>
                 </Link>
             </div>

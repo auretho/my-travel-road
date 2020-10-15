@@ -6,11 +6,11 @@
     &-infos{
         width: 50%;
         margin: auto;
-        padding: 1.5em;
+        padding: .5em;
         text-align: center;
     }
     &-profil{
-        width: 60%;
+        width: 100%;
         background-color: #ffffff;
         padding: .6em;
         border-radius: 5px;
@@ -24,20 +24,19 @@
     }
     &-article{
         background-color: rgb(255, 255, 255);
-        width: 60%;
+        width: 100%;
         max-height: 300px;
         margin: auto;
         margin-top: 1em;
         border-radius:5px;
-        padding: 1.2em;
+        padding: .2em 1.3em;
         box-shadow: 2px 2px 5px black;
-
     }
     
     &-photo{
         height: 400px;
         width: 650px;
-
+        margin: 0;
     }
 
     &-cover{
@@ -47,7 +46,12 @@
         border: 1px solid #fff;
         border-radius: 5px;
         box-shadow: 2px 2px 5px black;
+    }
 
+    &-picture{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &-titleDescription{
@@ -102,9 +106,10 @@
         
     }
     &-name{
+        color: #fff;
         font-weight: bold;
-        font-size: 2em;
-        text-shadow: 2px 2px 5px rgb(255, 255, 255);
+        font-size: 3em;
+        text-shadow: 2px 2px 5px black;
     }
     
 

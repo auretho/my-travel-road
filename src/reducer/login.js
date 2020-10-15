@@ -51,7 +51,7 @@ const login = (state = initialState, action = {}) => {
                 isLogged: false,
                 opened: false,
                 nickname: '',
-                // loggedMessage: 'Erreur de connexion',
+                loggedMessage: 'Erreur de connexion',
             };
             case LOGOUT_SUCCESS:
                 return {

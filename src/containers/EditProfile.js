@@ -16,7 +16,7 @@ const mapState =(state) => ({
     editMessage: state.editProfile.editMessage,
     openedCover: state.editProfile.openedCover,
     openedAvatar: state.editProfile.openedAvatar,
-    
+    loginData: state.login.data.user,
     
 });
 

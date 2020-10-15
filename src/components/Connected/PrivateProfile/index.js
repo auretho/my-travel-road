@@ -58,9 +58,7 @@ const privateProfile = ({ userData }) => {
 
             <div className="privateProfile-infos">
 
-                <div className="privateProfile-photo">
                     <img className="privateProfile-cover" src={userData.cover} alt="" />
-                </div>
 
                 <div className="privateProfile-picture">
                     <img className="privateProfile-avatar"src={userData.avatar} alt=""/>

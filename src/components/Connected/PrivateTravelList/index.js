@@ -34,9 +34,9 @@ const PrivateTravelList = ({ allTravels }) => {
                     <div className="travelList-card" key={travelDetails.id}>
                         <img className="travelList-avatar"src={travelDetails.cover} alt=""/>
                         <div className="travelList-img">
-                            <h4>{travelDetails.title}</h4>
+                            <h4 className="travelList-title">{travelDetails.title}</h4>
                             <div className="travelList-date">
-                            <p>Départ: {travelObject.departureAt[0]}</p>
+                            <p classname="travelList-dep">Départ: {travelObject.departureAt[0]}</p>
                             <Link to='/delete-travel' >
                                 <img className="travelList-delete" src={trashbin} alt="trashbin" />
                             </Link>

@@ -31,6 +31,7 @@
         top: -140px;
         left: -60px;
         height: 200px;
+        width: 200px;
         filter: drop-shadow(2px 2px 2px black);
         border-radius: 50%;
     }    
@@ -53,10 +54,13 @@
     }
 
     &-journal{
-        width: 80%;
-        margin: 2em auto 5em;
+        width: 60%;
+        margin: 2em auto;
+        padding: .6em 0 1.8em ; 
         text-align: justify;
         font-style: italic;
+        background-color: rgba(255, 255, 255, 0.68);
+        border-radius: 10px;
     }
 
     &-journal h2{
@@ -72,7 +76,7 @@
     &-title{
         font-size: 3em;
         font-weight: bold;
-        margin: .5em 1em 1em;
+        margin: .5em 1em ;
         text-shadow: 1px 1px 3px #fff;
     }
 }
