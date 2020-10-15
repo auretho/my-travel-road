@@ -11,6 +11,7 @@ const PublicTravelView = ({data, travelData, fetchTravelData}) => {
     fetchTravelData();
      return(
         <div className="pubTravView">
+        <div className="top-block">
         {
         travelData.travel && 
             <div className="pubTravView-header">
@@ -23,30 +24,30 @@ const PublicTravelView = ({data, travelData, fetchTravelData}) => {
         { travelData.user && travelData.user.map((user)=>{
             console.log(travelData.user);
             return(
-            <div>
                 <div className="pubTravView-photo">
                     <img className="pubTravView-cover" src={user.cover} alt="" />
                         
                     {/* <Link to={`/public-profil/${id}`}> */}
                         <div className="pubTravView-picture">
-                            <img className="pubTravView-avatar"src={user.avatar} alt=""/>
+                            <div className="avatar-block">
+                                <img className="pubTravView-avatar"src={user.avatar} alt=""/>
+                            </div>
                             <p className="pubTravView-name">{user.nickname}</p>            
                         </div>
                     {/* </Link> */}
                 </div>
-            </div>
         )})
-            
         }
             <div>
                 <div className="pubTravView-content">                    
                     <select name="steps" id="steps">
                         <option value="">--Choisissez une étape--</option>
-                        <option value="step">flagada</option>
+                        <option value="step"></option>
 
                     </select>
                 </div>
             </div>
+        </div>
             <div className="pubTravView-main">
                     {/* ============================TESTS MAP==================================== */}
 

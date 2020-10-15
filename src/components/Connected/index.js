@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route} from 'react-router-dom';
 import PrivateProfile from '../../containers/PrivateProfile';
 import EditProfile from '../../containers/EditProfile';
 import Home from '../../containers/Home';
@@ -64,9 +64,10 @@ const Connected = () => (
             <PrivateTravelView />
         </Route>
 
-        <Route path="/travel-view/:id" >
-            <PublicTravelView />
-        </Route>
+        <Route path="/travel-view/:id" 
+               render={({match}) => (
+            <PublicTravelView id={match.params.id} />
+            )} />
 
         <Route exact path="/about-us">
             <AboutUs />

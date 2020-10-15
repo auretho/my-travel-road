@@ -6,9 +6,9 @@ const mapState = (state) => ({
     travelData: state.newTravel.travelData,
 });
 
-const mapDispatch = (dispatch) => ({
+const mapDispatch = (dispatch, ownProps) => ({
     fetchTravelData: () => {
-        dispatch(fetchTravelData());
+        dispatch(fetchTravelData(ownProps.id));
       },
 });
 
