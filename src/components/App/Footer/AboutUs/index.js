@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.scss';
-import aurel from '../AboutUs/aurel.jpg';
-import jerem from '../AboutUs/jerem.jpg';
+import aure from '../AboutUs/aure.png';
+import jeremy from '../AboutUs/jeremy.png';
 import jerome from '../AboutUs/jerome.png';
-import melo from '../AboutUs/melo.jpg';
-import sara from '../AboutUs/sara.jpeg';
+import melo from '../AboutUs/melo.png';
+import sarah from '../AboutUs/sarah1.png';
 
 
 const AboutUs = () => {
@@ -22,12 +22,12 @@ const AboutUs = () => {
                 <div className="about-elt2">
                     <div className="about-scrum">
                         <h4 className="about-name">Sarah</h4>
-                        <img className="about-avatar"src={sara} alt=""/>
+                        <img className="about-avatar"src={sarah} alt=""/>
                         <p className="about-fonction">Scrum Master</p>
                     </div>
                     <div className="about-back">
                         <h4 className="about-name">Jérémy</h4>
-                        <img className="about-avatar"src={jerem}alt=""/>
+                        <img className="about-avatar"src={jeremy}alt=""/>
                         <p className="about-fonction">Lead Dev Back</p>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const AboutUs = () => {
                 <div className="about-elt3">
                     <div className="about-front">
                         <h4 className="about-name">Aurélie</h4>
-                        <img className="about-avatar"src={aurel}alt=""/>
+                        <img className="about-avatar"src={aure}alt=""/>
                         <p className="about-fonction">Lead Dev Front</p>
                     </div>
                     <div className="about-master">

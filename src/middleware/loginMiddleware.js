@@ -82,6 +82,7 @@ import {  CHECK_AUTH,
                 const { data } =res;
                 console.log(data);
                 dispatch(logoutSuccess());
+                window.location.assign("/");
             })
             .catch((err) => {
                 console.error(err);

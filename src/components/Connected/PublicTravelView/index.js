@@ -40,11 +40,11 @@ const PublicTravelView = ({data, travelData, fetchTravelData}) => {
         }
             <div>
                 <div className="pubTravView-content">                    
-                    <select name="steps" id="steps">
+                    {/* <select name="steps" id="steps">
                         <option value="">--Choisissez une étape--</option>
                         <option value="step"></option>
 
-                    </select>
+                    </select> */}
                 </div>
             </div>
         </div>

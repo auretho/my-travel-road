@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 import {Map, Marker, Popup, TileLayer, Polyline} from 'react-leaflet';
 import "@fortawesome/fontawesome-free/js/all";
 
@@ -45,15 +45,19 @@ console.log(countryData)
                         <span>Nouvelle étape</span>
                     </button>
 
-                    
+                    <Link to="/home">
+                        <button className='newTravel-create'>
+                            Valider le voyage
+                        </button>
+                    </Link>
 
-                    <label htmlFor="steps-select" className="steps-select">
+                    {/* <label htmlFor="steps-select" className="steps-select">
                         <select name="steps" id="steps">
                             <option value="">--Choisissez une étape--</option>
                             <option value="step">{country.name}</option>
 
                         </select>
-                    </label>
+                    </label> */}
                 </div>
                     
                 <div className="bottom-block">
@@ -132,8 +136,6 @@ console.log(countryData)
                             );    
                         })
                         }
-                        
-
                     </select>
 {/* ============================================================== */}
                     </label>
@@ -189,6 +191,7 @@ console.log(countryData)
             {/* </label> */}
 
                     <button className="newStep-button">Ajouter nouvelle étape</button>
+                    
                 </form>
             </div>
         </div>
