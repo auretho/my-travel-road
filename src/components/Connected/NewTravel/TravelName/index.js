@@ -21,7 +21,7 @@ const TravelName = ({location, country, departure, handleChange, handleSubmit, r
     <div className="travelName">
         <form className="travelName-form" onSubmit={handleInputSubmit}>
             <label>
-            <h1>Titre de ton voyage<span>*</span></h1>
+            <h1 className="travelName-title">TITRE DE TON VOYAGE<span>*</span></h1>
                 <input type="text" 
                         name="location" 
                         className="travelName-input" 
@@ -31,7 +31,7 @@ const TravelName = ({location, country, departure, handleChange, handleSubmit, r
                         />
             </label>
             <label>
-            <h1>Pays de départ<span>*</span></h1>
+            <h1 className="travelName-title">PAYS DE DEPART<span>*</span></h1>
                 <input type="text" 
                         name="country" 
                         className="travelName-input" 
@@ -41,7 +41,7 @@ const TravelName = ({location, country, departure, handleChange, handleSubmit, r
                         />
             </label>
             <label>
-            <h1>Date de départ<span>*</span></h1>
+            <h1 className="travelName-title">DATE DE DEPART<span>*</span></h1>
                 <input type="date" 
                         name="departure" 
                         className="travelName-input" 

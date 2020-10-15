@@ -26,7 +26,7 @@ const Home = ({data}) =>{
             data.travels.map((travel) => (
                 <Carousel.Item key={travel.id} className="item">
                     <img
-                    className="d-block voyage-picture"
+                    className="voyage-picture"
                     src={travel.cover}
                     alt="slide"
                     />
