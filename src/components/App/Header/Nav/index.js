@@ -18,13 +18,13 @@ const Nav = ({ loggedMessage, handleLogout, fetchTravels}) => {
             MES VOYAGES
         </NavLink>
 
-        <NavLink exact className="navigation-link" to="/my-travel-view">
+        {/* <NavLink exact className="navigation-link" to="/my-travel-view">
             PrivateTravelView
         </NavLink>
 
         <NavLink exact className="navigation-link" to="/travel-view">
             PublicTravelView
-        </NavLink>
+        </NavLink> */}
       </div>
     <div className="navigation-logged">
       <p className="navigation-message">

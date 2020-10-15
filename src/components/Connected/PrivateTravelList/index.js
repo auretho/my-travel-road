@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import jeremy from './jeremy.png';
+import trashbin from './jeremy.png';
 import add from './localisation.png';
 import './styles.scss';
 
@@ -8,7 +8,7 @@ const PrivateTravelList = ({ allTravels }) => {
 
     return(
         <div className="travelList">
-            <div className="travelList-navigation">
+            {/* <div className="travelList-navigation">
                 <nav className="travelList-nav1">
                     <ul>
                         <li className="travelList-list"><a className="travelList-lien" href="#Tous">Tous</a></li>
@@ -25,7 +25,7 @@ const PrivateTravelList = ({ allTravels }) => {
                         <option className="travelList-list">Pays</option>
                         <option className="travelList-list">Catégorie</option>
                     </select>
-            </div>
+            </div> */}
             
             <div className="travelList-allTravels">
             {
@@ -38,7 +38,7 @@ const PrivateTravelList = ({ allTravels }) => {
                             <div className="travelList-date">
                             <p>Départ: {travelObject.departureAt[0]}</p>
                             <Link to='/delete-travel' >
-                                <img className="travelList-delete" src={jeremy} />
+                                <img className="travelList-delete" src={trashbin} alt="trashbin" />
                             </Link>
                             </div>
                             {/* <button className="travelList-supp">Archiver</button> */}
