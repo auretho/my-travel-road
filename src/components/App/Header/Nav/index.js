@@ -7,14 +7,15 @@ import './style.scss';
 const Nav = ({ loggedMessage, handleLogout, fetchTravels}) => { 
     return (
     <div className="navigation">
+      <div className="navigation-links">
         <NavLink exact className="navigation-link" to="/home">
-            Accueil
+            ACCUEIL
         </NavLink>
         <NavLink exact className="navigation-link" to="/private-profile">
-            Profil  
+            PROFIL  
         </NavLink>
         <NavLink exact className="navigation-link" to="/my-travels" onClick={fetchTravels}>
-            Mes voyages
+            MES VOYAGES
         </NavLink>
 
         <NavLink exact className="navigation-link" to="/my-travel-view">
@@ -24,19 +25,19 @@ const Nav = ({ loggedMessage, handleLogout, fetchTravels}) => {
         <NavLink exact className="navigation-link" to="/travel-view">
             PublicTravelView
         </NavLink>
-    
+      </div>
     <div className="navigation-logged">
-    <p className="navigation-message">
-      {loggedMessage}
-    </p>
+      <p className="navigation-message">
+        {loggedMessage}
+      </p>
     
-    <button
-      type="button"
-      className="navigation-button"
-      onClick={handleLogout}
-    >
-      Déconnexion
-    </button>
+      <button
+        type="button"
+        className="navigation-button"
+        onClick={handleLogout}
+      >
+        Déconnexion
+      </button>
     </div>
   </div>
 );

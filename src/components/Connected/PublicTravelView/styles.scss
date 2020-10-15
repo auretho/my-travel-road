@@ -1,18 +1,12 @@
 .leaflet-container{
-    position: relative;
     height: 50vh;
     width: 100%;
-    margin: auto;
-    z-index: 0;
 }
 
 .pubTravView{
     margin: 0 5%;
-    height: 100vh;
 
     &-header{
-        // display: flex;
-        // justify-content: space-around;
         margin-bottom: 1em;
     }
     &-infos{
@@ -62,12 +56,9 @@
 
     //partie du bas
     &-main{
-        // display: flex;
-        // justify-content: center;
         align-items: center;
-        height: 60%;
         margin: auto;
-        border: 2px solid #afafaf;
+        border: 1px solid #afafaf;
         border-radius: 5px;
     }
 }
@@ -75,6 +66,7 @@
 .top-block{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 3em;
 }
 
